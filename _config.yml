@@ -6,18 +6,18 @@
 # --- Required options --- #
 
 # Name of website
-title: Hello World
+title: Critical Data Studies 2021 : Gaming
 
 # Your name to show in the footer
-author: 12345
+author: M. Corboz - H. Sprumon - D. Mizrahi - L. Duggan - D Khatanassian
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+  Useful links:
+    - Results overview: "http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/a4d441cb69411d95f52826ce26a567e8/raw/442f139b864d35cd287e948b65832e3caa6d4005/projector_config.json"
+    - We are in the matrix: "https://thiscatdoesnotexist.com/"
   Author's home: "https://deanattali.com"
 
 # --- Logo --- #
