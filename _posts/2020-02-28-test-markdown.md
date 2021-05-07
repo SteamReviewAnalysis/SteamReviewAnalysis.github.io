@@ -18,7 +18,7 @@ Here's a useless table:
 
 | Number | Next number | Previous number |
 | :------ |:--- | :--- |
-| Five | Six | Four |
+| Five | Six | Twenty |
 | Ten | Eleven | Nine |
 | Seven | Eight | Six |
 | Two | Three | One |
