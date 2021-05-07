@@ -14,7 +14,7 @@ author: M. Corboz - H. Sprumon - D. Mizrahi - L. Duggan - D Khatanassian
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  What is this about?: "problematic"
   Useful links:
     - Results overview: "http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/a4d441cb69411d95f52826ce26a567e8/raw/442f139b864d35cd287e948b65832e3caa6d4005/projector_config.json"
     - We are in the matrix: "https://thiscatdoesnotexist.com/"
@@ -24,7 +24,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/tricher_au_scrabble.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
