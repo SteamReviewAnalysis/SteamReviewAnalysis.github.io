@@ -7,6 +7,10 @@ bigimg: img/bigImg.png
 
 ## la problématique "finale" (est-ce-qu'elle est sur le drive ou c'est la problématique du rendu intermédiaire ?)
 
+- Pouvons-nous obtenir des informations pertinentes sur la terminologie du jeu vidéo en nous basant uniquement sur des critiques de joueur·euse·s ?
+- Quels thèmes récurrents apparaissent dans les commentaires d’utilisateur·trice·s, et quelle répartition selon les différents jeux ou genres de jeux peut-on en dégager ?
+- Peut-on trouver des moyens de regrouper et catégoriser des jeux en se basant uniquement sur les commentaires d’utilisateur·trice·s et leurs méta-données ?
+- Peut-on distinguer les critères de qualité d'un jeu entre les différentes catégories de jeux du set de données ?
 
 
 ## state of the art du game classification
