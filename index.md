@@ -1,6 +1,7 @@
 ---
 layout: page
-title: There is No Plan Bee Without Them
+title: Steam Reviews Analysis
+subtitle: A EPFL-Unil collaborative project
 bigimg: img/bigImg.png
 ---
 
