@@ -31,9 +31,6 @@ C'est très très le texte
 
 ## Résultats des petites questions statistiques
 
-Average rating of the games in our dataset :
-True     0.890888
-False    0.109112
-
 exemple de iframe :
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="https://indigo-vanguard.github.io/exportations_graph/main/html/honey_graph.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/average_all.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="./html/recivedForFree.html"></iframe>
