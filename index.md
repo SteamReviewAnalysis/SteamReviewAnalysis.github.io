@@ -45,3 +45,5 @@ C'est très très le texte
 
 #### Repartition of tags along each PCA axes
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
+#### 1st dimension games projection
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_1_games.html"></iframe>
