@@ -2,7 +2,7 @@
 layout: page
 title: Steam Reviews Analysis
 subtitle: A EPFL-Unil collaborative project
-bigimg: img/bigImg.png
+bigimg: img/steam_big.jpg
 ---
 
 ## la problématique "finale" (est-ce-qu'elle est sur le drive ou c'est la problématique du rendu intermédiaire ?)
