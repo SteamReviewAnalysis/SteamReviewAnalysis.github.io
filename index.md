@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Steam Reviews Analysis
+bigimg: img/steam_big.jpg
 subtitle: A EPFL-Unil collaborative project
-bigimg: img/bigImg.png
 ---
 
 ## la problématique "finale" (est-ce-qu'elle est sur le drive ou c'est la problématique du rendu intermédiaire ?)
@@ -42,4 +42,9 @@ C'est très très le texte
 #### Average rating from users that own a certain number of games
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="75%" height="500" src="/html/owned.html"></iframe>
 #### Average rating from reviews with a certain number of words
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="75%" height="500" src="/html/words.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
+
+#### Repartition of tags along each PCA axes
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
+#### 1st dimension games projection
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
