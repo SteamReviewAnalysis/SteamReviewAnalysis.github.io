@@ -5,7 +5,7 @@ bigimg: img/steam_big.jpg
 subtitle: A EPFL-Unil collaborative project
 ---
 
-<script src="konami.js">var easter_egg = new Konami('https://indigo-vanguard.github.io');</script>
+{% include konami.html %}
 
 ## la problématique "finale" (est-ce-qu'elle est sur le drive ou c'est la problématique du rendu intermédiaire ?)
 
