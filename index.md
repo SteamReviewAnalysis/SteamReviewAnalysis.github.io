@@ -5,6 +5,8 @@ bigimg: img/steam_big.jpg
 subtitle: A EPFL-Unil collaborative project
 ---
 
+{% include konami.html %}
+
 ## la problématique "finale" (est-ce-qu'elle est sur le drive ou c'est la problématique du rendu intermédiaire ?)
 
 - Pouvons-nous obtenir des informations pertinentes sur la terminologie du jeu vidéo en nous basant uniquement sur des critiques de joueur·euse·s ?
@@ -48,5 +50,3 @@ C'est très très le texte
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
 #### 1st dimension games projection
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
-
-<script>var easter_egg = new Konami('https://indigo-vanguard.github.io');</script>
