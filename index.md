@@ -5,6 +5,8 @@ bigimg: img/steam_big.jpg
 subtitle: A EPFL-Unil collaborative project
 ---
 
+<script src="konami.js">var easter_egg = new Konami('https://indigo-vanguard.github.io');</script>
+
 ## la problématique "finale" (est-ce-qu'elle est sur le drive ou c'est la problématique du rendu intermédiaire ?)
 
 - Pouvons-nous obtenir des informations pertinentes sur la terminologie du jeu vidéo en nous basant uniquement sur des critiques de joueur·euse·s ?
