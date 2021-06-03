@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Steam Reviews Analysis
-bigimg: /img/steam_big.jpg
 cover-img: "img/steam_big.jpg"
 subtitle: A EPFL-Unil collaborative project
 ---
+
+{% include konami.html %}
 
 ## Objectives
 
