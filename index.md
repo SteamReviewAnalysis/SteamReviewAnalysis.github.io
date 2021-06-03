@@ -14,7 +14,7 @@ subtitle: A EPFL-Unil collaborative project
 - Does this classification bare resemblance to the commonly used tags ?
 - Can Machine Learning help define a new classification ?
 
-## state of the art du game classification
+## State of the art du game classification
 
 C'est très très le texte
 
@@ -29,12 +29,13 @@ C'est très très le texte
 
 ## Machine learning tools used: presentation
 
-#### quel model est utilisé
+#### Word embedding
+
+#### K-means
+
+#### PCA
 
 #### quels sont les input et comment ont-ils été sélectionnés/ajouté (tag manuellement ajouté par exemple)
-
-
-## présentation de l'outil embedding
 
 ## Résultats des petites questions statistiques
 (Number of review per category available when hovered upon )
