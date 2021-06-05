@@ -33,15 +33,15 @@ We asked the author for more information on the selection of the games. They sai
 They also added: *"I attempted to collect all the reviews at the time (Jan. 2021) for every title, and as such, no reviews were left out intentionally. I did observe there were some reviews missing but I do not have an exact number. If I remember correctly it was usually something like 1% of a game's reviews that was missing."*
 
 ## Game embeddings
-To transform the huge quantity of reviews into a more usable material, we create game embeddings into a 100-dimensional space. This allows us to later manipulate our 200 games with other machine learning techniques.
-We hope the results of those embeddings, carrying information from the way users talk about their games, allow to reconstruct a classification in the way similar to the way games are tagged.
+To transform the huge quantity of reviews into a more usable material, we created game embeddings in a 100-dimensional space. This allowed us to later manipulate our 200 games with other machine learning techniques.
+We hoped the results of those embeddings, carrying information from the way users talk about their games, would allow to reconstruct a classification similar to the way games are tagged.
 
 <figure>
     <img src="img/Embeddings_method.jpg">
     <figcaption>First, reviews are treated as sentences and used to create sentence embeddings. Each game is then "embedded" as the mean vector formed by its most relevant reviews.</figcaption>
 </figure>
 
-The final game embeddings and similar tag embeddings can be visualized <a href="http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json">here</a>
+The final game embeddings and similarly made tag embeddings can be visualized <a href="http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json">here</a>
 
 
 ## Machine learning tools used: presentation
