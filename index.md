@@ -43,7 +43,13 @@ They also added: *"I attempted to collect all the reviews at the time (Jan. 2021
 #### quels sont les input et comment ont-ils été sélectionnés/ajouté (tag manuellement ajouté par exemple)
 
 ## Résultats des petites questions statistiques
+<div class="withSidenote" markdown="1">
 (Number of review per category available when hovered upon )
+<figure class="sidenote">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/average_all.html"></iframe>
+    <figcaption><em>Figure 1.</em> Average rating of the games in our dataset.</figcaption>
+</figure>
+</div>
 #### Average rating of the games in our dataset
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/average_all.html"></iframe>
 discussions on this high number ?
