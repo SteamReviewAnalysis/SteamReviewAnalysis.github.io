@@ -87,10 +87,12 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on _Ins
 - One comment with emotions: someone played with another one that was passionate, review says it was deeply appreciated
 <div class="withSidenote" markdown="1">
 This game's reviews are, obviously strongly different from the games observed above. _Arma 3_, on the other hand, has mentioned of 'experience', 'depth' and intense feelings in its reviews that can be easily paralleled with the four-games cluster. The content of the reviews is far from identical, but contrary to _Insurgency: Sandstorm_, some elements share similarities. It is highly possible that terms such as 'experience' are too frequent to be used to distinguish games' reviews (such as 'game', for example), explaining these similarities between highly distanced games. In any case, this reinforces the possibility that games similarity based on the embeddings cannot be completely understood.
-<figure class="sidenote">
+
+[//] # (<figure class="sidenote">
     <img src="img/Sad_post.png">
     <figcaption><em>Figure 1.</em> Sidenote test.</figcaption>
-</figure>
+</figure>)
+
 </div>
 
 #### Concluding remarks?
