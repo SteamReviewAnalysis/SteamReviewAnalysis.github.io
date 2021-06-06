@@ -37,6 +37,7 @@ For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics
 {% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 ## Game embeddings
+{% capture details %}
 To transform the huge quantity of reviews into a more usable material, we created game embeddings in a 100-dimensional space. This allowed us to later manipulate our 200 games with other machine learning techniques.
 We hoped the results of those embeddings, carrying information from the way users talk about their games, would allow to reconstruct a classification similar to the way games are tagged.
 <figure>
