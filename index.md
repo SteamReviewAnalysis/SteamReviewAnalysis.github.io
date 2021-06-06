@@ -72,10 +72,26 @@ We isolated in each cluster the tags that were present in all its games to find 
 
 | Cluster | Length | Tags |
 |-------|--------|---------|
-| 1 | 11 | 'User Singleplayer' |
-| 2 | 8 | 'Steam Action', 'User Action', 'User Story Rich' |
-| 3 | 19 | 'User Multiplayer', 'User Singleplayer', 'User Strategy' |
-| 10 | 6 | 'Steam RPG', 'User Adventure', 'User Great Soundtrack', 'User RPG', 'User Singleplayer', 'User Story Rich' |
+| 1 | 11 | User Singleplayer |
+| 2 | 8 | Steam Action, User Action, User Story Rich |
+| 3 | 19 | User Multiplayer, User Singleplayer, User Strategy |
+| 4 | 8 | User Adventure, User Great Soundtrack, User Singleplayer |
+| 5 | 18 | Steam Action, User Action, User Multiplayer |
+| 6 | 11 | - |
+| 7 | 11 | User Co-op, User Multiplayer |
+| 8 | 16 | - |
+| 9 | 10 | Steam Action, User Action, User Co-op, User Shooter, User Singleplayer |
+| 10 | 6 | Steam RPG, User Adventure, User Great Soundtrack, User RPG, User Singleplayer, User Story Rich |
+| 11 | 11 | Steam Action, User Action, User Singleplayer |
+| 12 | 10 | User Action |
+| 13 | 11 | Steam RPG, User RPG |
+| 14 | 7 | User Great Soundtrack, User Singleplayer |
+| 15 | 5 | User Singleplayer |
+| 16 | 6 | Steam Action, User Action, User Adventure, User Difficult, User Great Soundtrack |
+| 17 | 8 | Steam Indie, User Indie, User Open World, User Sandbox, User Singleplayer |
+| 18 | 9 | User Indie, User Singleplayer |
+| 19 | 10 | Steam Simulation |
+| 20 | 5 | User Puzzle |
 
 {% endcapture %}
 {% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
