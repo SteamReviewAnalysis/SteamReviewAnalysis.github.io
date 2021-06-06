@@ -96,9 +96,7 @@ This game's reviews are, obviously strongly different from the games observed ab
 #### quels sont les input et comment ont-ils été sélectionnés/ajouté (tag manuellement ajouté par exemple)
 
 ## Recommendation Statistics
-<details>
-<summary>Click to expand!</summary>
-
+{% capture details %}
 Number of reviews per category available you hover over them.
 
 #### Average rating of the games in our dataset
@@ -124,7 +122,8 @@ More critical when the user owns more games
 #### Average rating from reviews with a certain number of words
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words.
-</details>
+{% endcapture %}
+{% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 #### Repartition of tags along each PCA axes
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
