@@ -69,7 +69,7 @@ We isolated in each cluster the tags that were present in all its games to find 
 
 ## A closer look at the reviews
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
-Four games appear close together in our embeddings: *Night in the Woods*, *Undertale*, *OneShot*, and *To the Moon*, with all of their [**values**] to one another contained between 0.161 and 0.230. [**Add comment about them being in both clusters (12 and 25)**]
+Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**values**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
 
 Looking at the content of their reviews to try and find what patterns may have been found by the program, several elements are striking. The four games' reviews have frequent references to terms referring to:
 - the story in a highly positive way, commenting on the quality of the writing
