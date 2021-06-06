@@ -52,6 +52,9 @@ Although their is a loss of information when reducing a game to the average of i
 We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20 cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
+Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the Civilization and Total War series, and Simulation games of all sorts respectively.
+The cluster 5 is interesting because the games in it don't seem that similar, but still are linked by the fact that they are multiplayer games. 
+Maybe their appartenance to the same cluster is a sign that the multiplayer component is a truly important part of the game that supersedes the other aesthetic and gameplay components in most of the player's discussions. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
 
 ## A closer look at the reviews
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
