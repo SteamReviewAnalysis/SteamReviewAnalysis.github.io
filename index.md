@@ -88,8 +88,7 @@ We isolated in each cluster the tags that were present in all its games to find 
 | 19 | 10 | Steam Simulation |
 | 20 | 5 | User Puzzle |
 
-{% endcapture %}
-{% capture summary %}## How do the clusters compare to the tags classification ?{% endcapture %}{% include details.html %}
+{% endcapture %}{% capture summary %}## How do the clusters compare to the tags classification ?{% endcapture %}{% include details.html %}
 
 {% capture details %}
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
