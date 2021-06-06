@@ -61,7 +61,7 @@ So it appears we can effectively find a coherent classification using only the u
 Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
 {% endcapture %}{% include details.html %}
 
-{% capture summary %}## How do the clusters compare to the tags classification ?{% endcapture %}
+{% capture summary %}## How do the clusters compare to tags ?{% endcapture %}
 {% capture details %}
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
@@ -88,6 +88,9 @@ We isolated in each cluster the tags that were present in all its games to find 
 | 18 | 9 | User Indie, User Singleplayer |
 | 19 | 10 | Steam Simulation |
 | 20 | 5 | User Puzzle |
+The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
+
+We see that most clusters effectively contain games with a couple of tags in common.  
 
 {% endcapture %}{% include details.html %}
 
