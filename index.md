@@ -85,8 +85,13 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on _Ins
 - Comments on performance
 - Mentions of sound but as in realistic rather than beautiful/enjoyable (sound design vs soundtrack)
 - One comment with emotions: someone played with another one that was passionate, review says it was deeply appreciated
-
+<div class="withSidenote" markdown="1">
 This game's reviews are, obviously strongly different from the games observed above. _Arma 3_, on the other hand, has mentioned of 'experience', 'depth' and intense feelings in its reviews that can be easily paralleled with the four-games cluster. The content of the reviews is far from identical, but contrary to _Insurgency: Sandstorm_, some elements share similarities. It is highly possible that terms such as 'experience' are too frequent to be used to distinguish games' reviews (such as 'game', for example), explaining these similarities between highly distanced games. In any case, this reinforces the possibility that games similarity based on the embeddings cannot be completely understood.
+<figure class="sidenote">
+    <img src="img/Sad_post.png">
+    <figcaption><em>Figure 1.</em> Sidenote test.</figcaption>
+</figure>
+</div>
 
 #### Concluding remarks?
 [The program does not "understand English" so hard to visualise how the distances have been calculated, so these two games *may* be connected on elements that are unrelated to the meaning of the reviews; however lack of information as the analysis is made on an overview of only a part of the reviews, especially most helpful ones → not enough knowledge to have strong conclusions, only hypotheses]
