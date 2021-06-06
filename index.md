@@ -69,10 +69,14 @@ Although this grouping is a bit uncertain and not without outliers, it seems tha
 {% capture details %}
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
-<figure>
-    <img src="img/Tags.png">
-    <figcaption>The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.</figcaption>
-</figure>
+
+| Cluster | Length | Tags |
+|-------|--------|---------|
+| 1 | 11 | 'User Singleplayer' |
+| 2 | 8 | 'Steam Action', 'User Action', 'User Story Rich' |
+| 3 | 19 | 'User Multiplayer', 'User Singleplayer', 'User Strategy' |
+| 10 | 6 | 'Steam RPG', 'User Adventure', 'User Great Soundtrack', 'User RPG', 'User Singleplayer', 'User Story Rich' |
+
 {% endcapture %}
 {% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
