@@ -15,11 +15,9 @@ With this project we tried to answer the following questions:
 - Does this classification bare resemblance to the traditionnal categories?
 - More specifically, can Machine Learning help define a new classification?
 
-## State of the art du game classification
-
-C'est très très le texte
 
 ## Dataset presentation
+{% capture details %}
 For this project we used a huge dataset of steam reviews compiled in 2021 available on Kaggle[^1]. 
 
 #### Contents
@@ -35,6 +33,8 @@ They also added regarding the proportion of reviews collected for each selected 
 #### Game tags
 To complete our analysis, we gathered the official tags from steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
 For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/brake or not the different tags was highly subjective but mostly done by one person so whole distinction should at least be coherent.
+{% endcapture %}
+{% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 ## Game embeddings
 To transform the huge quantity of reviews into a more usable material, we created game embeddings in a 100-dimensional space. This allowed us to later manipulate our 200 games with other machine learning techniques.
@@ -47,8 +47,11 @@ The final game embeddings and similarly made tag embeddings can be visualized wi
 With this visualization you can select a game on the point cloud or by typing its name and the program will return a list of the closest games. Keep in mind that the "proximity" is calculated on 100 dimensions, this is why although close in reality, games may not appear next to each other in the 3D projection. 
 The closer games are to each other, the more similar are the ways their respective base of player talk about them. 
 Although their is a loss of information when reducing a game to the average of its review vectors, we hope to still be able to classify the games by this kind of proximity.
+{% endcapture %}
+{% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 ## Classification with K-means clustering
+{% capture details %}
 We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20 cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
@@ -58,16 +61,22 @@ Maybe their appartenance to the same cluster is a sign that the multiplayer comp
 
 So it appears we can effectively find a coherent classification using only the user reviews. 
 Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
+{% endcapture %}
+{% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 ## How do the clusters compare to the tags classification ?
+{% capture details %}
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
 <figure>
     <img src="img/Tags.png">
     <figcaption>The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.</figcaption>
 </figure>
+{% endcapture %}
+{% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 ## A closer look at the reviews
+{% capture details %}
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**values**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
 
@@ -101,16 +110,8 @@ This game's reviews are, obviously strongly different from the games observed ab
 
 #### Concluding remarks?
 [The program does not "understand English" so hard to visualise how the distances have been calculated, so these two games *may* be connected on elements that are unrelated to the meaning of the reviews; however lack of information as the analysis is made on an overview of only a part of the reviews, especially most helpful ones → not enough knowledge to have strong conclusions, only hypotheses]
-
-## Machine learning tools used: presentation
-
-#### Word embedding
-
-#### K-means
-
-#### PCA
-
-#### quels sont les input et comment ont-ils été sélectionnés/ajouté (tag manuellement ajouté par exemple)
+{% endcapture %}
+{% capture summary %}Click to expand!{% endcapture %}{% include details.html %}
 
 ## Recommendation Statistics
 {% capture details %}
