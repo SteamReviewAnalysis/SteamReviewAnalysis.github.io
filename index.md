@@ -62,29 +62,10 @@ Although this grouping is a bit uncertain and not without outliers, it seems tha
 ## How do the clusters compare to the tags classification ?
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
-
-- 1, length 11 : ['User Singleplayer']
-- 2, length 8 : ['Steam Action', 'User Action', 'User Story Rich']
-- 3, length 19 : ['User Multiplayer', 'User Singleplayer', 'User Strategy']
-- 4, length 8 : ['User Adventure', 'User Great Soundtrack', 'User Singleplayer']
-- 5, length 18 : ['Steam Action', 'User Action', 'User Multiplayer']
-- 6, length 11 : []
-- 7, length 11 : ['User Co-op', 'User Multiplayer']
-- 8, length 16 : []
-- 9, length 10 : ['Steam Action', 'User Action', 'User Co-op', 'User Shooter', 'User Singleplayer']
-- 10, length 6 : ['Steam RPG', 'User Adventure', 'User Great Soundtrack', 'User RPG', 'User Singleplayer', 'User Story Rich']
-- 11, length 11 : ['Steam Action', 'User Action', 'User Singleplayer']
-- 12, length 10 : ['User Action']
-- 13, length 11 : ['Steam RPG', 'User RPG']
-- 14, length 7 : ['User Great Soundtrack', 'User Singleplayer']
-- 15, length 5 : ['User Singleplayer']
-- 16, length 6 : ['Steam Action', 'User Action', 'User Adventure', 'User Difficult', 'User Great Soundtrack']
-- 17, length 8 : ['Steam Indie', 'User Indie', 'User Open World', 'User Sandbox', 'User Singleplayer']
-- 18, length 9 : ['User Indie', 'User Singleplayer']
-- 19, length 10 : ['Steam Simulation']
-- 20, length 5 : ['User Puzzle']
-
-The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
+<figure>
+    <img src="img/Tags.png">
+    <figcaption>The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.</figcaption>
+</figure>
 
 ## A closer look at the reviews
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
