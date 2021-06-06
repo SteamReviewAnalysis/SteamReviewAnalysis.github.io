@@ -12,7 +12,7 @@ With this project we tried to answer the following questions:
 
 - Are the game categories used usually relevant?
 - Can we classify games by looking at the way players review them?
-- Does this classification bare resemblance to the traditionnal categories?
+- Does this classification bare resemblance to the traditional categories?
 - More specifically, can Machine Learning help define a new classification?
 
 {% capture summary %}## Dataset presentation{% endcapture %}
@@ -20,9 +20,9 @@ With this project we tried to answer the following questions:
 For this project we used a huge dataset of steam reviews compiled in 2021 available on Kaggle[^1]. 
 
 #### Contents
-It contains 21 million user reviews, 10 million of which are in english, from around 300 different games.
-For each review there is the text and the recommendation, but also additionnal metadata such as the number of games owned by the author,
-the number of review they posted, if they received the game for free or if it was during early access. 
+It contains 21 million user reviews, 10 million of which are in English, from around 300 different games.
+For each review there is the text and the recommendation, but also additional metadata such as the number of games owned by the author,
+the number of reviews they posted, if they received the game for free or if it was during early access. 
 
 #### Source caveats
 Because only a subset of all reviews from Steam were kept for this collection, potential biases were introduced.
@@ -50,14 +50,14 @@ Although their is a loss of information when reducing a game to the average of i
 
 {% capture summary %}## Classification with K-means clustering{% endcapture %}
 {% capture details %}
-We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20 cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
+We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
 Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the Civilization and Total War series, and Simulation games of all sorts respectively.
 The cluster 5 is interesting because the games in it don't seem that similar, but still are linked by the fact that they are multiplayer games. 
-Maybe their appartenance to the same cluster is a sign that the multiplayer component is a truly important part of the game that supersedes the other aesthetic and gameplay components in most of the player's discussions. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
+Maybe their belonging to the same cluster is a sign that the multiplayer component is a truly important part of the game that supersedes the other aesthetic and gameplay components in most of the player's discussions. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
 
-So it appears we can effectively find a coherent classification using only the user reviews. 
+So, it appears we can effectively find a coherent classification using only the user reviews. 
 Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
 {% endcapture %}{% include details.html %}
 
@@ -110,13 +110,13 @@ Looking at the content of their reviews to try and find what patterns may have b
 The four of them have 'Story rich' and 'Great Soundtrack' in their top-3 user-defined tags. This is unsurprising: users reviewing the games and assigning them tags are most probably broadly the same people. Reading these four games' reviews, then, there seems to be lexical patterns justifying the measurements made by the program.
 
 #### Anomaly? _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_
-_Night in the Woods_ is the only game of this cluster having a closer neighbour than the three other in this group: _VA-11 Hall-A: Cyberpunk Bartender Action_. 
+_Night in the Woods_ is the only game of this cluster having a closer neighbour than the three others in this group: _VA-11 Hall-A: Cyberpunk Bartender Action_. 
 Supposedly, this game's reviews should have more in common with *Night in the Woods*'s than this latter would have with the three other games.
 However, 'Story Rich' is the fourth user-defined tag, while 'Great Soundtrack' is absent of the list. Looking at the ten main tags for each game, nothing strikingly separates _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_ from _Undertale_, _To the Moon_ and _OneShot_.
 
 _VA-11 Hall-A: Cyberpunk Bartender Action_'s reviews contains numerous mentions of sex, sexuality and alcohol, and terms such as 'waifu'/'weeb' are recurrent. Although the reviews frequently refer to the story's depth and how it affected the reviewer, terms such as 'feelings', 'sad' or 'happy' are mainly absent.
 
-A possible link between this game and _Night in the Woods_ could be mental health issues, as terms directly related to these appear in the latter's review, and the former has mentions of alcoholism and personal or relational conflicts (in reference to the game's content). _VA-11 Hall-A: Cyberpunk Bartender Action_'s bring more information, as there are frequent mentions of the game's music as being great, as well as comments on beautiful visuals and a focus on storytelling. The writing is pointed at, though for being shallow and boring. These elements brings the game closer to the cluster previously observed but does not give any indication of a specific similarity with *Night in the Woods* (whose negative reviews mostly mention of the developer, Alec Holowka's suicide).
+A possible link between this game and _Night in the Woods_ could be mental health issues, as terms directly related to these appear in the latter's review, and the former has mentions of alcoholism and personal or relational conflicts (in reference to the game's content). _VA-11 Hall-A: Cyberpunk Bartender Action_'s bring more information, as there are frequent mentions of the game's music as being great, as well as comments on beautiful visuals and a focus on storytelling. The writing is pointed at, though for being shallow and boring. These elements bring the game closer to the cluster previously observed but does not give any indication of a specific similarity with *Night in the Woods* (whose negative reviews mostly mention of the developer, Alec Holowka's suicide).
 
 _VA-11 Hall-A: Cyberpunk Bartender Action_ can be understood as an anomaly when comparing these games' reviews. While it is crucial to keep in mind that this analysis is based on a non-exhaustive overview and that striking resemblances between both games may have been overlooked, this suggests that the game embeddings are built on elements that are not as obvious to the human eye as topics and words choice, at least not only. There are most probably strong elements behind the game embeddings that are inaccessible to us.
 
