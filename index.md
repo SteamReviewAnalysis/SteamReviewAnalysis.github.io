@@ -53,6 +53,41 @@ We used K-means to make a simple classification from our game embeddings. After 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
 
+## A closer look at the reviews
+#### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
+Four games appear close together in our embeddings: *Night in the Woods*, *Undertale*, *OneShot*, and *To the Moon*, with all of their [**values**] to one another contained between 0.161 and 0.230. [**Add comment about them being in both clusters (12 and 25)**]
+
+Looking at the content of their reviews to try and find what patterns may have been found by the program, several elements are striking. The four games' reviews have frequent references to terms referring to:
+- the story in a highly positive way, commenting on the quality of the writing
+- emotions, with words such as 'feelings', 'cry', 'sad', 'happy'
+- comments on the games not being focused on gameplay
+- remarks on the high quality of the soundtrack
+- the word 'experience'
+
+The four of them have 'Story rich' and 'Great Soundtrack' in their top-3 user-defined tags. This is unsurprising: users reviewing the games and assigning them tags are most probably broadly the same people. Reading these four games' reviews, then, there seems to be lexical patterns justifying the measurements made by the program.
+
+#### Anomaly? _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_
+_Night in the Woods_ is the only game of this cluster having a closer neighbour than the three other in this group: _VA-11 Hall-A: Cyberpunk Bartender Action_. 
+Supposedly, this game's reviews should have more in common with *Night in the Woods*'s than this latter would have with the three other games.
+However, 'Story Rich' is the fourth user-defined tag, while 'Great Soundtrack' is absent of the list. Looking at the ten main tags for each game, nothing strikingly separates _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_ from _Undertale_, _To the Moon_ and _OneShot_.
+
+_VA-11 Hall-A: Cyberpunk Bartender Action_'s reviews contains numerous mentions of sex, sexuality and alcohol, and terms such as 'waifu'/'weeb' are recurrent. Although the reviews frequently refer to the story's depth and how it affected the reviewer, terms such as 'feelings', 'sad' or 'happy' are mainly absent.
+
+A possible link between this game and _Night in the Woods_ could be mental health issues, as terms directly related to these appear in the latter's review, and the former has mentions of alcoholism and personal or relational conflicts (in reference to the game's content). _VA-11 Hall-A: Cyberpunk Bartender Action_'s bring more information, as there are frequent mentions of the game's music as being great, as well as comments on beautiful visuals and a focus on storytelling. The writing is pointed at, though for being shallow and boring. These elements brings the game closer to the cluster previously observed but does not give any indication of a specific similarity with *Night in the Woods* (whose negative reviews mostly mention of the developer, Alec Holowka's suicide).
+
+_VA-11 Hall-A: Cyberpunk Bartender Action_ can be understood as an anomaly when comparing these games' reviews. While it is crucial to keep in mind that this analysis is based on a non-exhaustive overview and that striking resemblances between both games may have been overlooked, this suggests that the game embeddings are built on elements that are not as obvious to the human eye as topics and words choice, at least not only. There are most probably strong elements behind the game embeddings that are inaccessible to us.
+
+#### Opposites: _Undertale_ vs _Insurgency: Sandstorm_ and _Arma 3_
+Finally, let us compare the 4-games cluster with opposite ones, focusing on _Insurgency: Sandstorm_ (1.541) and _Arma 3_ (1.526), the two most distant from Undertale. The first, classified as an Action game on Steam, has 'very positive' reviews, whose content bears these main topics:
+- Comments on performance
+- Mentions of sound but as in realistic rather than beautiful/enjoyable (sound design vs soundtrack)
+- One comment with emotions: someone played with another one that was passionate, review says it was deeply appreciated
+
+This game's reviews are, obviously strongly different from the games observed above. _Arma 3_, on the other hand, has mentioned of 'experience', 'depth' and intense feelings in its reviews that can be easily paralleled with the four-games cluster. The content of the reviews is far from identical, but contrary to _Insurgency: Sandstorm_, some elements share similarities. It is highly possible that terms such as 'experience' are too frequent to be used to distinguish games' reviews (such as 'game', for example), explaining these similarities between highly distanced games. In any case, this reinforces the possibility that games similarity based on the embeddings cannot be completely understood.
+
+#### Concluding remarks?
+[The program does not "understand English" so hard to visualise how the distances have been calculated, so these two games *may* be connected on elements that are unrelated to the meaning of the reviews; however lack of information as the analysis is made on an overview of only a part of the reviews, especially most helpful ones → not enough knowledge to have strong conclusions, only hypotheses]
+
 ## Machine learning tools used: presentation
 
 #### Word embedding
