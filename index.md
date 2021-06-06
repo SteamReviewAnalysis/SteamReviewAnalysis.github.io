@@ -88,9 +88,10 @@ We isolated in each cluster the tags that were present in all its games to find 
 | 18 | 9 | User Indie, User Singleplayer |
 | 19 | 10 | Steam Simulation |
 | 20 | 5 | User Puzzle |
+
 The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
 
-We see that most clusters effectively contain games with a couple of tags in common.  
+We see that most clusters effectively contain games with a couple of tags in common. 
 
 {% endcapture %}{% include details.html %}
 
