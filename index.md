@@ -95,7 +95,7 @@ We see that most clusters effectively contain games with a couple of tags in com
 It is interesting to see the contrast between the tags and the diversity of some clusters. Coming back to Group 5, we find the common idea of multiplayer action while the rest of the gameplay of these games is relatively varied.
 We could interpret our clustering as the first sort, like selecting the defining feature of each game to place it in a cluster. 
 
-Maybe this is actually the application that can be found to this study :
+Maybe this is an application that can be found to this study :
 Ranking the tags by order of importance to the players. Finding the most defining feature of a game.
 This could help the players orient themselves when looking for a specific type of experience as simply looking for a tag's presence does not carry information about its importance.
 
