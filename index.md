@@ -13,7 +13,7 @@ subtitle: A EPFL-Unil collaborative project
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
 - [Classification with K-means clustering](#classification-with-k-means-clustering)
-- [How do the clusters compare to classical tags?](#how-do-the-clusters-compare-to-classical-tags)
+- [How do the clusters compare to classical tags?](#how-do-the-clusters-compare-to-classical-tags?)
 - [A closer look a the reviews](#a-closer-look-at-the-reviews)
 - [Recommendation statistics](#recommendation-statistics)
 - [References](#references)
