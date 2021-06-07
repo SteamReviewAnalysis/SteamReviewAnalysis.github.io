@@ -60,17 +60,26 @@ blockquote {
 blockquote p:first-child {
   margin-top: 0;
 }
+
+details {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+iframe {
+  frameborder: no;
+  border: 0;
+  marginwidth: 0;
+  marginheight: 0;
+  width: 100%;
+}
+
 hr.small {
   max-width: 6.25rem;
   margin: 1rem auto;
   border-width: 0.25rem;
   border-color: inherit;
   border-radius: 0.1875rem;
-}
-
-details {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
 }
 
 /* fix in-page anchors to not be behind fixed header */
