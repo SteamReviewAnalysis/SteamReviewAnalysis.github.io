@@ -7,6 +7,18 @@ subtitle: A EPFL-Unil collaborative project
 
 {% include konami.html %}
 
+
+## Table of Contents
+- [Objectives](#objectives)
+- [Dataset](#dataset)
+- [Game embeddings](#game-embeddings)
+- [Classification with K-means clustering
+](#classification-with-k-means-clustering)
+- [How do the clusters compare to classical tags?](#how-do-the-clusters-compare-to-classical-tags)
+- [A closer look a the reviews](#a-closer-look-at-the-reviews)
+- [Recommendation statistics](#recommendation-statistics)
+- [References](#references)
+
 ## Objectives
 With this project we tried to answer the following questions:
 
@@ -15,8 +27,7 @@ With this project we tried to answer the following questions:
 - Does this classification bare resemblance to the traditional categories?
 - More specifically, can Machine Learning help define a new classification?
 
-{% capture summary %}## Dataset presentation{% endcapture %}
-{% capture details %}
+## Dataset
 For this project we used a huge dataset of steam reviews compiled in 2021 available on Kaggle[^1]. 
 
 #### Contents
@@ -32,10 +43,9 @@ They also added regarding the proportion of reviews collected for each selected 
 #### Game tags
 To complete our analysis, we gathered the official tags from steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
 For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/brake or not the different tags was highly subjective but mostly done by one person so whole distinction should at least be coherent.
-{% endcapture %}{% include details.html %}
 
-{% capture summary %}## Game embeddings{% endcapture %}
-{% capture details %}
+
+## Game embeddings
 To transform the huge quantity of reviews into a more usable material, we created game embeddings in a 100-dimensional space. This allowed us to later manipulate our 200 games with other machine learning techniques.
 We hoped the results of those embeddings, carrying information from the way users talk about their games, would allow to reconstruct a classification similar to the way games are tagged.
 <figure>
@@ -46,10 +56,10 @@ The final game embeddings and similarly made tag embeddings can be visualized wi
 With this visualization you can select a game on the point cloud or by typing its name and the program will return a list of the closest games. Keep in mind that the "proximity" is calculated on 100 dimensions, this is why although close in reality, games may not appear next to each other in the 3D projection. 
 The closer games are to each other, the more similar are the ways their respective base of player talk about them. 
 Although their is a loss of information when reducing a game to the average of its review vectors, we hope to still be able to classify the games by this kind of proximity.
-{% endcapture %}{% include details.html %}
 
-{% capture summary %}## Classification with K-means clustering{% endcapture %}
-{% capture details %}
+
+## Classification with K-means clustering
+
 We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
@@ -59,10 +69,9 @@ Maybe their belonging to the same cluster is a sign that the multiplayer compone
 
 So, it appears we can effectively find a coherent classification using only the user reviews. 
 Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
-{% endcapture %}{% include details.html %}
 
-{% capture summary %}## How do the clusters compare to traditional tags ?{% endcapture %}
-{% capture details %}
+
+## How do the clusters compare to traditional tags ?
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
 
@@ -99,10 +108,10 @@ Maybe this is an application that can be found to this study :
 Ranking the tags by order of importance to the players. Finding the most defining feature of a game.
 This could help the players orient themselves when looking for a specific type of experience as simply looking for a tag's presence does not carry information about its importance.
 
-{% endcapture %}{% include details.html %}
 
-{% capture summary %}## A closer look at the reviews{% endcapture %}
-{% capture details %}
+
+## A closer look at the reviews
+
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
 _Night in the Woods_ is a game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters. In _Undertale_, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and 'enemies' we can choose to fight or spare, with our main aim being to come back to the surface and in our own world. _OneShot_ is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality. Finally, _To the Moon_ presents two doctors exploring an old man's memories to alter them, so that he can die with his dying wish complet in his memories.
@@ -147,8 +156,8 @@ It is highly possible that terms such as 'experience' are way too frequent to be
 As the program that created the embeddings does not understand English but measures the distances on grounds unknown to us, it is hard to understand _how_ the distances have been calculated and visualise _why_ two games will be close or distant. Consequently, _Night in the Woods_, _Undertale_, _OneShot_ and _To the Moon_ *may* be connected on elements that are unrelated to the meaning of their reviews. However, there is a crucial lack of information in this analysis, as it is based on an overview of only a part of the reviews, especially the ones voted the most helpful, so there is a huge lack of representativity here. No strong conclusions can be drawn here, only hypotheses pointing out the difficulty to pinpoint the elements determining the distance between games.
 {% endcapture %}{% include details.html %}
 
-{% capture summary %}## Recommendation Statistics{% endcapture %}
-{% capture details %}
+## Recommendation statistics
+
 
 Number of reviews per category available you hover over them.
 
@@ -175,8 +184,6 @@ More critical when the user owns more games
 #### Average rating from reviews with a certain number of words
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words.
-
-{% endcapture %}{% include details.html %}
 
 #### Repartition of tags along each PCA axes
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
