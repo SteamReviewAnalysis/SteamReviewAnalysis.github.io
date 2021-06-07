@@ -9,6 +9,7 @@ subtitle: A EPFL-Unil collaborative project
 
 
 ## Table of Contents
+
 - [Objectives](#objectives)
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
