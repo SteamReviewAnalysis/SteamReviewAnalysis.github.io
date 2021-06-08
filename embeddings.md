@@ -7,10 +7,10 @@ This page is all about the <a href="http://projector.tensorflow.org/?config=http
 
 Every point you see correspont to a game. If you click on any of the floating points you will get some information on the closest neighbors in the 100 dimensions space.
 <figure>
-    <img src="img/tensorflow_1.jpg">
+    <img src="img/tensorflow_1.png">
     <figcaption></figcaption>
 </figure>
 <figure>
-    <img src="img/tensorflow_2.jpg">
+    <img src="img/tensorflow_2.png">
     <figcaption></figcaption>
 </figure>
