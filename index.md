@@ -63,41 +63,41 @@ Although their is a loss of information when reducing a game to the average of i
 
 We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
-If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
-Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the Civilization and Total War series, and Simulation games of all sorts respectively.
-The cluster 5 is interesting because the games in it don't seem that similar, but still are linked by the fact that they are multiplayer games. 
-Maybe their belonging to the same cluster is a sign that the multiplayer component is a truly important part of the game that supersedes the other aesthetic and gameplay components in most of the player's discussions. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
+If you know your games well, you see that the classification worked pretty well, at the exception of some oddities. 
+Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the _Civilization_ and _Total War_ series, and Simulation games of all sorts respectively.
+The cluster 5 is interesting as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
+Maybe their belonging to the same cluster is a sign that the multiplayer component is the most salient part of the game, superseding the other aesthetic and gameplay features, in the players' reviews. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
 
-So, it appears we can effectively find a coherent classification using only the user reviews. 
-Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
+So, hypotheses can be found to explain the regrouping of games when more obvious aspects are lacking. It appears that we can effectively find a coherent classification using only the users' reviews. To confidently verify the hypothesis that the fifth cluster gathers games because players pay more attention to the multiplayer feature of these games than the others, a thorough linguistic analysis of the reviews' content is necessary.
+Although this grouping in 20 clusters is slightly uncertain and not without outliers, it seems that the model was overall able to capture enough information from the users' discourse to form a coherent understanding of each game.
 
 
 ## How do the clusters compare to traditional tags ?
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
 
-| Cluster | Length | Tags |
-|-------|--------|---------|
-| 1 | 11 | User Singleplayer |
-| 2 | 8 | Steam Action, User Action, User Story Rich |
-| 3 | 19 | User Multiplayer, User Singleplayer, User Strategy |
-| 4 | 8 | User Adventure, User Great Soundtrack, User Singleplayer |
-| 5 | 18 | Steam Action, User Action, User Multiplayer |
-| 6 | 11 | - |
-| 7 | 11 | User Co-op, User Multiplayer |
-| 8 | 16 | - |
-| 9 | 10 | Steam Action, User Action, User Co-op, User Shooter, User Singleplayer |
-| 10 | 6 | Steam RPG, User Adventure, User Great Soundtrack, User RPG, User Singleplayer, User Story Rich |
-| 11 | 11 | Steam Action, User Action, User Singleplayer |
-| 12 | 10 | User Action |
-| 13 | 11 | Steam RPG, User RPG |
-| 14 | 7 | User Great Soundtrack, User Singleplayer |
-| 15 | 5 | User Singleplayer |
-| 16 | 6 | Steam Action, User Action, User Adventure, User Difficult, User Great Soundtrack |
-| 17 | 8 | Steam Indie, User Indie, User Open World, User Sandbox, User Singleplayer |
-| 18 | 9 | User Indie, User Singleplayer |
-| 19 | 10 | Steam Simulation |
-| 20 | 5 | User Puzzle |
+| Cluster | Length | Steam Genres | User-defined Tags |
+|-------|--------|---------|---------|
+| 1 | 11 | - | User Singleplayer |
+| 2 | 8 | Action | Action, Story Rich |
+| 3 | 19 | - | Multiplayer, Singleplayer, Strategy |
+| 4 | 8 | - | Adventure, Great Soundtrack, Singleplayer |
+| 5 | 18 | Action | Action, Multiplayer |
+| 6 | 11 | - | - |
+| 7 | 11 | - | Co-op, Multiplayer |
+| 8 | 16 | - | - |
+| 9 | 10 | Action | Action, Co-op, Shooter, Singleplayer |
+| 10 | 6 | RPG | Adventure, Great Soundtrack, RPG, Singleplayer, Story Rich |
+| 11 | 11 | Action | Action, Singleplayer |
+| 12 | 10 | - | Action |
+| 13 | 11 | RPG | RPG |
+| 14 | 7 | - | Great Soundtrack, Singleplayer |
+| 15 | 5 | - | Singleplayer |
+| 16 | 6 | Action | Action, Adventure, Difficult, Great Soundtrack |
+| 17 | 8 | Indie | Indie, Open World, Sandbox, Singleplayer |
+| 18 | 9 | - | Indie, Singleplayer |
+| 19 | 10 | Simulation | - |
+| 20 | 5 | - | Puzzle |
 
 The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
 
