@@ -21,14 +21,13 @@ Continue reading for more details and other interesting numbers on Steam reviews
 ## Table of Contents
   
 
-- [Objectives](#objectives)
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
 - [Classification with K-means clustering](#classification-with-k-means-clustering)
 - [Clusters and tags comparison](#clusters-and-tags-comparison)
 - [A closer look a the reviews](#a-closer-look-at-the-reviews)
 - [PCA and classification](#pca-and-classification)
-- [What about the users](#what-about-the-users)
+- [What about the users ?](#what-about-the-users-)
 - [References](#references)
 
 
@@ -292,7 +291,7 @@ Still, we can use these graphics to find the most representative axes for a spec
 
 Sadly that's all we can get out of the PCA analysis, no particular discoveries here...
 
-## What about the users
+## What about the users?
 
 Let's deep-dive into some statistics analysis on the metadata from the database! The number of reviews per category available you hover over them.
 
