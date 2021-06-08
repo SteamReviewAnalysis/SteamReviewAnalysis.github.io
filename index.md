@@ -15,8 +15,9 @@ subtitle: A EPFL-Unil collaborative project
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
 - [Classification with K-means clustering](#classification-with-k-means-clustering)
-- [How do the clusters compare to classical tags?](#how-do-the-clusters-compare-to-classical-tags?)
+- [Clusters and tags comparison](#clusters-and-tags-comparison)
 - [A closer look a the reviews](#a-closer-look-at-the-reviews)
+- [PCA and classification](#pca-and-classification)
 - [Recommendation statistics](#recommendation-statistics)
 - [References](#references)
 
@@ -72,7 +73,7 @@ So, it appears we can effectively find a coherent classification using only the 
 Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
 
 
-## How do the clusters compare to traditional tags ?
+## Clusters and tags comparison
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
 
@@ -214,8 +215,25 @@ It is highly possible that terms such as 'experience' are way too frequent to be
 
 #### Embeddings: a black box
 As the program that created the embeddings does not understand English but measures the distances on grounds unknown to us, it is hard to understand _how_ the distances have been calculated and visualise _why_ two games will be close or distant. Consequently, _Night in the Woods_, _Undertale_, _OneShot_ and _To the Moon_ *may* be connected on elements that are unrelated to the meaning of their reviews. However, there is a crucial lack of information in this analysis, as it is based on an overview of only a part of the reviews, especially the ones voted the most helpful, so there is a huge lack of representativity here. No strong conclusions can be drawn here, only hypotheses pointing out the difficulty to pinpoint the elements determining the distance between games.
-## Recommendation statistics
 
+## PCA and classification
+Sometimes, the PCA decomposition can lead to interesting projection vectors. 
+Out of curiosity, we tried to see if the PCA dimensions had similarities with the tags repartition.
+For each PCA dimension, we ploted the mean position of each tag 
+(Once all games are projected, we calculate the mean position of all games possessing the tag).
+On the second plot, you can visualize each dimension and the position of all tagged games to get a better idea.
+
+#### Repartition of tags along each PCA axes
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
+
+It was expected, but individual axes do not correspond to individual tags and cannot be properly interpreted.
+Still, we can use these graphics to find the most representative axes for a specific tag and better visualize groups of games on tensorflow.
+(Try components 1,2 and 4, and select color by User Story Rich to see most of the Story Rich games clumped together in a corner of the space.)
+
+Sadly that's all we can get out of the PCA analysis, no particular discoveries here...
+
+## Recommendation statistics
 
 Number of reviews per category available you hover over them.
 
@@ -242,11 +260,6 @@ More critical when the user owns more games
 #### Average rating from reviews with a certain number of words
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words.
-
-#### Repartition of tags along each PCA axes
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
 
 ## References
 
