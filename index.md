@@ -23,6 +23,7 @@ classes: wide
 - [References](#references)
 
 ## Objectives
+
 With this project we tried to answer the following questions:
 
 - Are the game categories used usually relevant?
@@ -31,24 +32,29 @@ With this project we tried to answer the following questions:
 - More specifically, can Machine Learning help define a new classification?
 
 ## Dataset
+
 For this project we used a huge dataset of steam reviews compiled in 2021 available on Kaggle[^1]. 
 
 #### Contents
+
 It contains 21 million user reviews, 10 million of which are in English, from around 300 different games.
 For each review there is the text and the recommendation, but also additional metadata such as the number of games owned by the author,
 the number of reviews they posted, if they received the game for free or if it was during early access. 
 
 #### Source caveats
+
 Because only a subset of all reviews from Steam were kept for this collection, potential biases were introduced.
 We asked the author for more information on the selection of the games. They said: *"The games were picked by hand without stringent criteria. I did, however, pay attention to a few aspects and made an effort to include: both mainstream titles as well as indie titles, largely positively reviewed games as well as largely negatively reviewed games, and some older titles alongside newer titles, though you'll find most of the dataset is comprised of games released in 2017 and later."*.
 They also added regarding the proportion of reviews collected for each selected game: *"I attempted to collect all the reviews at the time (Jan. 2021) for every title, and as such, no reviews were left out intentionally. I did observe there were some reviews missing but I do not have an exact number. If I remember correctly it was usually something like 1% of a game's reviews that was missing."*
 
 #### Game tags
+
 To complete our analysis, we gathered the official tags from steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
 For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/brake or not the different tags was highly subjective but mostly done by one person so whole distinction should at least be coherent.
 
 
 ## Game embeddings
+
 To transform the huge quantity of reviews into a more usable material, we created game embeddings in a 100-dimensional space. This allowed us to later manipulate our 200 games with other machine learning techniques.
 We hoped the results of those embeddings, carrying information from the way users talk about their games, would allow to reconstruct a classification similar to the way games are tagged.
 <figure>
@@ -75,7 +81,6 @@ Although this grouping in 20 clusters is slightly uncertain and not without outl
 
 
 ## Clusters and tags comparison
-## How do the clusters compare to traditional tags ?
 
 The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
 To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly signigicant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
@@ -116,6 +121,7 @@ This could help players orient themselves more precisely when looking for a spec
 ## A closer look at the reviews
 
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
+
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
 
 <div class="container">
@@ -189,6 +195,7 @@ Looking at the content of these games' reviews to try and find what patterns may
 The four of them have 'Story rich' and 'Great Soundtrack' in their top-3 user-defined tags. This is unsurprising: users reviewing the games and assigning them tags are most probably broadly the same people. Reading these four games' reviews, then, there seems to be lexical patterns justifying the measurements made by the program.
 
 #### Anomaly? _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_
+
 _Night in the Woods_ is the only game of this cluster having a closer neighbour than the three others in this group: _VA-11 Hall-A: Cyberpunk Bartender Action_. It is a game in which the player incarnates a bartender preparing and serving drinks to different customers while listening to them in a cyberpunk setting.
 
 <div class="container">
@@ -217,6 +224,7 @@ A possible link between this game and _Night in the Woods_ could be mental healt
 _VA-11 Hall-A: Cyberpunk Bartender Action_ can be understood as an anomaly when comparing these games' reviews. While it is crucial to keep in mind that this analysis is based on a non-exhaustive overview and that striking resemblances between both games may have been overlooked, this suggests that the game embeddings are built on elements that are not as obvious to the human eye as topics and words choice, at least not only. There are most probably strong elements behind the game embeddings that are inaccessible to us.
 
 #### Opposites: _Undertale_ vs _Insurgency: Sandstorm_ and _Arma 3_
+
 Finally, let us compare the 4-games cluster with opposite ones, focusing on the two most distant from Undertale: _Insurgency: Sandstorm_ (1.541), an action game according to Steam, and _Arma 3_ (1.526), classified as an action, simulation and strategy game. Both are online multiplayer games in which the players engage in shooting fights against other players.
 
 <div class="container">
@@ -257,9 +265,11 @@ Similarly, _Arma 3_'s reviews contain mainly feedback on the game's content, whi
 It is highly possible that terms such as 'experience' are way too frequent to be used as a way to distinguish games' reviews (like 'game', for example); this would explain the similarities between those highly distanced games. While some potential explanation can be found, slight similarities do exist between strongly opposed games in the embeddings.
 
 #### Embeddings: a black box
+
 As the program that created the embeddings does not understand English but measures the distances on grounds unknown to us, it is hard to understand _how_ the distances have been calculated and visualise _why_ two games will be close or distant. Consequently, _Night in the Woods_, _Undertale_, _OneShot_ and _To the Moon_ *may* be connected on elements that are unrelated to the meaning of their reviews. However, there is a crucial lack of information in this analysis, as it is based on an overview of only a part of the reviews, especially the ones voted the most helpful, so there is a huge lack of representativity here. No strong conclusions can be drawn here, only hypotheses pointing out the difficulty to pinpoint the elements determining the distance between games.
 
 ## PCA and classification
+
 Sometimes, the PCA decomposition can lead to interesting projection vectors. 
 Out of curiosity, we tried to see if the PCA dimensions had similarities with the tags repartition.
 For each PCA dimension, we ploted the mean position of each tag 
@@ -267,6 +277,7 @@ For each PCA dimension, we ploted the mean position of each tag
 On the second plot, you can visualize each dimension and the position of all tagged games to get a better idea.
 
 #### Repartition of tags along each PCA axes
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
 
@@ -281,26 +292,32 @@ Sadly that's all we can get out of the PCA analysis, no particular discoveries h
 Number of reviews per category available you hover over them.
 
 #### Average rating of the games in our dataset
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="200" src="/html/average_all.html"></iframe>
 discussions on this high number ?
 
 #### Average rating of games received for free or not
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/recivedForFree.html"></iframe>
 Surprisingly the same
 
 #### Average rating of games played during early access or not
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/early.html"></iframe>
 A bit more critical when game in early access
 
 #### Average rating from users that posted a certain number of reviews
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/numReview.html"></iframe>
 More critical when the user posts more reviews until a point
 
 #### Average rating from users that own a certain number of games
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/owned.html"></iframe>
 More critical when the user owns more games
 
 #### Average rating from reviews with a certain number of words
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words.
 
