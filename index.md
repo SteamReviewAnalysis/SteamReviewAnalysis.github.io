@@ -62,10 +62,12 @@ The process to obtain these embeddings is quite involved, although we can split 
 
 The final game embeddings, and similarly obtained genre and tag embeddings, are publicly available, and can easily be visualized using the [Tensorflow Embedding Projector](http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json). We heavily recommend taking a look at [**this dedicated page**]({% link embeddings.md %}) for more info.
 
+When looking at these embeddings, we notice that similar games are usually very close together in the embedding space, and that games with specific tags are often grouped together. We find these embeddings to be quite satisfying, and use them throughout our analysis.
+
 
 ## Classification with K-means clustering
 
-We used K-means clustering on the embeddings to partition our games in sensible categories. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number for more variety.
+We now try to see if we can use clustering on these embeddings to group similar games together. To do so, we pick K-Means, a simple yet effective technique for distance-based clustering. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number in order to get more specific clusters, which would be more interesting to analyze. After a bit of trial and error with different seeds and cluster numbers, we settled on a 20-cluster classification that produced fairly satisfying results.
 
 
 <details>
@@ -118,20 +120,25 @@ We used K-means clustering on the embeddings to partition our games in sensible 
 
 The figure below shows the games which are part of each cluster. Use the menu to navigate to the cluster of your choice.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
-If you know your games well, you see that the classification worked pretty well, with the exception of some oddities.
+If you know your games well, you see that the clustering worked quite well, aside from a few oddities.
 
-Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the _Civilization_ and _Total War_ series, and Simulation games of all sorts respectively.
-The cluster 5 is interesting as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
-Maybe their belonging to the same cluster is a sign that the multiplayer component is the most salient part of the game, superseding the other aesthetic and gameplay features, in the players' reviews. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
+Here are some clusters we found particulary satisfying:
+- Cluster 3, which groups grand strategy wargames such as the _Civilization_ and _Total War_ series
+- Cluster 19, which contains simulation games of all sorts
+- Cluster 7, which comprises of many games of different genres and visual styles, but which are all well-known for their strong co-op / multiplayer aspect
 
-So, hypotheses can be found to explain the regrouping of games when more obvious aspects are lacking. It appears that we can effectively find a coherent classification using only the users' reviews. To confidently verify the hypothesis that the fifth cluster gathers games because players pay more attention to the multiplayer feature of these games than the others, a thorough linguistic analysis of the reviews' content is necessary.
+The cluster 5 is interesting as well, as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
+Maybe their belonging to the same cluster is a sign that the multiplayer component is the most salient part of the game, superseding the other aesthetic and gameplay features, in the players' reviews. Alternatively, it could simply be that these games were hard to group with anything else, and their relative proximity in the embedding space resulted in a cluster (as with K-Means clustering, all games must belong to a cluster).
+
+So, hypotheses can be found to explain the regrouping of games when more obvious aspects are lacking. It appears that we can effectively find a coherent classification using only the users' reviews. To confidently verify the hypothesis that the 5th cluster gathers games because players pay more attention to the multiplayer feature of these games than the others, a thorough linguistic analysis of the reviews' content is necessary.
+
 Although this grouping in 20 clusters is slightly uncertain and not without outliers, it seems that the model was overall able to capture enough information from the users' discourse to form a coherent understanding of each game.
 
 
 ## Clusters and tags comparison
 
 The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game?
-To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly significant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **].
+To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly significant. [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **].
 
 | Cluster | Size | Steam Genres | User-defined Tags | Prototype |
 |-------|--------|---------|---------|---------|
