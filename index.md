@@ -71,7 +71,7 @@ We used K-means clustering on the embeddings to partition our games in sensible 
 
 
 
-{% capture summary %}**Click to view clusters** (games ordered alphabetically){% endcapture %} {% capture details %} 
+{% capture summary %}**Click to view clusters** (games ordered alphabetically){% endcapture %}{% capture details %} 
 
 **Cluster 1:**
 Banished, Factorio, Frostpunk, Kenshi, No Man's Sky, Oxygen Not Included, RimWorld, Satisfactory, Subnautica, Super Hexagon, Surviving Mars
