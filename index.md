@@ -118,13 +118,14 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
 _Night in the Woods_ is a game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters. In _Undertale_, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and 'enemies' we can choose to fight or spare, with our main aim being to come back to the surface and in our own world. _OneShot_ is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality. Finally, _To the Moon_ presents two doctors exploring an old man's memories to alter them, so that he can die with his dying wish complet in his memories.
 
 <div class="container">
-    <div class="row" style="background-color: #9999C0;">
+    <div class="row" style="background-color: #0b2c39;">
         <div class="col-lg-6 col-md-6 nopadding">
             <img src="img/nitw.jpg" onmouseover="img/Night.webp';" onmouseout="this.src='img/nitw.jpg';">
         </div>
+        
         <div class="col-lg-6 col-md-6 nopadding" style="color: #FFFFFF;">
             <div class="boxtext">
-                <h2> Night in the Woods </h2>
+                <h2> Night in the Woods </h2><br>
                 Night in the Woods is a single-player adventure game. It was developed by Infinite Fall, a studio founded by game designer Alec Holowka and animator/artist Scott Benson, and published by Finji. It is a story-focused exploration game in which players control a young woman named Mae Borowski, who recently dropped out of college and has returned to her hometown to find unexpected changes. The game was funded via the crowdfunding platform Kickstarter, where it eventually earned over 400% of its US$50,000 funding goal.
             </div>
         </div>
@@ -132,31 +133,30 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
 </div>
 <br>
 <div class="container">
-    <div class="row" style="background-color: #e52935;">
+    <div class="row" style="background-color: #000;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #e52935; color: #FFFFFF;">
             <div class="boxtext">
-                <h2> PS </h2>
-                The Social Democratic Party of Switzerland or Socialist party (Parti Socialiste Suisse in French) is a socialist, progressive and <b>Center-left</b> party. It is the second strongest party in Switzerland. They are in favor of strong
-                public services, environmental policy with climate change mitigation and social equity in an open society. The party is against policies of economic liberalization such as deregulation and capitalism.
+                <h2> Undertale </h2><br>
+                Undertale is a 2D role-playing video game created by indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magic barrier. The player meets various monsters during the journey back to the surface. Some monsters might engage the player in a fight. The combat system involves the player navigating through mini-bullet hell attacks by the opponent. They can opt to pacify or subdue monsters in order to spare them instead of killing them. These choices affect the game, with the dialogue, characters, and story changing based on outcomes.
             </div>
         </div>
-
+        
         <div class="col-lg-6 col-md-6 nopadding">
-            <img src="static/images/WordCloud_2_PS_logo.png" onmouseover="this.src='static/images/PS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PS_logo.png';">
+            <img src="img/under.jpg">
         </div>
     </div>
 </div>
 <br>
 <div class="container">
-    <div class="row" style="background-color: #375191; ">
+    <div class="row" style="background-color: #340b36; ">
         <div class="col-lg-6 col-md-6 nopadding">
-            <img src="static/images/WordCloud_2_PLR_logo.png" onmouseover="this.src='static/images/PLR_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PLR_logo.png';">
+            <img src="img/oneshot.png">
         </div>
+        
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #375191; color: #FFFFFF;">
             <div class="boxtext">
-                <h2> PLR </h2>
-                The Liberals (Parti Libéral-radical in French) is a liberal and <b>right-wing</b> party. It is the third largest party in the Swiss parliament. They call themselves the party of the economy and promote individual responsibility. The
-                party believes that an open society and economic freedom are more conducive to prosperity, rather than a redistributive and regulative state.
+                <h2> Oneshot </h2><br>
+                OneShot is a puzzle and adventure indie game developed by Future Cat and published by Degica. Based on a 2014 free version, it was released for Steam on December 8, 2016 and on itch.io on March 12, 2020. Both its gameplay and plot involve metafictional elements; the game has been described by the developers as having "the world know you exist". Some of the game's puzzles involve interacting with the operating system outside of the game application. The player is a separate character from Niko, the protagonist; in the game's story, both characters arrive in a unfamiliar world which has been deprived of its sunlight, and eventually aim to restore it by replacing its sun, a lightbulb, at the top of a tower.
             </div>
 
         </div>
@@ -164,18 +164,16 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
 </div>
 <br>
 <div class="container">
-    <div class="row" style="background-color: #84b414;">
+    <div class="row" style="background-color: #1b3e63;">
         <div class="col-lg-6 col-md-6 nopadding" style="background-color: #84b414; color: #FFFFFF;">
             <div class="boxtext">
-
-                <h2> Les VERTS </h2>
-                The green Party of Switzerland (Les Verts in French) is a environmentalist, progressive and <b>left-wing</b> party. It is the fourth-largest party in Switzerland. Their main concerns are the protection of the environment and the fight
-                against climate change. The party is often allied with the Socialist Party, sharing common values such as social equity and strong public services.
+                <h2> To the Moon </h2><br>
+                To the Moon is an adventure game developed and published by Freebird Games. It was originally released for Microsoft Windows in November 2011, with ports later being released for Mac OS X, Linux, Android, iOS and Nintendo Switch. The story follows two doctors who offer to fulfill a dying man's last wish using artificial memories. The game features relatively few gameplay mechanics, with the player controlling the two doctors, exploring the narrative and solving puzzles as they try to reconstruct the dying man's memories in order to fulfill his wish.
             </div>
         </div>
 
         <div class="col-lg-6 col-md-6 nopadding">
-            <img src="static/images/WordCloud_2_VERTS_logo.png" onmouseover="this.src='static/images/VERTS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_VERTS_logo.png';">
+            <img src="img/ttm.jpg">
         </div>
     </div>
 </div>
