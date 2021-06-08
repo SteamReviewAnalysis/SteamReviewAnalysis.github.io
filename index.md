@@ -123,7 +123,7 @@ If we were to create a new categorisation system, then, these genres would have 
 
 
 ## A closer look at the reviews
-
+<br>
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
 
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
