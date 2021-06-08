@@ -72,64 +72,65 @@ We used K-means clustering on the embeddings to partition our games in sensible 
 
 
 {% capture summary %}**Click to view clusters** (games ordered alphabetically){% endcapture %}{% capture details %} 
-- **Cluster 1:**
+
+**Cluster 1:**
 Banished, Factorio, Frostpunk, Kenshi, No Man's Sky, Oxygen Not Included, RimWorld, Satisfactory, Subnautica, Super Hexagon, Surviving Mars
 
-- **Cluster 2:**
+**Cluster 2:**
 Assassin's Creed Odyssey, Assassin's Creed Origins, Batman: Arkham Asylum GOTY Edition, BioShock Infinite, Dishonored, Dying Light, Rise of the Tomb Raider, Tomb Raider
 
-- **Cluster 3:**
+**Cluster 3:**
 Age of Empires II (2013), BATTLETECH, Crusader Kings III, Europa Universalis IV, Hearts of Iron IV, Mount & Blade: Warband, Northgard, STAR WARS™ Empire at War: Gold Pack, Sid Meier's Civilization V, Sid Meier's Civilization VI, Stellaris, They Are Billions, Total War Saga: Thrones of Britannia, Total War: ROME II - Emperor Edition, Total War: THREE KINGDOMS, Total War: WARHAMMER, Total War: WARHAMMER II, Warhammer 40,000: Dawn of War III, XCOM 2
 
-- **Cluster 4:**
+**Cluster 4:**
 A Hat in Time, Celeste, DEATH STRANDING, GRIS, Hollow Knight, Little Nightmares, Ori and the Will of the Wisps, To the Moon
 
-- **Cluster 5:**
+**Cluster 5:**
 ARK: Survival Evolved, ATLAS, BATTALION 1944, Black Desert Online, Blackwake, Bless Online, Conan Exiles, Dead by Daylight, For Honor, Hunt: Showdown, Insurgency: Sandstorm, MORDHAU, Nether, PLAYERUNKNOWN'S BATTLEGROUNDS, Rust, SCUM, Tom Clancy's Rainbow Six Siege, Warhammer: Vermintide 2
 
-- **Cluster 6:**
+**Cluster 6:**
 Darkest Dungeon®, Dead Cells, Deep Rock Galactic, Enter the Gungeon, FTL: Faster Than Light, For The King, Hades, Into the Breach, Slay the Spire, Streets of Rogue, Warhammer 40,000: Mechanicus
 
-- **Cluster 7:**
+**Cluster 7:**
 Among Us, BattleBlock Theater, Broforce, Castle Crashers, Duck Game, Golf It!, Human: Fall Flat, Keep Talking and Nobody Explodes, Overcooked! 2, Phasmophobia, Tabletop Simulator
 
-- **Cluster 8:**
+**Cluster 8:**
 Danganronpa 2: Goodbye Despair, Danganronpa: Trigger Happy Havoc, Doki Doki Literature Club, Helltaker, HuniePop, Mirror, Monster Prom, Night in the Woods, OneShot, Papers, Please, South Park™: The Stick of Truth™, The Henry Stickmin Collection, The Walking Dead, The Wolf Among Us, Undertale, VA-11 Hall-A: Cyberpunk Bartender Action
 
-- **Cluster 9:**
+**Cluster 9:**
 Borderlands 3, Call of Duty: Infinite Warfare, Call of Duty: WWII, Far Cry 5, Just Cause 3, Just Cause 4, Saints Row: The Third, Sniper Elite 4, Tom Clancy's Ghost Recon® Wildlands, Watch_Dogs 2
 
-- **Cluster 10:**
+**Cluster 10:**
 FINAL FANTASY XV WINDOWS EDITION, NieR:Automata™, Persona 4 Golden, Tales of Berseria, The Witcher 3: Wild Hunt, Yakuza 0
 
-- **Cluster 11:**
+**Cluster 11:**
 Black Mesa, Crash Bandicoot™ N. Sane Trilogy, DOOM, DOOM Eternal, DUSK, Half-Life, Half-Life 2: Episode Two, Half-Life: Alyx, Outlast, Resident Evil 2, Resident Evil 7 Biohazard
 
-- **Cluster 12:**
+**Cluster 12:**
 Arma 3, Beat Saber, Counter-Strike: Source, Day of Infamy, Garry's Mod, People Playground, Ravenfield, Totally Accurate Battle Simulator, Totally Accurate Battlegrounds, Wallpaper Engine
 
-- **Cluster 13:**
+**Cluster 13:**
 Cube World, Divinity: Original Sin 2, FINAL FANTASY XIV Online, Fallout 4, Kingdom Come: Deliverance, Middle-earth™: Shadow of War™, Mutant Year Zero: Road to Eden, Pathfinder: Kingmaker, Pillars of Eternity II: Deadfire, The Elder Scrolls Online, Vampyr
 
-- **Cluster 14:**
+**Cluster 14:**
 Artifact, Bloons TD 6, Grand Theft Auto V, HITMAN™ 2, PAYDAY 2, The Elder Scrolls V: Skyrim, The Elder Scrolls V: Skyrim Special Edition
 
-- **Cluster 15:**
+**Cluster 15:**
 American Truck Simulator, BeamNG.drive, Euro Truck Simulator 2, Rocket League, The Crew 2
 
-- **Cluster 16:**
+**Cluster 16:**
 DARK SOULS™ III, DARK SOULS™: REMASTERED, DRAGON BALL FighterZ, Monster Hunter: World, Nioh: Complete Edition, Sekiro™: Shadows Die Twice
 
-- **Cluster 17:**
+**Cluster 17:**
 Don't Starve, Don't Starve Together, My Time At Portia, Raft, Slime Rancher, Stardew Valley, Terraria, The Forest
 
-- **Cluster 18:**
+**Cluster 18:**
 Cuphead, Getting Over It with Bennett Foddy, Hotline Miami, Mark of the Ninja, One Finger Death Punch, Shovel Knight: Treasure Trove, Super Meat Boy, The Binding of Isaac, The Binding of Isaac: Rebirth
 
-- **Cluster 19:**
+**Cluster 19:**
 Cities: Skylines, Farming Simulator 19, House Flipper, Jurassic World Evolution, PC Building Simulator, Planet Coaster, The Sims(TM) 3, Two Point Hospital, Youtubers Life, theHunter: Call of the Wild™
 
-- **Cluster 20:**
+**Cluster 20:**
 Baba Is You, Gunpoint, Portal 2, The Room, The Room Two
 
 {% endcapture %}{% include details.html %}
@@ -404,7 +405,7 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 
 
 <details>
-<summary>### Images</summary>
+<summary> ### Images </summary>
 <br>
 - 2017-11-11-170105.jpg (960×544). (2017, November 11). <https://pixeladventurers.com/wp-content/uploads/2017/11/2017-11-11-170105.jpg>
 - 696436-arma-iii-windows-screenshot-moving-in-formation.jpg (1920×1080). (n.d.). Retrieved 8 June 2021, from <https://www.mobygames.com/images/shots/l/696436-arma-iii-windows-screenshot-moving-in-formation.jpg>
