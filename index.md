@@ -24,12 +24,13 @@ classes: wide
 
 ## Objectives
 
-With this project we tried to answer the following questions:
+The number and variety of video games is humongous. As a relatively new medium, video game’s impressive growth attracts numerous scholars from different fields, though in a sometimes frustrating way. Many studies are focused on small scales and lack representativity, while others stay on an abstract level with their data handling.
 
-- Are the game categories used usually relevant?
-- Can we classify games by looking at the way players review them?
-- Does this classification bare resemblance to the traditional categories?
-- More specifically, can Machine Learning help define a new classification?
+**So, what better way to make an interdisciplinary study of video games than to bring humanities, game studies and machine learning together?**
+
+With an enormous dataset of Steam reviews, we question the relevance of game genres, explore the possibility of classifying games based on their reviews, and study the resemblance between this classification and genres as well as user-defined tags.
+Continue reading for more details and other interesting numbers on Steam reviews!
+
 
 ## Dataset
 
