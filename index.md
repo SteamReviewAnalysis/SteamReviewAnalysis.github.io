@@ -19,7 +19,7 @@ classes: wide
 - [Clusters and tags comparison](#clusters-and-tags-comparison)
 - [A closer look a the reviews](#a-closer-look-at-the-reviews)
 - [PCA and classification](#pca-and-classification)
-- [Recommendation statistics](#recommendation-statistics)
+- [What about the users](#what-about-the-users)
 - [References](#references)
 
 ## Objectives
@@ -291,9 +291,9 @@ Still, we can use these graphics to find the most representative axes for a spec
 
 Sadly that's all we can get out of the PCA analysis, no particular discoveries here...
 
-## Recommendation statistics
+## What about the users
 
-In this chapter we will present some basic statistics analysis on the metadata from the database. The number of reviews per category available you hover over them.
+Let's deep-dive into some statistics analysis on the metadata from the database! The number of reviews per category available you hover over them.
 
 #### Average rating of the games in our dataset<br>
 
@@ -325,9 +325,11 @@ We can see that the more someone owns games, the more likely they will be to rat
 #### Average rating from reviews with a certain number of words<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
-The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words, so they are typically longer than positive reviews. 
+The more there are words, the more critical the reviews become.
+We also found that positive reviews had an average of 35 words, with the median lenght being 10 words.
+For negative reviews we have an average of 76 words with a median length of 28 words, so they are typically longer than positive reviews. 
 
-## References
+## References<br>
 
 [^1]: [Kaggle, *Steam Reviews Dataset 2021*, 2021](https://www.kaggle.com/najzeko/steam-reviews-2021)
 
