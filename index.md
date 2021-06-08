@@ -18,8 +18,7 @@ With an enormous dataset of Steam reviews, we question the relevance of game gen
 Continue reading for more details and other interesting numbers on Steam reviews!
 
 
-## Table of Contents
-  <br>
+## Table of Contents <br>
 
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
