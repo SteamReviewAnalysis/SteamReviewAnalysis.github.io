@@ -106,7 +106,7 @@ To answer this question, we isolated for each cluster the genres and tags that w
 | 19 | 10 | Simulation | - | _Farming Simulator 19_ |
 | 20 | 5 | - | Puzzle | _The Room_ |
 
-The length indicates the number of games in each cluster.
+The length indicates the number of games in each cluster, and the prototypes are the most central games in each cluster. Prototypes can be further analysed to try and create a classification system based on representative games, though this goes beyond the aim of our study.
 
 We see that most clusters effectively contain games with a couple of tags or genres in common. 
 It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 
