@@ -3,6 +3,7 @@ layout: page
 title: Steam Reviews Analysis
 cover-img: "img/steam_big.jpg"
 subtitle: A EPFL-Unil collaborative project
+classes: wide
 ---
 
 {% include konami.html %}
@@ -64,41 +65,41 @@ Although their is a loss of information when reducing a game to the average of i
 
 We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
-If you know your games well, you see that the classification worked pretty well, but there are undoubtedly some oddities. 
-Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the Civilization and Total War series, and Simulation games of all sorts respectively.
-The cluster 5 is interesting because the games in it don't seem that similar, but still are linked by the fact that they are multiplayer games. 
-Maybe their belonging to the same cluster is a sign that the multiplayer component is a truly important part of the game that supersedes the other aesthetic and gameplay components in most of the player's discussions. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
+If you know your games well, you see that the classification worked pretty well, at the exception of some oddities. 
+Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the _Civilization_ and _Total War_ series, and Simulation games of all sorts respectively.
+The cluster 5 is interesting as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
+Maybe their belonging to the same cluster is a sign that the multiplayer component is the most salient part of the game, superseding the other aesthetic and gameplay features, in the players' reviews. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
 
-So, it appears we can effectively find a coherent classification using only the user reviews. 
-Although this grouping is a bit uncertain and not without outliers, it seems that the model was able to capture enough information from the user's speech to form a coherent understanding of each game.
+So, hypotheses can be found to explain the regrouping of games when more obvious aspects are lacking. It appears that we can effectively find a coherent classification using only the users' reviews. To confidently verify the hypothesis that the fifth cluster gathers games because players pay more attention to the multiplayer feature of these games than the others, a thorough linguistic analysis of the reviews' content is necessary.
+Although this grouping in 20 clusters is slightly uncertain and not without outliers, it seems that the model was overall able to capture enough information from the users' discourse to form a coherent understanding of each game.
 
 
 ## Clusters and tags comparison
 The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
 We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
 
-| Cluster | Length | Tags |
-|-------|--------|---------|
-| 1 | 11 | User Singleplayer |
-| 2 | 8 | Steam Action, User Action, User Story Rich |
-| 3 | 19 | User Multiplayer, User Singleplayer, User Strategy |
-| 4 | 8 | User Adventure, User Great Soundtrack, User Singleplayer |
-| 5 | 18 | Steam Action, User Action, User Multiplayer |
-| 6 | 11 | - |
-| 7 | 11 | User Co-op, User Multiplayer |
-| 8 | 16 | - |
-| 9 | 10 | Steam Action, User Action, User Co-op, User Shooter, User Singleplayer |
-| 10 | 6 | Steam RPG, User Adventure, User Great Soundtrack, User RPG, User Singleplayer, User Story Rich |
-| 11 | 11 | Steam Action, User Action, User Singleplayer |
-| 12 | 10 | User Action |
-| 13 | 11 | Steam RPG, User RPG |
-| 14 | 7 | User Great Soundtrack, User Singleplayer |
-| 15 | 5 | User Singleplayer |
-| 16 | 6 | Steam Action, User Action, User Adventure, User Difficult, User Great Soundtrack |
-| 17 | 8 | Steam Indie, User Indie, User Open World, User Sandbox, User Singleplayer |
-| 18 | 9 | User Indie, User Singleplayer |
-| 19 | 10 | Steam Simulation |
-| 20 | 5 | User Puzzle |
+| Cluster | Length | Steam Genres | User-defined Tags |
+|-------|--------|---------|---------|
+| 1 | 11 | - | User Singleplayer |
+| 2 | 8 | Action | Action, Story Rich |
+| 3 | 19 | - | Multiplayer, Singleplayer, Strategy |
+| 4 | 8 | - | Adventure, Great Soundtrack, Singleplayer |
+| 5 | 18 | Action | Action, Multiplayer |
+| 6 | 11 | - | - |
+| 7 | 11 | - | Co-op, Multiplayer |
+| 8 | 16 | - | - |
+| 9 | 10 | Action | Action, Co-op, Shooter, Singleplayer |
+| 10 | 6 | RPG | Adventure, Great Soundtrack, RPG, Singleplayer, Story Rich |
+| 11 | 11 | Action | Action, Singleplayer |
+| 12 | 10 | - | Action |
+| 13 | 11 | RPG | RPG |
+| 14 | 7 | - | Great Soundtrack, Singleplayer |
+| 15 | 5 | - | Singleplayer |
+| 16 | 6 | Action | Action, Adventure, Difficult, Great Soundtrack |
+| 17 | 8 | Indie | Indie, Open World, Sandbox, Singleplayer |
+| 18 | 9 | - | Indie, Singleplayer |
+| 19 | 10 | Simulation | - |
+| 20 | 5 | - | Puzzle |
 
 The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
 
@@ -116,7 +117,6 @@ This could help the players orient themselves when looking for a specific type o
 
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
-_Night in the Woods_ is a game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters. In _Undertale_, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and 'enemies' we can choose to fight or spare, with our main aim being to come back to the surface and in our own world. _OneShot_ is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality. Finally, _To the Moon_ presents two doctors exploring an old man's memories to alter them, so that he can die with his dying wish complet in his memories.
 
 <div class="container">
     <div class="row" style="background-color: #0b2c39;">
@@ -127,7 +127,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F3F4;">
             <div class="boxtext">
                 <h2> Night in the Woods </h2><br><br>
-                Night in the Woods is a single-player adventure game. It was developed by Infinite Fall, a studio founded by game designer Alec Holowka and animator/artist Scott Benson, and published by Finji. It is a story-focused exploration game in which players control a young woman named Mae Borowski, who recently dropped out of college and has returned to her hometown to find unexpected changes. The game was funded via the crowdfunding platform Kickstarter, where it eventually earned over 400% of its US$50,000 funding goal.
+                Night in the Woods is a single-player adventure game. It is a story-focused exploration game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters.
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F0F0F0;">
             <div class="boxtext">
                 <h2> Undertale </h2><br><br>
-                Undertale is a 2D role-playing video game created by indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magic barrier. The player meets various monsters during the journey back to the surface. Some monsters might engage the player in a fight. The combat system involves the player navigating through mini-bullet hell attacks by the opponent. They can opt to pacify or subdue monsters in order to spare them instead of killing them. These choices affect the game, with the dialogue, characters, and story changing based on outcomes.
+                In Undertale, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and ‘enemies’ we can choose to fight or spare, with our main aim being to come back to the surface and in our own world.
             </div>
         </div>
         
@@ -157,7 +157,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
             <div class="boxtext">
                 <h2> Oneshot </h2><br><br>
-                OneShot is a puzzle and adventure indie game developed by Future Cat and published by Degica. Based on a 2014 free version, it was released for Steam on December 8, 2016 and on itch.io on March 12, 2020. Both its gameplay and plot involve metafictional elements; the game has been described by the developers as having "the world know you exist". Some of the game's puzzles involve interacting with the operating system outside of the game application. The player is a separate character from Niko, the protagonist; in the game's story, both characters arrive in a unfamiliar world which has been deprived of its sunlight, and eventually aim to restore it by replacing its sun, a lightbulb, at the top of a tower.
+                OneShot is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality.
             </div>
 
         </div>
@@ -169,7 +169,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
                 <h2> To the Moon </h2><br><br>
-                To the Moon is an adventure game developed and published by Freebird Games. It was originally released for Microsoft Windows in November 2011, with ports later being released for Mac OS X, Linux, Android, iOS and Nintendo Switch. The story follows two doctors who offer to fulfill a dying man's last wish using artificial memories. The game features relatively few gameplay mechanics, with the player controlling the two doctors, exploring the narrative and solving puzzles as they try to reconstruct the dying man's memories in order to fulfill his wish.
+                To the Moon presents two doctors exploring an old man’s memories to alter them, so that he can die with his dying wish completed in his memories.
             </div>
         </div>
 
@@ -191,7 +191,21 @@ The four of them have 'Story rich' and 'Great Soundtrack' in their top-3 user-de
 #### Anomaly? _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_
 _Night in the Woods_ is the only game of this cluster having a closer neighbour than the three others in this group: _VA-11 Hall-A: Cyberpunk Bartender Action_. It is a game in which the player incarnates a bartender preparing and serving drinks to different customers while listening to them in a cyberpunk setting.
 
-[**Insert image**]
+<div class="container">
+    <div class="row" style="background-color: #040308; ">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
+            <img src="img/vallhalla.jpg">
+        </div>
+        
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
+            <div class="boxtext">
+                <h2> VA-11 Hall-A: Cyberpunk Bartender Action </h2><br><br>
+                In this game you play a bartender at the eponymous VA-11 HALL-A, a small bar in a dystopian downtown which is said to attract the "most fascinating" of people. Gameplay consists of players making and serving drinks to bar attendees whilst listening to their stories and experiences.
+            </div>
+
+        </div>
+    </div>
+</div>
 
 Supposedly, this game's reviews should have more in common with _Night in the Woods_'s than this latter would have with the three other games. 
 However, 'Story Rich' is the fourth user-defined tag, while 'Great Soundtrack' is absent of the list. Looking at the ten main tags for each game, nothing strikingly separates _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_ from _Undertale_, _To the Moon_ and _OneShot_.
@@ -205,7 +219,36 @@ _VA-11 Hall-A: Cyberpunk Bartender Action_ can be understood as an anomaly when 
 #### Opposites: _Undertale_ vs _Insurgency: Sandstorm_ and _Arma 3_
 Finally, let us compare the 4-games cluster with opposite ones, focusing on the two most distant from Undertale: _Insurgency: Sandstorm_ (1.541), an action game according to Steam, and _Arma 3_ (1.526), classified as an action, simulation and strategy game. Both are online multiplayer games in which the players engage in shooting fights against other players.
 
-[**Insert images**]
+<div class="container">
+    <div class="row" style="background-color: #474236;">
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
+            <div class="boxtext">
+                <h2> Insurgency: Sandstorm </h2><br><br>
+                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle Eastern region, the game depicts a conflict between two factions: "Security" and "Insurgents".
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
+            <img src="img/sandstorm.jpg">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row" style="background-color: #17191d; ">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
+            <img src="img/arma.jpg">
+        </div>
+        
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
+            <div class="boxtext">
+                <h2> Arma 3 </h2><br><br>
+                ARMA 3 is an open-world, realism-based, military tactical shooter video game. The single-player campaign has the player take control of U.S. Army soldier Corporal Ben Kerry. In the single player mode, the player is placed in a variety of situations, from lone wolf infiltration missions to the commanding of large-scale armored operations. This game has a very active modding community.
+            </div>
+
+        </div>
+    </div>
+</div>
 
 _Insurgency: Sandstorm_'s reviews contain recurrent comments on the game's performances, mentions of sound but as in realistic rather than beautiful/enjoyable (sound design vs soundtrack). A review stood out, describing how passionate another player was, and how this intense experience was deeply appreciated by the reviewer.
 This game's reviews are obviously strikingly different from the games observed above. 
