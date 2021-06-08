@@ -15,10 +15,10 @@ The number and variety of video games is humongous. As a relatively new medium, 
 **So, what better way to make an interdisciplinary study of video games than to bring humanities, game studies and machine learning together?**
 
 With an enormous dataset of Steam reviews, we question the relevance of game genres, explore the possibility of classifying games based on their reviews, and study the resemblance between this classification and genres as well as user-defined tags.
-Continue reading for more details and other interesting numbers on Steam reviews!
+Continue reading for more details and other interesting statistics on Steam reviews!
 
 
-## Table of Contents <br>
+## Table of Contents 
 
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
@@ -37,6 +37,7 @@ For this project, we used a large-scale dataset of Steam reviews compiled in 202
 #### Contents
 
 This dataset consists of over 21 million Steam reviews, 10 million of which are in English, from over 300 different games. For each of these reviews, additional metadata is provided, such as the timestamp, the number of users who found that review helpful or funny, whether that game was received for free or during early-access, and other user-related information.
+
 #### Source caveats
 
 Because only a subset of all reviews from Steam were kept for this collection, potential biases were introduced.
@@ -66,7 +67,9 @@ Although there is a loss of information when reducing a game to the average of i
 
 ## Classification with K-means clustering
 
-We used K-means to make a simple classification from our game embeddings. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the silhouette score to determine the good number of clusters, but we also chose a high number for more variety.
+We used K-means clustering to partition our games in sensible categories. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number for more variety. 
+
+The figure below shows the games which are part of each cluster. Use the menu to navigate to the cluster of your choice.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you see that the classification worked pretty well, at the exception of some oddities. 
 Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the _Civilization_ and _Total War_ series, and Simulation games of all sorts respectively.
@@ -82,7 +85,7 @@ Although this grouping in 20 clusters is slightly uncertain and not without outl
 The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
 To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly significant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
 
-| Cluster | Length | Steam Genres | User-defined Tags | Prototype |
+| Cluster | Size | Steam Genres | User-defined Tags | Prototype |
 |-------|--------|---------|---------|---------|
 | 1 | 11 | - | User Singleplayer | _Oxygen Not Included_ |
 | 2 | 8 | Action | Action, Story Rich | _Rise of the Tomb Raider_ |
@@ -105,7 +108,7 @@ To answer this question, we isolated for each cluster the genres and tags that w
 | 19 | 10 | Simulation | - | _Farming Simulator 19_ |
 | 20 | 5 | - | Puzzle | _The Room_ |
 
-The length indicates the number of games in each cluster, and the prototypes are the most central games in each cluster. Prototypes can be further analysed to try and create a classification system based on representative games, though this goes beyond the aim of our study.
+The size indicates the number of games in each cluster, and the prototypes are the most central games in each cluster. Prototypes can be further analysed to try and create a classification system based on representative games, though this goes beyond the aim of our study.
 
 We see that most clusters effectively contain games with a couple of tags or genres in common. 
 It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 
