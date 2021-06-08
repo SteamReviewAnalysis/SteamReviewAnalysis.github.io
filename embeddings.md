@@ -1,5 +1,5 @@
 ---
-Title: 
+Title: Embedding projector
 layout: page
 ---
 
