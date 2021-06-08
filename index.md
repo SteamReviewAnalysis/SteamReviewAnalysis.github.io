@@ -403,7 +403,10 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 
 [^1]: [Kaggle, *Steam Reviews Dataset 2021*, 2021](https://www.kaggle.com/najzeko/steam-reviews-2021)
 
-### Images<br>
+
+<details>
+<summary>### Images</summary>
+<br>
 - 2017-11-11-170105.jpg (960×544). (2017, November 11). <https://pixeladventurers.com/wp-content/uploads/2017/11/2017-11-11-170105.jpg>
 - 696436-arma-iii-windows-screenshot-moving-in-formation.jpg (1920×1080). (n.d.). Retrieved 8 June 2021, from <https://www.mobygames.com/images/shots/l/696436-arma-iii-windows-screenshot-moving-in-formation.jpg>
 - 7551559D53AB49AE0A1D232EA6777497395A7F94 (640×480). (n.d.). Retrieved 8 June 2021, from <https://steamuserimages-a.akamaihd.net/ugc/103980755826651042/7551559D53AB49AE0A1D232EA6777497395A7F94/>
@@ -418,3 +421,5 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 - To-the-moon-cover.cover_large.jpg (600×600). (n.d.). Retrieved 8 June 2021, from <https://images.nintendolife.com/77811ede754b2/to-the-moon-cover.cover_large.jpg>
 - Valhalla.jpg (800×800). (n.d.). Retrieved 8 June 2021, from <https://thegamehoard.com/wp-content/uploads/2018/11/valhalla.jpg>
 - Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8 (362×512). (n.d.). Retrieved 8 June 2021, from <https://lh3.googleusercontent.com/proxy/Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8>
+<br>
+
