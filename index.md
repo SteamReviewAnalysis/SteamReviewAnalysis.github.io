@@ -3,7 +3,7 @@ layout: page
 title: Steam Reviews Analysis
 cover-img: "img/steam_big.jpg"
 subtitle: A EPFL-Unil collaborative project
-full-width: true
+classes: wide
 ---
 
 {% include konami.html %}
@@ -193,7 +193,7 @@ _Night in the Woods_ is the only game of this cluster having a closer neighbour 
 <div class="container">
     <div class="row" style="background-color: #040308; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/vallhalla.png">
+            <img src="img/vallhalla.jpg">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
@@ -236,7 +236,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
 <div class="container">
     <div class="row" style="background-color: #17191d; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/arma.png">
+            <img src="img/arma.jpg">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
