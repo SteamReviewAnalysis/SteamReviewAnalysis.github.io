@@ -23,7 +23,7 @@ The Game embeddings, which will show the point cloud of games.<br>
 The Tag embeddings, which will show the point cloud of some of the most popular user-defined tags.<br>
 The Genre embeddings, which will show the point cloud of the official Steam tags.<br>
 
-- 2 : This drop-down menu allows you to color the games based on their tag or genre.
+- 2 : This drop-down menu allows you to color the games based on their tag or genre. Try coloring games by a tag, and then move the projection around. You'll likely notice that games with a specific tag are often near each other, and that it's sometimes possible to find a view of the projection that nicely separates points with and without a specific tag!
 
 - 3 : This menu allows you to select which axes from PCA you want to show, or even switch to 2D. You can also use other dimensionality reduction techniques like UMAP or t-SNE, don't be shy!
 
