@@ -82,28 +82,28 @@ Although this grouping in 20 clusters is slightly uncertain and not without outl
 The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
 To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly signigicant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
 
-| Cluster | Length | Steam Genres | User-defined Tags |
+| Cluster | Length | Steam Genres | User-defined Tags | Prototype |
 |-------|--------|---------|---------|
-| 1 | 11 | - | User Singleplayer |
-| 2 | 8 | Action | Action, Story Rich |
-| 3 | 19 | - | Multiplayer, Singleplayer, Strategy |
-| 4 | 8 | - | Adventure, Great Soundtrack, Singleplayer |
-| 5 | 18 | Action | Action, Multiplayer |
-| 6 | 11 | - | - |
-| 7 | 11 | - | Co-op, Multiplayer |
-| 8 | 16 | - | - |
-| 9 | 10 | Action | Action, Co-op, Shooter, Singleplayer |
-| 10 | 6 | RPG | Adventure, Great Soundtrack, RPG, Singleplayer, Story Rich |
-| 11 | 11 | Action | Action, Singleplayer |
-| 12 | 10 | - | Action |
-| 13 | 11 | RPG | RPG |
-| 14 | 7 | - | Great Soundtrack, Singleplayer |
-| 15 | 5 | - | Singleplayer |
-| 16 | 6 | Action | Action, Adventure, Difficult, Great Soundtrack |
-| 17 | 8 | Indie | Indie, Open World, Sandbox, Singleplayer |
-| 18 | 9 | - | Indie, Singleplayer |
-| 19 | 10 | Simulation | - |
-| 20 | 5 | - | Puzzle |
+| 1 | 11 | - | User Singleplayer | _Oxygen Not Included_ |
+| 2 | 8 | Action | Action, Story Rich | _Rise of the Tomb Raider_ |
+| 3 | 19 | - | Multiplayer, Singleplayer, Strategy | _Total War Saga: Thrones of Britannia_ |
+| 4 | 8 | - | Adventure, Great Soundtrack, Singleplayer | _GRIS_ |
+| 5 | 18 | Action | Action, Multiplayer | _SCUM_ |
+| 6 | 11 | - | - | _Slay the Spire_ |
+| 7 | 11 | - | Co-op, Multiplayer | _BattleBlock Theater_ |
+| 8 | 16 | - | - | _Danganronpa: Trigger Happy Havoc_ |
+| 9 | 10 | Action | Action, Co-op, Shooter, Singleplayer | _Tom Clancy's Ghost Recon® Wildlands_ |
+| 10 | 6 | RPG | Adventure, Great Soundtrack, RPG, Singleplayer, Story Rich | _Tales of Berseria_ |
+| 11 | 11 | Action | Action, Singleplayer | _Resident Evil 2_ |
+| 12 | 10 | - | Action | _Ravenfield_ |
+| 13 | 11 | RPG | RPG | _Pillars of Eternity II: Deadfire_ |
+| 14 | 7 | - | Great Soundtrack, Singleplayer | _PAYDAY 2_ |
+| 15 | 5 | - | Singleplayer | _Euro Truck Simulator 2_ |
+| 16 | 6 | Action | Action, Adventure, Difficult, Great Soundtrack | _Nioh: Complete Edition_ |
+| 17 | 8 | Indie | Indie, Open World, Sandbox, Singleplayer | _Don't Starve_ |
+| 18 | 9 | - | Indie, Singleplayer | _Super Meat Boy_ |
+| 19 | 10 | Simulation | - | _Farming Simulator 19_ |
+| 20 | 5 | - | Puzzle | _The Room_ |
 
 The length indicates the number of games in each cluster.
 
