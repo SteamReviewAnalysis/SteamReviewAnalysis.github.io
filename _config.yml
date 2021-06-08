@@ -21,8 +21,8 @@ navbar-links:
     #- Phrase2Vec: "https://www.sciencedirect.com/science/article/abs/pii/S0020025519311429"
     #- ThisCatDoesNotExist: "https://thiscatdoesnotexist.com/"
   #About our leader:
-    - Contact: "https://people.epfl.ch/selim.krichane"
-    - Meet: "https://lecafelitteraire.ch/"
+    #- Contact: "https://people.epfl.ch/selim.krichane"
+    #- Meet: "https://lecafelitteraire.ch/"
 
 # --- Logo --- #
 
