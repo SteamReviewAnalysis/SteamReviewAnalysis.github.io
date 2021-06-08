@@ -13,28 +13,22 @@ Every point you see correspont to a game. If you click on any of the floating po
     <figcaption></figcaption>
 </figure>
 
-#### 1 :
-By clicking on this box you can select between 3 datasets :
-- The Game embeddings, that will show the cloud of games.
-- The Tag embeddings, that will show the cloud of some of the most popular user defined tags.
-- The Genre embeddings, that will show the cloud of the official Steam tags.
+- 1 : By clicking on this box you can select between 3 datasets :
+The Game embeddings, that will show the cloud of games.<br>
+The Tag embeddings, that will show the cloud of some of the most popular user defined tags.<br>
+The Genre embeddings, that will show the cloud of the official Steam tags.<br>
+
+- 2 : With the option number 2 you can color the games depending on if they possess the indicated tag in the drop down.
+
+- 3 : In the option 3 you can select with axis from PCA you want to show. You can also use other projection methods like UMAP or T-SNE, don't be shy!
+
+- 4 : At number 4 you can enter a game's name to locate it automatically
 
 <figure>
     <img src="../img/tensorflow_2.png">
     <figcaption></figcaption>
 </figure>
 
-#### 2<br>
-With the option number 2 you can color the games depending on if they possess the indicated tag in the drop down.
+- 5 : When a game is selected, the closest points are displayed in the section 5. Different distance metrics are available, try them both to see which one you understand the best.
 
-#### 3<br>
-In the option 3 you can select with axis from PCA you want to show. You can also use other projection methods like UMAP or T-SNE, don't be shy!
-
-#### 4<br>
-At number 4 you can enter a game's name to locate it automatically
-
-#### 5<br>
-When a game is selected, the closest points are displayed in the section 5. Different distance metrics are available, try them both to see which one you understand the best.
-
-#### 6<br>
-Here is the name of the selected game.
+- 6 : Here is the name of the selected game.
