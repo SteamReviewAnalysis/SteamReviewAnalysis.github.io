@@ -194,7 +194,7 @@ _Night in the Woods_ is the only game of this cluster having a closer neighbour 
 <div class="container">
     <div class="row" style="background-color: #040308; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/vallhalla.jpg" onmouseover="this.src='img/vallhalla_screen.png';" onmouseout="this.src='img/vallhalla.jpg';">
+            <img src="img/vallhalla.jpg" onmouseover="this.src='img/vallhalla_screen.jpg';" onmouseout="this.src='img/vallhalla.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
@@ -229,7 +229,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
         </div>
 
         <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
-            <img src="img/sandstorm.jpg" onmouseover="this.src='img/sandstorm_screen.png';" onmouseout="this.src='img/sandstorm.jpg';">
+            <img src="img/sandstorm.jpg" onmouseover="this.src='img/sandstorm_screen.jpg';" onmouseout="this.src='img/sandstorm.jpg';">
         </div>
     </div>
 </div>
@@ -237,7 +237,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
 <div class="container">
     <div class="row" style="background-color: #17191d; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/arma.jpg" onmouseover="this.src='img/arma_screen.png';" onmouseout="this.src='img/arma.jpg';">
+            <img src="img/arma.jpg" onmouseover="this.src='img/arma_screen.jpg';" onmouseout="this.src='img/arma.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
