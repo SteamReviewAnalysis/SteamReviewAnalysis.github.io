@@ -59,7 +59,7 @@ We hoped the results of those embeddings, carrying information from the way user
     <figcaption>First, reviews are treated as sentences and used to create sentence embeddings. Each game is then "embedded" as the mean vector formed by its most relevant reviews.</figcaption>
 </figure>
 The final game embeddings and similarly made tag embeddings can be visualized with <a href="http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json">Tensorflow</a>.
-Here is a small page explaining how the <a href="embeddings.html">Embedding Projector</a> works.
+Here is a small page explaining how the Embedding Projector works.
 With this visualization you can select a game on the point cloud or by typing its name and the program will return a list of the closest games. Keep in mind that the "proximity" is calculated on 100 dimensions, this is why although close in reality, games may not appear next to each other in the 3D projection. 
 The closer games are to each other, the more similar are the ways their respective base of player talk about them. 
 Although there is a loss of information when reducing a game to the average of its review vectors, we hope to still be able to classify the games by this kind of proximity.
@@ -106,7 +106,7 @@ To answer this question, we isolated for each cluster the genres and tags that w
 | 19 | 10 | Simulation | - | _Farming Simulator 19_ |
 | 20 | 5 | - | Puzzle | _The Room_ |
 
-The length indicates the number of games in each cluster.
+The length indicates the number of games in each cluster, and the prototypes are the most central games in each cluster. Prototypes can be further analysed to try and create a classification system based on representative games, though this goes beyond the aim of our study.
 
 We see that most clusters effectively contain games with a couple of tags or genres in common. 
 It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 

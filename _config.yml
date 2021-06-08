@@ -15,7 +15,7 @@ author: M. Corboz - H. Sprumont - D. Mizrahi - L. Duggan - D. Khatanassian
 
 navbar-links:
 
-  #Problematic: "problematic"
+  Embeddings Projector: "embeddings"
   #Results: "http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/a4d441cb69411d95f52826ce26a567e8/raw/442f139b864d35cd287e948b65832e3caa6d4005/projector_config.json"
   #Documentation:
     #- Phrase2Vec: "https://www.sciencedirect.com/science/article/abs/pii/S0020025519311429"
