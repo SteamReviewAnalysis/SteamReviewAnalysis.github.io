@@ -33,14 +33,11 @@ With this project we tried to answer the following questions:
 
 ## Dataset
 
-For this project we used a huge dataset of steam reviews compiled in 2021 available on Kaggle[^1]. 
+For this project, we used a large-scale dataset of Steam reviews compiled in 2021, which is openly available on Kaggle[^1]. 
 
 #### Contents
 
-It contains 21 million user reviews, 10 million of which are in English, from around 300 different games.
-For each review there is the text and the recommendation, but also additional metadata such as the number of games owned by the author,
-the number of reviews they posted, if they received the game for free or if it was during early access. 
-
+This dataset consists of over 21 million Steam reviews, 10 million of which are in English, from over 300 different games. For each of these reviews, additional metadata is provided, such as the timestamp, the number of users who found that review helpful or funny, whether that game was received for free or during early-access, and other user-related information.
 #### Source caveats
 
 Because only a subset of all reviews from Steam were kept for this collection, potential biases were introduced.
@@ -49,8 +46,8 @@ They also added regarding the proportion of reviews collected for each selected 
 
 #### Game tags
 
-To complete our analysis, we gathered the official tags from steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
-For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/brake or not the different tags was highly subjective but mostly done by one person so whole distinction should at least be coherent.
+To complete our analysis, we gathered the official tags from Steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
+For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/break the different tags or not was highly subjective but mostly done by one person so whole distinction should at least be coherent. The games and their tags are publicly accessible [here](https://www.notion.so/ae461477418242858455d878c7647f5f?v=da64bc60b507481483510043f76169c3).
 
 
 ## Game embeddings
