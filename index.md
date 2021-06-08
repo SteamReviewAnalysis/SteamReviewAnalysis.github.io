@@ -16,8 +16,9 @@ classes: wide
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
 - [Classification with K-means clustering](#classification-with-k-means-clustering)
-- [How do the clusters compare to classical tags?](#how-do-the-clusters-compare-to-classical-tags?)
+- [Clusters and tags comparison](#clusters-and-tags-comparison)
 - [A closer look a the reviews](#a-closer-look-at-the-reviews)
+- [PCA and classification](#pca-and-classification)
 - [Recommendation statistics](#recommendation-statistics)
 - [References](#references)
 
@@ -73,9 +74,11 @@ So, hypotheses can be found to explain the regrouping of games when more obvious
 Although this grouping in 20 clusters is slightly uncertain and not without outliers, it seems that the model was overall able to capture enough information from the users' discourse to form a coherent understanding of each game.
 
 
+## Clusters and tags comparison
 ## How do the clusters compare to traditional tags ?
-The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
-We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
+
+The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
+To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly signigicant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
 
 | Cluster | Length | Steam Genres | User-defined Tags |
 |-------|--------|---------|---------|
@@ -100,16 +103,14 @@ We isolated in each cluster the tags that were present in all its games to find 
 | 19 | 10 | Simulation | - |
 | 20 | 5 | - | Puzzle |
 
-The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
+The length indicates the number of games in each cluster.
 
-We see that most clusters effectively contain games with a couple of tags in common. 
-It is interesting to see the contrast between the tags and the diversity of some clusters. Coming back to Group 5, we find the common idea of multiplayer action while the rest of the gameplay of these games is relatively varied.
-We could interpret our clustering as the first sort, like selecting the defining feature of each game to place it in a cluster. 
+We see that most clusters effectively contain games with a couple of tags or genres in common. 
+It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 
+Following it, We could interpret our clustering as a model selecting the defining feature(s) of each game to then place them in corresponding clusters. Once again, this idea should be further explored by looking at the reviews and find whether the characteristics associated with the genres and tags standing out for each cluster do in fact appear significantly more than other patterns in the players' discourse.
 
-Maybe this is an application that can be found to this study :
-Ranking the tags by order of importance to the players. Finding the most defining feature of a game.
-This could help the players orient themselves when looking for a specific type of experience as simply looking for a tag's presence does not carry information about its importance.
-
+Such results, with a more thorough analysis, could help us determine the most defining feature(s) of a game and classify genres and tags according to the value players assign to them in a game.
+This could help players orient themselves more precisely when looking for a specific type of experience, contrary to simply search for a tag's or genre's presence in a game, which does not indicate how important this characterstic will be in said game.
 
 
 ## A closer look at the reviews
@@ -257,8 +258,25 @@ It is highly possible that terms such as 'experience' are way too frequent to be
 
 #### Embeddings: a black box
 As the program that created the embeddings does not understand English but measures the distances on grounds unknown to us, it is hard to understand _how_ the distances have been calculated and visualise _why_ two games will be close or distant. Consequently, _Night in the Woods_, _Undertale_, _OneShot_ and _To the Moon_ *may* be connected on elements that are unrelated to the meaning of their reviews. However, there is a crucial lack of information in this analysis, as it is based on an overview of only a part of the reviews, especially the ones voted the most helpful, so there is a huge lack of representativity here. No strong conclusions can be drawn here, only hypotheses pointing out the difficulty to pinpoint the elements determining the distance between games.
-## Recommendation statistics
 
+## PCA and classification
+Sometimes, the PCA decomposition can lead to interesting projection vectors. 
+Out of curiosity, we tried to see if the PCA dimensions had similarities with the tags repartition.
+For each PCA dimension, we ploted the mean position of each tag 
+(Once all games are projected, we calculate the mean position of all games possessing the tag).
+On the second plot, you can visualize each dimension and the position of all tagged games to get a better idea.
+
+#### Repartition of tags along each PCA axes
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
+
+It was expected, but individual axes do not correspond to individual tags and cannot be properly interpreted.
+Still, we can use these graphics to find the most representative axes for a specific tag and better visualize groups of games on tensorflow.
+(Try components 1,2 and 4, and select color by User Story Rich to see most of the Story Rich games clumped together in a corner of the space.)
+
+Sadly that's all we can get out of the PCA analysis, no particular discoveries here...
+
+## Recommendation statistics
 
 Number of reviews per category available you hover over them.
 
@@ -285,11 +303,6 @@ More critical when the user owns more games
 #### Average rating from reviews with a certain number of words
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words.
-
-#### Repartition of tags along each PCA axes
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
 
 ## References
 
