@@ -119,13 +119,13 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
 
 <div class="container">
     <div class="row" style="background-color: #0b2c39;">
-        <div class="col-lg-6 col-md-6 nopadding">
-            <img src="img/nitw.jpg" onmouseover="img/Night.webp';" onmouseout="this.src='img/nitw.jpg';">
+        <div style="padding-left: 0;">
+            <img src="img/nitw.jpg" onmouseover="img/Night.png';" onmouseout="this.src='img/nitw.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F3F4;">
             <div class="boxtext">
-                <h2> Night in the Woods </h2><br>
+                <h2> Night in the Woods </h2><br><br>
                 Night in the Woods is a single-player adventure game. It was developed by Infinite Fall, a studio founded by game designer Alec Holowka and animator/artist Scott Benson, and published by Finji. It is a story-focused exploration game in which players control a young woman named Mae Borowski, who recently dropped out of college and has returned to her hometown to find unexpected changes. The game was funded via the crowdfunding platform Kickstarter, where it eventually earned over 400% of its US$50,000 funding goal.
             </div>
         </div>
@@ -136,12 +136,12 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
     <div class="row" style="background-color: #000;">
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F0F0F0;">
             <div class="boxtext">
-                <h2> Undertale </h2><br>
+                <h2> Undertale </h2><br><br>
                 Undertale is a 2D role-playing video game created by indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magic barrier. The player meets various monsters during the journey back to the surface. Some monsters might engage the player in a fight. The combat system involves the player navigating through mini-bullet hell attacks by the opponent. They can opt to pacify or subdue monsters in order to spare them instead of killing them. These choices affect the game, with the dialogue, characters, and story changing based on outcomes.
             </div>
         </div>
         
-        <div class="col-lg-6 col-md-6 nopadding">
+        <div style="padding-right: 0;">
             <img src="img/under.jpg">
         </div>
     </div>
@@ -149,13 +149,13 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
 <br>
 <div class="container">
     <div class="row" style="background-color: #340b36; ">
-        <div class="col-lg-6 col-md-6 nopadding">
+        <div style="padding-left: 0;">
             <img src="img/oneshot.png">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
             <div class="boxtext">
-                <h2> Oneshot </h2><br>
+                <h2> Oneshot </h2><br><br>
                 OneShot is a puzzle and adventure indie game developed by Future Cat and published by Degica. Based on a 2014 free version, it was released for Steam on December 8, 2016 and on itch.io on March 12, 2020. Both its gameplay and plot involve metafictional elements; the game has been described by the developers as having "the world know you exist". Some of the game's puzzles involve interacting with the operating system outside of the game application. The player is a separate character from Niko, the protagonist; in the game's story, both characters arrive in a unfamiliar world which has been deprived of its sunlight, and eventually aim to restore it by replacing its sun, a lightbulb, at the top of a tower.
             </div>
 
@@ -167,12 +167,12 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
     <div class="row" style="background-color: #1b3e63;">
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
-                <h2> To the Moon </h2><br>
+                <h2> To the Moon </h2><br><br>
                 To the Moon is an adventure game developed and published by Freebird Games. It was originally released for Microsoft Windows in November 2011, with ports later being released for Mac OS X, Linux, Android, iOS and Nintendo Switch. The story follows two doctors who offer to fulfill a dying man's last wish using artificial memories. The game features relatively few gameplay mechanics, with the player controlling the two doctors, exploring the narrative and solving puzzles as they try to reconstruct the dying man's memories in order to fulfill his wish.
             </div>
         </div>
 
-        <div class="col-lg-6 col-md-6 nopadding">
+        <div style="padding-right: 0;">
             <img src="img/ttm.jpg">
         </div>
     </div>
