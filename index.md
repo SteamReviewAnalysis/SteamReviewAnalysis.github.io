@@ -117,7 +117,68 @@ This could help the players orient themselves when looking for a specific type o
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
 _Night in the Woods_ is a game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters. In _Undertale_, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and 'enemies' we can choose to fight or spare, with our main aim being to come back to the surface and in our own world. _OneShot_ is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality. Finally, _To the Moon_ presents two doctors exploring an old man's memories to alter them, so that he can die with his dying wish complet in his memories.
 
-[**INSERT IMAGES**]
+<div class="container">
+    <div class="row" style="background-color: #9999C0;">
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="img/nitw.jpg" onmouseover="img/Night.webp';" onmouseout="this.src='img/nitw.jpg';">
+        </div>
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #FFFFFF;">
+            <div class="boxtext">
+                <h2> Night in the Woods </h2>
+                Night in the Woods is a single-player adventure game. It was developed by Infinite Fall, a studio founded by game designer Alec Holowka and animator/artist Scott Benson, and published by Finji. It is a story-focused exploration game in which players control a young woman named Mae Borowski, who recently dropped out of college and has returned to her hometown to find unexpected changes. The game was funded via the crowdfunding platform Kickstarter, where it eventually earned over 400% of its US$50,000 funding goal.
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row" style="background-color: #e52935;">
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #e52935; color: #FFFFFF;">
+            <div class="boxtext">
+                <h2> PS </h2>
+                The Social Democratic Party of Switzerland or Socialist party (Parti Socialiste Suisse in French) is a socialist, progressive and <b>Center-left</b> party. It is the second strongest party in Switzerland. They are in favor of strong
+                public services, environmental policy with climate change mitigation and social equity in an open society. The party is against policies of economic liberalization such as deregulation and capitalism.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_PS_logo.png" onmouseover="this.src='static/images/PS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PS_logo.png';">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row" style="background-color: #375191; ">
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_PLR_logo.png" onmouseover="this.src='static/images/PLR_logo.png';" onmouseout="this.src='static/images/WordCloud_2_PLR_logo.png';">
+        </div>
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #375191; color: #FFFFFF;">
+            <div class="boxtext">
+                <h2> PLR </h2>
+                The Liberals (Parti Libéral-radical in French) is a liberal and <b>right-wing</b> party. It is the third largest party in the Swiss parliament. They call themselves the party of the economy and promote individual responsibility. The
+                party believes that an open society and economic freedom are more conducive to prosperity, rather than a redistributive and regulative state.
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row" style="background-color: #84b414;">
+        <div class="col-lg-6 col-md-6 nopadding" style="background-color: #84b414; color: #FFFFFF;">
+            <div class="boxtext">
+
+                <h2> Les VERTS </h2>
+                The green Party of Switzerland (Les Verts in French) is a environmentalist, progressive and <b>left-wing</b> party. It is the fourth-largest party in Switzerland. Their main concerns are the protection of the environment and the fight
+                against climate change. The party is often allied with the Socialist Party, sharing common values such as social equity and strong public services.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 nopadding">
+            <img src="static/images/WordCloud_2_VERTS_logo.png" onmouseover="this.src='static/images/VERTS_logo.png';" onmouseout="this.src='static/images/WordCloud_2_VERTS_logo.png';">
+        </div>
+    </div>
+</div>
 
 Looking at the content of these games' reviews to try and find what patterns may have been found by the program, several elements are striking. The four games' reviews have frequent references to terms referring to:
 - the story in a highly positive way, commenting on the quality of the writing
