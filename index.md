@@ -276,7 +276,7 @@ For each PCA dimension, we ploted the mean position of each tag
 (Once all games are projected, we calculate the mean position of all games possessing the tag).
 On the second plot, you can visualize each dimension and the position of all tagged games to get a better idea.
 
-#### Repartition of tags along each PCA axes
+#### Repartition of tags along each PCA axes  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/tag_repartition.html"></iframe>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
@@ -291,32 +291,32 @@ Sadly that's all we can get out of the PCA analysis, no particular discoveries h
 
 Number of reviews per category available you hover over them.
 
-#### Average rating of the games in our dataset
+#### Average rating of the games in our dataset  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="200" src="/html/average_all.html"></iframe>
 discussions on this high number ?
 
-#### Average rating of games received for free or not
+#### Average rating of games received for free or not  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/recivedForFree.html"></iframe>
 Surprisingly the same
 
-#### Average rating of games played during early access or not
+#### Average rating of games played during early access or not  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/early.html"></iframe>
 A bit more critical when game in early access
 
-#### Average rating from users that posted a certain number of reviews
+#### Average rating from users that posted a certain number of reviews  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/numReview.html"></iframe>
 More critical when the user posts more reviews until a point
 
-#### Average rating from users that own a certain number of games
+#### Average rating from users that own a certain number of games  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/owned.html"></iframe>
 More critical when the user owns more games
 
-#### Average rating from reviews with a certain number of words
+#### Average rating from reviews with a certain number of words  
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become. We also found that positive reviews had an average of 35 words, with the median lenght being 10 words. For negative reviews we have an average of 76 words with a median length of 28 words.
