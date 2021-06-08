@@ -8,6 +8,15 @@ classes: wide
 
 {% include konami.html %}
 
+## Video Gamez r kool
+
+The number and variety of video games is humongous. As a relatively new medium, video game’s impressive growth attracts numerous scholars from different fields, though in a sometimes frustrating way. Many studies are focused on small scales and lack representativity, while others stay on an abstract level with their data handling.
+
+**So, what better way to make an interdisciplinary study of video games than to bring humanities, game studies and machine learning together?**
+
+With an enormous dataset of Steam reviews, we question the relevance of game genres, explore the possibility of classifying games based on their reviews, and study the resemblance between this classification and genres as well as user-defined tags.
+Continue reading for more details and other interesting numbers on Steam reviews!
+
 
 ## Table of Contents
   
@@ -21,15 +30,6 @@ classes: wide
 - [PCA and classification](#pca-and-classification)
 - [What about the users](#what-about-the-users)
 - [References](#references)
-
-## Objectives
-
-The number and variety of video games is humongous. As a relatively new medium, video game’s impressive growth attracts numerous scholars from different fields, though in a sometimes frustrating way. Many studies are focused on small scales and lack representativity, while others stay on an abstract level with their data handling.
-
-**So, what better way to make an interdisciplinary study of video games than to bring humanities, game studies and machine learning together?**
-
-With an enormous dataset of Steam reviews, we question the relevance of game genres, explore the possibility of classifying games based on their reviews, and study the resemblance between this classification and genres as well as user-defined tags.
-Continue reading for more details and other interesting numbers on Steam reviews!
 
 
 ## Dataset
