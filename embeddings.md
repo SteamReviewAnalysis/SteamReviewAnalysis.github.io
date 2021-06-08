@@ -27,14 +27,19 @@ You can move around the projection by clicking and dragging across the central s
 
 - 3 : This menu allows you to select which axes from PCA you want to show, or even switch to 2D. You can also use other dimensionality reduction techniques like UMAP or t-SNE, don't be shy!
 
-- 4 : This field allows you to enter a game's name to locate it automatically.
+- 4 : This field allows you to enter a game's name to locate it automatically. If you're out of inspiration, here are some varied and interesting games to look up:
+    - [Among Us](https://store.steampowered.com/app/945360/Among_Us/): a wildly popular social deduction game
+    - [Euro Truck Simulator 2](https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/): an open-world truck simulation game
+    - [Hollow Knight](https://store.steampowered.com/app/367520/Hollow_Knight/): a highly-praised 2D indie action-adventure game
+    -  [Call of Duty: Infinite Warfare](https://store.steampowered.com/app/292730/Call_of_Duty_Infinite_Warfare/): a high-budget first-person shooter game
+
 
 <figure>
     <img src="../img/tensorflow_2.png">
     <figcaption></figcaption>
 </figure>
 
-- 5 : When a game is selected, the closest points are displayed in this section. Different distance metrics are available, try them both to see which one you understand the best.
+- 5 : When a game is selected, the closest points are displayed in this section. Different distance metrics are available, try them both to see which one you understand the best. 
 
 - 6 : If you click on this rectangle when a point is selected, there will be a drop-down showing which tags (from Steam or the users) are attributed to this game.
 

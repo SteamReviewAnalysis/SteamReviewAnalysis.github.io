@@ -54,14 +54,13 @@ For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics
 
 Given the massive quantity of reviews, one key challenge is to condense all the information contained in a useful way. To do so, we tried to obtain numerical representations for each game, which we call **game embeddings**. Ideally, these embeddings would capture key information about the games and place conceptually similar games close together in the embedding space.
 
-The process to obtain these embeddings is quite involved, although we can split it in two key steps which are summarized in the figure below.
+The process to obtain these embeddings is quite involved, although we can split it in two key steps: First, we take the textual content from all the English reviews and use it to train a  <a href="https://github.com/epfml/sent2vec">Sent2vec model</a> to obtain 100-dimensional sentence embeddings. Then, we take the 1000 most helpful reviews for each of the 200 most reviewed games, feed them to the trained Sent2vec model, and average the resulting sentence embeddings for each game. This gives us a 100-dimensional embedding for each of the top 200 most reviewed games in our dataset. This process is summarized in the figure below.
 
 <figure>
     <img src="img/Embeddings_method.jpg">
-    <figcaption>First, we take the textual content from all the English reviews and use it to train a  <a href="https://github.com/epfml/sent2vec">Sent2vec model</a> to obtain 100-dimensional sentence embeddings. Then, we take the 1000 most helpful reviews for each of the 200 most reviewed games, feed them to the trained Sent2vec model, and average the resulting sentence embeddings for each game. This gives us a 100-dimensional embedding for each of the top 200 most reviewed games in our dataset.</figcaption>
 </figure>
 
-The final game embeddings, and similarly obtained genre and tag embeddings, are publicly available, and can easily be visualized using the [Tensorflow Embedding Projector](http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json), and are also openly available. We heavily recommend taking a look at [**this dedicated page**]({% link embeddings.md %}) for more info.
+The final game embeddings, and similarly obtained genre and tag embeddings, are publicly available, and can easily be visualized using the [Tensorflow Embedding Projector](http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json). We heavily recommend taking a look at [**this dedicated page**]({% link embeddings.md %}) for more info.
 
 
 ## Classification with K-means clustering
