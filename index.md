@@ -19,7 +19,7 @@ Continue reading for more details and other interesting numbers on Steam reviews
 
 
 ## Table of Contents
-  
+  <br>
 
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
