@@ -3,6 +3,7 @@ layout: page
 title: Steam Reviews Analysis
 cover-img: "img/steam_big.jpg"
 subtitle: A EPFL-Unil collaborative project
+full-width: true
 ---
 
 {% include konami.html %}
@@ -115,7 +116,6 @@ This could help the players orient themselves when looking for a specific type o
 
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
 Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
-_Night in the Woods_ is a game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters. In _Undertale_, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and 'enemies' we can choose to fight or spare, with our main aim being to come back to the surface and in our own world. _OneShot_ is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality. Finally, _To the Moon_ presents two doctors exploring an old man's memories to alter them, so that he can die with his dying wish complet in his memories.
 
 <div class="container">
     <div class="row" style="background-color: #0b2c39;">
@@ -126,7 +126,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F3F4;">
             <div class="boxtext">
                 <h2> Night in the Woods </h2><br><br>
-                Night in the Woods is a single-player adventure game. It was developed by Infinite Fall, a studio founded by game designer Alec Holowka and animator/artist Scott Benson, and published by Finji. It is a story-focused exploration game in which players control a young woman named Mae Borowski, who recently dropped out of college and has returned to her hometown to find unexpected changes. The game was funded via the crowdfunding platform Kickstarter, where it eventually earned over 400% of its US$50,000 funding goal.
+                Night in the Woods is a single-player adventure game. It is a story-focused exploration game in which we play Mae, a character coming back to her hometown that she explores, meeting and interacting with non-playable characters.
             </div>
         </div>
     </div>
@@ -137,7 +137,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F0F0F0;">
             <div class="boxtext">
                 <h2> Undertale </h2><br><br>
-                Undertale is a 2D role-playing video game created by indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magic barrier. The player meets various monsters during the journey back to the surface. Some monsters might engage the player in a fight. The combat system involves the player navigating through mini-bullet hell attacks by the opponent. They can opt to pacify or subdue monsters in order to spare them instead of killing them. These choices affect the game, with the dialogue, characters, and story changing based on outcomes.
+                In Undertale, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and ‘enemies’ we can choose to fight or spare, with our main aim being to come back to the surface and in our own world.
             </div>
         </div>
         
@@ -156,7 +156,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
             <div class="boxtext">
                 <h2> Oneshot </h2><br><br>
-                OneShot is a puzzle and adventure indie game developed by Future Cat and published by Degica. Based on a 2014 free version, it was released for Steam on December 8, 2016 and on itch.io on March 12, 2020. Both its gameplay and plot involve metafictional elements; the game has been described by the developers as having "the world know you exist". Some of the game's puzzles involve interacting with the operating system outside of the game application. The player is a separate character from Niko, the protagonist; in the game's story, both characters arrive in a unfamiliar world which has been deprived of its sunlight, and eventually aim to restore it by replacing its sun, a lightbulb, at the top of a tower.
+                OneShot is a story in which we control a child from an outside perspective, acting as a sort of guardian for them. The game also has an interactive part with the operating system, which is praised in the reviews for its originality.
             </div>
 
         </div>
@@ -168,7 +168,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
                 <h2> To the Moon </h2><br><br>
-                To the Moon is an adventure game developed and published by Freebird Games. It was originally released for Microsoft Windows in November 2011, with ports later being released for Mac OS X, Linux, Android, iOS and Nintendo Switch. The story follows two doctors who offer to fulfill a dying man's last wish using artificial memories. The game features relatively few gameplay mechanics, with the player controlling the two doctors, exploring the narrative and solving puzzles as they try to reconstruct the dying man's memories in order to fulfill his wish.
+                To the Moon presents two doctors exploring an old man’s memories to alter them, so that he can die with his dying wish completed in his memories.
             </div>
         </div>
 
@@ -190,7 +190,21 @@ The four of them have 'Story rich' and 'Great Soundtrack' in their top-3 user-de
 #### Anomaly? _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_
 _Night in the Woods_ is the only game of this cluster having a closer neighbour than the three others in this group: _VA-11 Hall-A: Cyberpunk Bartender Action_. It is a game in which the player incarnates a bartender preparing and serving drinks to different customers while listening to them in a cyberpunk setting.
 
-[**Insert image**]
+<div class="container">
+    <div class="row" style="background-color: #040308; ">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
+            <img src="img/vallhalla.png">
+        </div>
+        
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
+            <div class="boxtext">
+                <h2> VA-11 Hall-A: Cyberpunk Bartender Action </h2><br><br>
+                In this game you play a bartender at the eponymous VA-11 HALL-A, a small bar in a dystopian downtown which is said to attract the "most fascinating" of people. Gameplay consists of players making and serving drinks to bar attendees whilst listening to their stories and experiences.
+            </div>
+
+        </div>
+    </div>
+</div>
 
 Supposedly, this game's reviews should have more in common with _Night in the Woods_'s than this latter would have with the three other games. 
 However, 'Story Rich' is the fourth user-defined tag, while 'Great Soundtrack' is absent of the list. Looking at the ten main tags for each game, nothing strikingly separates _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_ from _Undertale_, _To the Moon_ and _OneShot_.
@@ -204,7 +218,36 @@ _VA-11 Hall-A: Cyberpunk Bartender Action_ can be understood as an anomaly when 
 #### Opposites: _Undertale_ vs _Insurgency: Sandstorm_ and _Arma 3_
 Finally, let us compare the 4-games cluster with opposite ones, focusing on the two most distant from Undertale: _Insurgency: Sandstorm_ (1.541), an action game according to Steam, and _Arma 3_ (1.526), classified as an action, simulation and strategy game. Both are online multiplayer games in which the players engage in shooting fights against other players.
 
-[**Insert images**]
+<div class="container">
+    <div class="row" style="background-color: #474236;">
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
+            <div class="boxtext">
+                <h2> Insurgency: Sandstorm </h2><br><br>
+                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle Eastern region, the game depicts a conflict between two factions: "Security" and "Insurgents".
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
+            <img src="img/sandstorm.jpg">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row" style="background-color: #17191d; ">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
+            <img src="img/arma.png">
+        </div>
+        
+        <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
+            <div class="boxtext">
+                <h2> Arma 3 </h2><br><br>
+                ARMA 3 is an open-world, realism-based, military tactical shooter video game. The single-player campaign has the player take control of U.S. Army soldier Corporal Ben Kerry. In the single player mode, the player is placed in a variety of situations, from lone wolf infiltration missions to the commanding of large-scale armored operations. This game has a very active modding community.
+            </div>
+
+        </div>
+    </div>
+</div>
 
 _Insurgency: Sandstorm_'s reviews contain recurrent comments on the game's performances, mentions of sound but as in realistic rather than beautiful/enjoyable (sound design vs soundtrack). A review stood out, describing how passionate another player was, and how this intense experience was deeply appreciated by the reviewer.
 This game's reviews are obviously strikingly different from the games observed above. 
