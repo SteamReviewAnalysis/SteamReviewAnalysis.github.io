@@ -54,7 +54,7 @@ For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics
 
 Given the massive quantity of reviews, one key challenge is to condense all the information contained in a useful way. To do so, we tried to obtain numerical representations for each game, which we call **game embeddings**. Ideally, these embeddings would capture key information about the games and place conceptually similar games close together in the embedding space.
 
-The process to obtain these embeddings is quite involved, although we can split it in two key steps: First, we take the textual content from all the English reviews and use it to train a  <a href="https://github.com/epfml/sent2vec">Sent2vec model</a> to obtain 100-dimensional sentence embeddings. Then, we take the 1000 most helpful reviews for each of the 200 most reviewed games, feed them to the trained Sent2vec model, and average the resulting sentence embeddings for each game. This gives us a 100-dimensional embedding for each of the top 200 most reviewed games in our dataset. This process is summarized in the figure below.
+The process to obtain these embeddings is quite involved, although we can split it in two key steps: First, we take the textual content from all the English reviews and use it to train a Sent2vec[^2] modelto obtain 100-dimensional sentence embeddings. Then, we take the 1000 most helpful reviews for each of the 200 most reviewed games, feed them to the trained Sent2vec model, and average the resulting sentence embeddings for each game. This gives us a 100-dimensional embedding for each of the top 200 most reviewed games in our dataset. This process is summarized in the figure below.
 
 <figure>
     <img src="img/Embeddings_method.jpg">
@@ -390,6 +390,7 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 ## References<br>
 
 [^1]: [Kaggle, *Steam Reviews Dataset 2021*, 2021](https://www.kaggle.com/najzeko/steam-reviews-2021)
+[^2]: [Matteo Pagliardini, Prakhar Gupta, Martin Jaggi, *Unsupervised Learning of Sentence Embeddings using Compositional n-Gram Features*, NAACL 2018](https://github.com/epfml/sent2vec)
 
 
 <details>
@@ -409,6 +410,7 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 <li>To-the-moon-cover.cover_large.jpg (600×600). (n.d.). Retrieved 8 June 2021, from https://images.nintendolife.com/77811ede754b2/to-the-moon-cover.cover_large.jpg</li>
 <li>Valhalla.jpg (800×800). (n.d.). Retrieved 8 June 2021, from https://thegamehoard.com/wp-content/uploads/2018/11/valhalla.jpg</li>
 <li>Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8 (362×512). (n.d.). Retrieved 8 June 2021, from https://lh3.googleusercontent.com/proxy/Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8</li>
+<li><div>Icons made by <a href="https://icon54.com/" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div><li>
  </ul>
 <br>
 </details>
