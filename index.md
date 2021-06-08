@@ -117,6 +117,13 @@ Following it, We could interpret our clustering as a model selecting the definin
 Such results, with a more thorough analysis, could help us determine the most defining feature(s) of a game and classify genres and tags according to the value players assign to them in a game.
 This could help players orient themselves more precisely when looking for a specific type of experience, contrary to simply search for a tag's or genre's presence in a game, which does not indicate how important this characterstic will be in said game.
 
+In addition to this overall suggestion that some genres and tags are more salient than others depending on the games, this table offers an interesting perspective on genres and user-defined tags in themselves. Indeed, at the exception of cluster 19, all genres defined by Steam are appearing in the tafs as well.
+
+Supposedly, then, Steam users relate to the official genres. However, the games from clusters 2, 5, 9, 11, and 16 all share the same genre, Action. They distinguish by their tags, who are more precise. The same happens with the RPG genre in clusters 10 and 13. In cluster 13, the only tag shared by all games is RPG as well, while cluster 10 has several tags completing it. Possibly, the games from cluster 13 could be considered as the moste representative of the RPG genre, while cluster 10 regroups RPG games with other salient features. 
+Although the official genres are generally included in the user-defined tags, they appear to be insufficient by themselves, especially the Action genre.
+
+If we were to create a new categorisation system, then, these genres would have their share of information to give, but what is most striking here is how important and useful players’ opinions and perspectives can bring to the discussion. 
+
 
 ## A closer look at the reviews
 
