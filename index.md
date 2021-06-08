@@ -120,7 +120,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
 <div class="container">
     <div class="row" style="background-color: #0b2c39;">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/nitw.jpg" onmouseover="this.src='img/Night.png';" onmouseout="this.src='img/nitw.jpg';">
+            <img src="img/nitw.jpg" onmouseover="this.src='img/nitw_screen.jpg';" onmouseout="this.src='img/nitw.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F3F4;">
@@ -142,7 +142,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
-            <img src="img/under.jpg">
+            <img src="img/under.jpg" onmouseover="this.src='img/under_screen.jpg';" onmouseout="this.src='img/under.jpg';">
         </div>
     </div>
 </div>
@@ -150,7 +150,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
 <div class="container">
     <div class="row" style="background-color: #340b36; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/oneshot.png">
+            <img src="img/oneshot.png" onmouseover="this.src='img/oneshot_screen.jpg';" onmouseout="this.src='img/oneshot.png';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
@@ -168,12 +168,12 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
                 <h2> To the Moon </h2><br><br>
-                To the Moon presents two doctors exploring an old man’s memories to alter them, so that he can die with his dying wish completed in his memories.
+                To the Moon is a puzzle and adventure game. You play as two doctors exploring an old man’s memories to alter them, so that he can die with his dying wish completed in his memories.
             </div>
         </div>
 
         <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
-            <img src="img/ttm.jpg">
+            <img src="img/ttm.jpg" onmouseover="this.src='img/moon_screen.png';" onmouseout="this.src='img/ttm.jpg';">
         </div>
     </div>
 </div>
@@ -193,7 +193,7 @@ _Night in the Woods_ is the only game of this cluster having a closer neighbour 
 <div class="container">
     <div class="row" style="background-color: #040308; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/vallhalla.jpg">
+            <img src="img/vallhalla.jpg" onmouseover="this.src='img/vallhalla_screen.png';" onmouseout="this.src='img/vallhalla.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
@@ -228,7 +228,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
         </div>
 
         <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
-            <img src="img/sandstorm.jpg">
+            <img src="img/sandstorm.jpg" onmouseover="this.src='img/sandstorm_screen.png';" onmouseout="this.src='img/sandstorm.jpg';">
         </div>
     </div>
 </div>
@@ -236,7 +236,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
 <div class="container">
     <div class="row" style="background-color: #17191d; ">
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
-            <img src="img/arma.jpg">
+            <img src="img/arma.jpg" onmouseover="this.src='img/arma_screen.png';" onmouseout="this.src='img/arma.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
