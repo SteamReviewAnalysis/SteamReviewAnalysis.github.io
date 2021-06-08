@@ -83,7 +83,7 @@ The classical criteria to classify games is the use of genres that describe part
 To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly signigicant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
 
 | Cluster | Length | Steam Genres | User-defined Tags | Prototype |
-|-------|--------|---------|---------|
+|-------|--------|---------|---------|---------|
 | 1 | 11 | - | User Singleplayer | _Oxygen Not Included_ |
 | 2 | 8 | Action | Action, Story Rich | _Rise of the Tomb Raider_ |
 | 3 | 19 | - | Multiplayer, Singleplayer, Strategy | _Total War Saga: Thrones of Britannia_ |
