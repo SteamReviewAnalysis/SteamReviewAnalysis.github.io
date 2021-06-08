@@ -47,7 +47,7 @@ They also added regarding the proportion of reviews collected for each selected 
 #### Game tags
 
 To complete our analysis, we gathered the official tags from Steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
-For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/break the different tags or not was highly subjective but mostly done by one person so whole distinction should at least be coherent. The games and their tags are publicly accessible [here](https://www.notion.so/ae461477418242858455d878c7647f5f?v=da64bc60b507481483510043f76169c3).
+For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/break the different tags or not was highly subjective but mostly done by one person as to stay consistent. The games and their tags are publicly accessible [here](https://www.notion.so/ae461477418242858455d878c7647f5f?v=da64bc60b507481483510043f76169c3).
 
 
 ## Game embeddings
@@ -67,11 +67,78 @@ Although there is a loss of information when reducing a game to the average of i
 
 ## Classification with K-means clustering
 
-We used K-means clustering to partition our games in sensible categories. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number for more variety. 
+We used K-means clustering on the embeddings to partition our games in sensible categories. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number for more variety. 
+
+
+
+{% capture summary %}**Click to view clusters** (games ordered alphabetically){% endcapture %} {% capture details %} 
+
+**Cluster 1:**
+Banished, Factorio, Frostpunk, Kenshi, No Man's Sky, Oxygen Not Included, RimWorld, Satisfactory, Subnautica, Super Hexagon, Surviving Mars
+
+**Cluster 2:**
+Assassin's Creed Odyssey, Assassin's Creed Origins, Batman: Arkham Asylum GOTY Edition, BioShock Infinite, Dishonored, Dying Light, Rise of the Tomb Raider, Tomb Raider
+
+**Cluster 3:**
+Age of Empires II (2013), BATTLETECH, Crusader Kings III, Europa Universalis IV, Hearts of Iron IV, Mount & Blade: Warband, Northgard, STAR WARS™ Empire at War: Gold Pack, Sid Meier's Civilization V, Sid Meier's Civilization VI, Stellaris, They Are Billions, Total War Saga: Thrones of Britannia, Total War: ROME II - Emperor Edition, Total War: THREE KINGDOMS, Total War: WARHAMMER, Total War: WARHAMMER II, Warhammer 40,000: Dawn of War III, XCOM 2
+
+**Cluster 4:**
+A Hat in Time, Celeste, DEATH STRANDING, GRIS, Hollow Knight, Little Nightmares, Ori and the Will of the Wisps, To the Moon
+
+**Cluster 5:**
+ARK: Survival Evolved, ATLAS, BATTALION 1944, Black Desert Online, Blackwake, Bless Online, Conan Exiles, Dead by Daylight, For Honor, Hunt: Showdown, Insurgency: Sandstorm, MORDHAU, Nether, PLAYERUNKNOWN'S BATTLEGROUNDS, Rust, SCUM, Tom Clancy's Rainbow Six Siege, Warhammer: Vermintide 2
+
+**Cluster 6:**
+Darkest Dungeon®, Dead Cells, Deep Rock Galactic, Enter the Gungeon, FTL: Faster Than Light, For The King, Hades, Into the Breach, Slay the Spire, Streets of Rogue, Warhammer 40,000: Mechanicus
+
+**Cluster 7:**
+Among Us, BattleBlock Theater, Broforce, Castle Crashers, Duck Game, Golf It!, Human: Fall Flat, Keep Talking and Nobody Explodes, Overcooked! 2, Phasmophobia, Tabletop Simulator
+
+**Cluster 8:**
+Danganronpa 2: Goodbye Despair, Danganronpa: Trigger Happy Havoc, Doki Doki Literature Club, Helltaker, HuniePop, Mirror, Monster Prom, Night in the Woods, OneShot, Papers, Please, South Park™: The Stick of Truth™, The Henry Stickmin Collection, The Walking Dead, The Wolf Among Us, Undertale, VA-11 Hall-A: Cyberpunk Bartender Action
+
+**Cluster 9:**
+Borderlands 3, Call of Duty: Infinite Warfare, Call of Duty: WWII, Far Cry 5, Just Cause 3, Just Cause 4, Saints Row: The Third, Sniper Elite 4, Tom Clancy's Ghost Recon® Wildlands, Watch_Dogs 2
+
+**Cluster 10:**
+FINAL FANTASY XV WINDOWS EDITION, NieR:Automata™, Persona 4 Golden, Tales of Berseria, The Witcher 3: Wild Hunt, Yakuza 0
+
+**Cluster 11:**
+Black Mesa, Crash Bandicoot™ N. Sane Trilogy, DOOM, DOOM Eternal, DUSK, Half-Life, Half-Life 2: Episode Two, Half-Life: Alyx, Outlast, Resident Evil 2, Resident Evil 7 Biohazard
+
+**Cluster 12:**
+Arma 3, Beat Saber, Counter-Strike: Source, Day of Infamy, Garry's Mod, People Playground, Ravenfield, Totally Accurate Battle Simulator, Totally Accurate Battlegrounds, Wallpaper Engine
+
+**Cluster 13:**
+Cube World, Divinity: Original Sin 2, FINAL FANTASY XIV Online, Fallout 4, Kingdom Come: Deliverance, Middle-earth™: Shadow of War™, Mutant Year Zero: Road to Eden, Pathfinder: Kingmaker, Pillars of Eternity II: Deadfire, The Elder Scrolls Online, Vampyr
+
+**Cluster 14:**
+Artifact, Bloons TD 6, Grand Theft Auto V, HITMAN™ 2, PAYDAY 2, The Elder Scrolls V: Skyrim, The Elder Scrolls V: Skyrim Special Edition
+
+**Cluster 15:**
+American Truck Simulator, BeamNG.drive, Euro Truck Simulator 2, Rocket League, The Crew 2
+
+**Cluster 16:**
+DARK SOULS™ III, DARK SOULS™: REMASTERED, DRAGON BALL FighterZ, Monster Hunter: World, Nioh: Complete Edition, Sekiro™: Shadows Die Twice
+
+**Cluster 17:**
+Don't Starve, Don't Starve Together, My Time At Portia, Raft, Slime Rancher, Stardew Valley, Terraria, The Forest
+
+**Cluster 18:**
+Cuphead, Getting Over It with Bennett Foddy, Hotline Miami, Mark of the Ninja, One Finger Death Punch, Shovel Knight: Treasure Trove, Super Meat Boy, The Binding of Isaac, The Binding of Isaac: Rebirth
+
+**Cluster 19:**
+Cities: Skylines, Farming Simulator 19, House Flipper, Jurassic World Evolution, PC Building Simulator, Planet Coaster, The Sims(TM) 3, Two Point Hospital, Youtubers Life, theHunter: Call of the Wild™
+
+**Cluster 20:**
+Baba Is You, Gunpoint, Portal 2, The Room, The Room Two
+
+{% endcapture %}{% include details.html %}
 
 The figure below shows the games which are part of each cluster. Use the menu to navigate to the cluster of your choice.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
-If you know your games well, you see that the classification worked pretty well, at the exception of some oddities. 
+If you know your games well, you see that the classification worked pretty well, with the exception of some oddities. 
+
 Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the _Civilization_ and _Total War_ series, and Simulation games of all sorts respectively.
 The cluster 5 is interesting as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
 Maybe their belonging to the same cluster is a sign that the multiplayer component is the most salient part of the game, superseding the other aesthetic and gameplay features, in the players' reviews. <span class="spoiler">(Or maybe the model was just desperate to make a group, hard to say ;n;)</span>
