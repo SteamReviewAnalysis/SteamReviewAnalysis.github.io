@@ -390,7 +390,7 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 <details>
 <summary><b>Images</b></summary>
 <ul>
-<li>2017-11-11-170105.jpg (960×544). (2017, November 11). <https://pixeladventurers.com/wp-content/uploads/2017/11/2017-11-11-170105.jpg></li>
+<li>2017-11-11-170105.jpg (960×544). (2017, November 11). [ici](https://pixeladventurers.com/wp-content/uploads/2017/11/2017-11-11-170105.jpg)</li>
 <li>696436-arma-iii-windows-screenshot-moving-in-formation.jpg (1920×1080). (n.d.). Retrieved 8 June 2021, from <https://www.mobygames.com/images/shots/l/696436-arma-iii-windows-screenshot-moving-in-formation.jpg></li>
 <li>7551559D53AB49AE0A1D232EA6777497395A7F94 (640×480). (n.d.). Retrieved 8 June 2021, from <https://steamuserimages-a.akamaihd.net/ugc/103980755826651042/7551559D53AB49AE0A1D232EA6777497395A7F94/></li>
 <li>2953937288.jpg (500×710). (n.d.). Retrieved 8 June 2021, from <https://cdn.startselect.com/production/products/images/4d59f/58605/2953937288.jpg></li>
