@@ -75,8 +75,10 @@ Although this grouping in 20 clusters is slightly uncertain and not without outl
 
 
 ## Clusters and tags comparison
-The classical criteria to classify games is the use of tags to describe part of their aesthetic or some gameplay features. We would like to know if there are links between our clusters and the corresponding tags of each game. 
-We isolated in each cluster the tags that were present in all its games to find out. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews. 
+## How do the clusters compare to traditional tags ?
+
+The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
+To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly signigicant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
 
 | Cluster | Length | Steam Genres | User-defined Tags |
 |-------|--------|---------|---------|
@@ -101,16 +103,14 @@ We isolated in each cluster the tags that were present in all its games to find 
 | 19 | 10 | Simulation | - |
 | 20 | 5 | - | Puzzle |
 
-The tags preceded by “Steam” are the official tags from steam and the “User” are the popularly defined ones. The length is the number of games in each cluster.
+The length indicates the number of games in each cluster.
 
-We see that most clusters effectively contain games with a couple of tags in common. 
-It is interesting to see the contrast between the tags and the diversity of some clusters. Coming back to Group 5, we find the common idea of multiplayer action while the rest of the gameplay of these games is relatively varied.
-We could interpret our clustering as the first sort, like selecting the defining feature of each game to place it in a cluster. 
+We see that most clusters effectively contain games with a couple of tags or genres in common. 
+It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 
+Following it, We could interpret our clustering as a model selecting the defining feature(s) of each game to then place them in corresponding clusters. Once again, this idea should be further explored by looking at the reviews and find whether the characteristics associated with the genres and tags standing out for each cluster do in fact appear significantly more than other patterns in the players' discourse.
 
-Maybe this is an application that can be found to this study :
-Ranking the tags by order of importance to the players. Finding the most defining feature of a game.
-This could help the players orient themselves when looking for a specific type of experience as simply looking for a tag's presence does not carry information about its importance.
-
+Such results, with a more thorough analysis, could help us determine the most defining feature(s) of a game and classify genres and tags according to the value players assign to them in a game.
+This could help players orient themselves more precisely when looking for a specific type of experience, contrary to simply search for a tag's or genre's presence in a game, which does not indicate how important this characterstic will be in said game.
 
 
 ## A closer look at the reviews
