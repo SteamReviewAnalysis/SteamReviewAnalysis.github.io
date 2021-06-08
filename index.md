@@ -62,7 +62,7 @@ The final game embeddings and similarly made tag embeddings can be visualized wi
 Here is a small page explaining how the [Embedding Projector]({% post_url embeddings %}) works.
 With this visualization you can select a game on the point cloud or by typing its name and the program will return a list of the closest games. Keep in mind that the "proximity" is calculated on 100 dimensions, this is why although close in reality, games may not appear next to each other in the 3D projection. 
 The closer games are to each other, the more similar are the ways their respective base of player talk about them. 
-Although their is a loss of information when reducing a game to the average of its review vectors, we hope to still be able to classify the games by this kind of proximity.
+Although there is a loss of information when reducing a game to the average of its review vectors, we hope to still be able to classify the games by this kind of proximity.
 
 
 ## Classification with K-means clustering
@@ -81,7 +81,7 @@ Although this grouping in 20 clusters is slightly uncertain and not without outl
 ## Clusters and tags comparison
 
 The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
-To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly signigicant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
+To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly significant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
 
 | Cluster | Length | Steam Genres | User-defined Tags | Prototype |
 |-------|--------|---------|---------|---------|
@@ -110,14 +110,14 @@ The length indicates the number of games in each cluster.
 
 We see that most clusters effectively contain games with a couple of tags or genres in common. 
 It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 
-Following it, We could interpret our clustering as a model selecting the defining feature(s) of each game to then place them in corresponding clusters. Once again, this idea should be further explored by looking at the reviews and find whether the characteristics associated with the genres and tags standing out for each cluster do in fact appear significantly more than other patterns in the players' discourse.
+Following it, we could interpret our clustering as a model selecting the defining feature(s) of each game to then place them in corresponding clusters. Once again, this idea should be further explored by looking at the reviews and find whether the characteristics associated with the genres and tags standing out for each cluster do in fact appear significantly more than other patterns in the players' discourse.
 
 Such results, with a more thorough analysis, could help us determine the most defining feature(s) of a game and classify genres and tags according to the value players assign to them in a game.
-This could help players orient themselves more precisely when looking for a specific type of experience, contrary to simply search for a tag's or genre's presence in a game, which does not indicate how important this characterstic will be in said game.
+This could help players orient themselves more precisely when looking for a specific type of experience, contrary to simply search for a tag's or genre's presence in a game, which does not indicate how important this characteristic will be in said game.
 
-In addition to this overall suggestion that some genres and tags are more salient than others depending on the games, this table offers an interesting perspective on genres and user-defined tags in themselves. Indeed, at the exception of cluster 19, all genres defined by Steam are appearing in the tafs as well.
+In addition to this overall suggestion that some genres and tags are more salient than others depending on the games, this table offers an interesting perspective on genres and user-defined tags in themselves. Indeed, at the exception of cluster 19, all genres defined by Steam are appearing in the tags as well.
 
-Supposedly, then, Steam users relate to the official genres. However, the games from clusters 2, 5, 9, 11, and 16 all share the same genre, Action. They distinguish by their tags, who are more precise. The same happens with the RPG genre in clusters 10 and 13. In cluster 13, the only tag shared by all games is RPG as well, while cluster 10 has several tags completing it. Possibly, the games from cluster 13 could be considered as the moste representative of the RPG genre, while cluster 10 regroups RPG games with other salient features. 
+Supposedly, then, Steam users relate to the official genres. However, the games from clusters 2, 5, 9, 11, and 16 all share the same genre, Action. They distinguish by their tags, who are more precise. The same happens with the RPG genre in clusters 10 and 13. In cluster 13, the only tag shared by all games is RPG as well, while cluster 10 has several tags completing it. Possibly, the games from cluster 13 could be considered as the most representative of the RPG genre, while cluster 10 regroups RPG games with other salient features. 
 Although the official genres are generally included in the user-defined tags, they appear to be insufficient by themselves, especially the Action genre.
 
 If we were to create a new categorisation system, then, these genres would have their share of information to give, but what is most striking here is how important and useful players’ opinions and perspectives can bring to the discussion. 
@@ -277,7 +277,7 @@ As the program that created the embeddings does not understand English but measu
 
 Sometimes, the PCA decomposition can lead to interesting projection vectors. 
 Out of curiosity, we tried to see if the PCA dimensions had similarities with the tags repartition.
-For each PCA dimension, we ploted the mean position of each tag 
+For each PCA dimension, we plotted the mean position of each tag 
 (Once all games are projected, we calculate the mean position of all games possessing the tag).
 On the second plot, you can visualize each dimension and the position of all tagged games to get a better idea.
 
@@ -307,7 +307,7 @@ We can see that the average score of the games in our database is quite high. Th
 This was one of the most surprising results we got. Apparently, on average (for the games in our database at least), receiving the game for free doesn't make you want to recommend a game more.
 
 #### Average rating of games played during early access or not<br>
-"Early access" is a term meaning that the game can be purchased when the game is still being developped, usually at a smaller price, so that the player can provide feedback on what should be fixed or improved.
+"Early access" is a term meaning that the game can be purchased when the game is still being developed, usually at a smaller price, so that the player can provide feedback on what should be fixed or improved.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/early.html"></iframe>
 From this result, we can see a small tendency to be more critical when a game is released in early access.
 They usually have many bugs and sometimes a game change so much during development that early adopters of a game will not like how it is evolving and will then post "Not recommended" reviews in contest.
@@ -316,18 +316,18 @@ And this other funding model also have some issues, sometimes some game develope
 #### Average rating from users that posted a certain number of reviews<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/numReview.html"></iframe>
-Those results show that people will be more critical when posting more reviews until a certain point. This might be due to people noting their favorite games first and then the ones they dislike. And then you would have very active critics which might have a more nuanced view of games.
+Those results show that people will be more critical when posting more reviews until a certain point. This might be due to people noting their favourite games first and then the ones they dislike. And then you would have very active critics which might have a more nuanced view of games.
 
 #### Average rating from users that own a certain number of games<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/owned.html"></iframe>
-We can see that the more someone owns games, the more likely they will be to rate a game down. This could be because when people play a lot of games, they will play a bigger proportion of indie game which tend to be less polished (gameplay- and graphically-wise) than game produced by big companies and will therefore rate them unfavorably.
+We can see that the more someone owns games, the more likely they will be to rate a game down. This could be because when people play a lot of games, they will play a bigger proportion of indie game which tend to be less polished (gameplay- and graphically-wise) than game produced by big companies and will therefore rate them unfavourably.
 
 #### Average rating from reviews with a certain number of words<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become.
-We also found that positive reviews had an average of 35 words, with the median lenght being 10 words.
+We also found that positive reviews had an average of 35 words, with the median length being 10 words.
 For negative reviews we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results. 
 
 ## References<br>
