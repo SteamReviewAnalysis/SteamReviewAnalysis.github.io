@@ -119,8 +119,8 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
 
 <div class="container">
     <div class="row" style="background-color: #0b2c39;">
-        <div style="padding-left: 0;">
-            <img src="img/nitw.jpg" onmouseover="img/Night.png';" onmouseout="this.src='img/nitw.jpg';">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
+            <img src="img/nitw.jpg" onmouseover="this.src='img/Night.png';" onmouseout="this.src='img/nitw.jpg';">
         </div>
         
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F3F4;">
@@ -141,7 +141,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
             </div>
         </div>
         
-        <div style="padding-right: 0;">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
             <img src="img/under.jpg">
         </div>
     </div>
@@ -149,7 +149,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
 <br>
 <div class="container">
     <div class="row" style="background-color: #340b36; ">
-        <div style="padding-left: 0;">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
             <img src="img/oneshot.png">
         </div>
         
@@ -172,7 +172,7 @@ _Night in the Woods_ is a game in which we play Mae, a character coming back to 
             </div>
         </div>
 
-        <div style="padding-right: 0;">
+        <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
             <img src="img/ttm.jpg">
         </div>
     </div>
