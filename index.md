@@ -18,7 +18,7 @@ With an enormous dataset of Steam reviews, we question the relevance of game gen
 Continue reading for more details and other interesting statistics on Steam reviews!
 
 
-## Table of Contents 
+## Table of Contents
 
 - [Dataset](#dataset)
 - [Game embeddings](#game-embeddings)
@@ -32,7 +32,7 @@ Continue reading for more details and other interesting statistics on Steam revi
 
 ## Dataset
 
-For this project, we used a large-scale dataset of Steam reviews compiled in 2021, which is openly available on Kaggle[^1]. 
+For this project, we used a large-scale dataset of Steam reviews compiled in 2021, which is openly available on Kaggle[^1].
 
 #### Contents
 
@@ -60,84 +60,67 @@ We hoped the results of those embeddings, carrying information from the way user
 </figure>
 The final game embeddings and similarly made tag embeddings can be visualized with <a href="http://projector.tensorflow.org/?config=https://gist.githubusercontent.com/dmizr/6ed0d83d738a86a3d57e7a8455efe83f/raw/6b7aed45e8d7d5eec7d4f5fb0f71d9c74f0423e8/projector_config_all.json">Tensorflow</a>.
 Here is a small page explaining how the [Embedding Projector]({% link embeddings.md %}) works.
-With this visualization you can select a game on the point cloud or by typing its name and the program will return a list of the closest games. Keep in mind that the "proximity" is calculated on 100 dimensions, this is why although close in reality, games may not appear next to each other in the 3D projection. 
-The closer games are to each other, the more similar are the ways their respective base of player talk about them. 
+With this visualization you can select a game on the point cloud or by typing its name and the program will return a list of the closest games. Keep in mind that the "proximity" is calculated on 100 dimensions, this is why although close in reality, games may not appear next to each other in the 3D projection.
+The closer games are to each other, the more similar are the ways their respective base of player talk about them.
 Although there is a loss of information when reducing a game to the average of its review vectors, we hope to still be able to classify the games by this kind of proximity.
 
 
 ## Classification with K-means clustering
 
-We used K-means clustering on the embeddings to partition our games in sensible categories. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number for more variety. 
+We used K-means clustering on the embeddings to partition our games in sensible categories. After a bit of trial and error with different seeds and cluster number, we settled on a 20-cluster classification that produced fairly satisfying results. We used the [Silhouette Coefficient](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) to determine a good number of clusters, but we also chose a high number for more variety.
 
 
+<details>
+<summary><b>Click to view clusters</b> (games ordered alphabetically)</summary>
+<br>
+<ul>
 
-{% capture summary %}**Click to view clusters** (games ordered alphabetically){% endcapture %}{% capture details %} 
+<li><b>Cluster 1:</b> Banished, Factorio, Frostpunk, Kenshi, No Man's Sky, Oxygen Not Included, RimWorld, Satisfactory, Subnautica, Super Hexagon, Surviving Mars</li>
 
-**Cluster 1:**
-Banished, Factorio, Frostpunk, Kenshi, No Man's Sky, Oxygen Not Included, RimWorld, Satisfactory, Subnautica, Super Hexagon, Surviving Mars
+<li><b>Cluster 2:</b> Assassin's Creed Odyssey, Assassin's Creed Origins, Batman: Arkham Asylum GOTY Edition, BioShock Infinite, Dishonored, Dying Light, Rise of the Tomb Raider, Tomb Raider</li>
 
-**Cluster 2:**
-Assassin's Creed Odyssey, Assassin's Creed Origins, Batman: Arkham Asylum GOTY Edition, BioShock Infinite, Dishonored, Dying Light, Rise of the Tomb Raider, Tomb Raider
+<li><b>Cluster 3:</b> Age of Empires II (2013), BATTLETECH, Crusader Kings III, Europa Universalis IV, Hearts of Iron IV, Mount & Blade: Warband, Northgard, STAR WARS™ Empire at War: Gold Pack, Sid Meier's Civilization V, Sid Meier's Civilization VI, Stellaris, They Are Billions, Total War Saga: Thrones of Britannia, Total War: ROME II - Emperor Edition, Total War: THREE KINGDOMS, Total War: WARHAMMER, Total War: WARHAMMER II, Warhammer 40,000: Dawn of War III, XCOM 2</li>
 
-**Cluster 3:**
-Age of Empires II (2013), BATTLETECH, Crusader Kings III, Europa Universalis IV, Hearts of Iron IV, Mount & Blade: Warband, Northgard, STAR WARS™ Empire at War: Gold Pack, Sid Meier's Civilization V, Sid Meier's Civilization VI, Stellaris, They Are Billions, Total War Saga: Thrones of Britannia, Total War: ROME II - Emperor Edition, Total War: THREE KINGDOMS, Total War: WARHAMMER, Total War: WARHAMMER II, Warhammer 40,000: Dawn of War III, XCOM 2
+<li><b>Cluster 4:</b> A Hat in Time, Celeste, DEATH STRANDING, GRIS, Hollow Knight, Little Nightmares, Ori and the Will of the Wisps, To the Moon</li>
 
-**Cluster 4:**
-A Hat in Time, Celeste, DEATH STRANDING, GRIS, Hollow Knight, Little Nightmares, Ori and the Will of the Wisps, To the Moon
+<li><b>Cluster 5:</b> ARK: Survival Evolved, ATLAS, BATTALION 1944, Black Desert Online, Blackwake, Bless Online, Conan Exiles, Dead by Daylight, For Honor, Hunt: Showdown, Insurgency: Sandstorm, MORDHAU, Nether, PLAYERUNKNOWN'S BATTLEGROUNDS, Rust, SCUM, Tom Clancy's Rainbow Six Siege, Warhammer: Vermintide 2</li>
 
-**Cluster 5:**
-ARK: Survival Evolved, ATLAS, BATTALION 1944, Black Desert Online, Blackwake, Bless Online, Conan Exiles, Dead by Daylight, For Honor, Hunt: Showdown, Insurgency: Sandstorm, MORDHAU, Nether, PLAYERUNKNOWN'S BATTLEGROUNDS, Rust, SCUM, Tom Clancy's Rainbow Six Siege, Warhammer: Vermintide 2
+<li><b>Cluster 6:</b> Darkest Dungeon®, Dead Cells, Deep Rock Galactic, Enter the Gungeon, FTL: Faster Than Light, For The King, Hades, Into the Breach, Slay the Spire, Streets of Rogue, Warhammer 40,000: Mechanicus</li>
 
-**Cluster 6:**
-Darkest Dungeon®, Dead Cells, Deep Rock Galactic, Enter the Gungeon, FTL: Faster Than Light, For The King, Hades, Into the Breach, Slay the Spire, Streets of Rogue, Warhammer 40,000: Mechanicus
+<li><b>Cluster 7:</b> Among Us, BattleBlock Theater, Broforce, Castle Crashers, Duck Game, Golf It!, Human: Fall Flat, Keep Talking and Nobody Explodes, Overcooked! 2, Phasmophobia, Tabletop Simulator</li>
 
-**Cluster 7:**
-Among Us, BattleBlock Theater, Broforce, Castle Crashers, Duck Game, Golf It!, Human: Fall Flat, Keep Talking and Nobody Explodes, Overcooked! 2, Phasmophobia, Tabletop Simulator
+<li><b>Cluster 8:</b> Danganronpa 2: Goodbye Despair, Danganronpa: Trigger Happy Havoc, Doki Doki Literature Club, Helltaker, HuniePop, Mirror, Monster Prom, Night in the Woods, OneShot, Papers, Please, South Park™: The Stick of Truth™, The Henry Stickmin Collection, The Walking Dead, The Wolf Among Us, Undertale, VA-11 Hall-A: Cyberpunk Bartender Action</li>
 
-**Cluster 8:**
-Danganronpa 2: Goodbye Despair, Danganronpa: Trigger Happy Havoc, Doki Doki Literature Club, Helltaker, HuniePop, Mirror, Monster Prom, Night in the Woods, OneShot, Papers, Please, South Park™: The Stick of Truth™, The Henry Stickmin Collection, The Walking Dead, The Wolf Among Us, Undertale, VA-11 Hall-A: Cyberpunk Bartender Action
+<li><b>Cluster 9:</b> Borderlands 3, Call of Duty: Infinite Warfare, Call of Duty: WWII, Far Cry 5, Just Cause 3, Just Cause 4, Saints Row: The Third, Sniper Elite 4, Tom Clancy's Ghost Recon® Wildlands, Watch_Dogs 2</li>
 
-**Cluster 9:**
-Borderlands 3, Call of Duty: Infinite Warfare, Call of Duty: WWII, Far Cry 5, Just Cause 3, Just Cause 4, Saints Row: The Third, Sniper Elite 4, Tom Clancy's Ghost Recon® Wildlands, Watch_Dogs 2
+<li><b>Cluster 10:</b> FINAL FANTASY XV WINDOWS EDITION, NieR:Automata™, Persona 4 Golden, Tales of Berseria, The Witcher 3: Wild Hunt, Yakuza 0</li>
 
-**Cluster 10:**
-FINAL FANTASY XV WINDOWS EDITION, NieR:Automata™, Persona 4 Golden, Tales of Berseria, The Witcher 3: Wild Hunt, Yakuza 0
+<li><b>Cluster 11:</b> Black Mesa, Crash Bandicoot™ N. Sane Trilogy, DOOM, DOOM Eternal, DUSK, Half-Life, Half-Life 2: Episode Two, Half-Life: Alyx, Outlast, Resident Evil 2, Resident Evil 7 Biohazard</li>
 
-**Cluster 11:**
-Black Mesa, Crash Bandicoot™ N. Sane Trilogy, DOOM, DOOM Eternal, DUSK, Half-Life, Half-Life 2: Episode Two, Half-Life: Alyx, Outlast, Resident Evil 2, Resident Evil 7 Biohazard
+<li><b>Cluster 12:</b> Arma 3, Beat Saber, Counter-Strike: Source, Day of Infamy, Garry's Mod, People Playground, Ravenfield, Totally Accurate Battle Simulator, Totally Accurate Battlegrounds, Wallpaper Engine</li>
 
-**Cluster 12:**
-Arma 3, Beat Saber, Counter-Strike: Source, Day of Infamy, Garry's Mod, People Playground, Ravenfield, Totally Accurate Battle Simulator, Totally Accurate Battlegrounds, Wallpaper Engine
+<li><b>Cluster 13:</b> Cube World, Divinity: Original Sin 2, FINAL FANTASY XIV Online, Fallout 4, Kingdom Come: Deliverance, Middle-earth™: Shadow of War™, Mutant Year Zero: Road to Eden, Pathfinder: Kingmaker, Pillars of Eternity II: Deadfire, The Elder Scrolls Online, Vampyr</li>
 
-**Cluster 13:**
-Cube World, Divinity: Original Sin 2, FINAL FANTASY XIV Online, Fallout 4, Kingdom Come: Deliverance, Middle-earth™: Shadow of War™, Mutant Year Zero: Road to Eden, Pathfinder: Kingmaker, Pillars of Eternity II: Deadfire, The Elder Scrolls Online, Vampyr
+<li><b>Cluster 14:</b> Artifact, Bloons TD 6, Grand Theft Auto V, HITMAN™ 2, PAYDAY 2, The Elder Scrolls V: Skyrim, The Elder Scrolls V: Skyrim Special Edition</li>
 
-**Cluster 14:**
-Artifact, Bloons TD 6, Grand Theft Auto V, HITMAN™ 2, PAYDAY 2, The Elder Scrolls V: Skyrim, The Elder Scrolls V: Skyrim Special Edition
+<li><b>Cluster 15:</b> American Truck Simulator, BeamNG.drive, Euro Truck Simulator 2, Rocket League, The Crew 2</li>
 
-**Cluster 15:**
-American Truck Simulator, BeamNG.drive, Euro Truck Simulator 2, Rocket League, The Crew 2
+<li><b>Cluster 16:</b> DARK SOULS™ III, DARK SOULS™: REMASTERED, DRAGON BALL FighterZ, Monster Hunter: World, Nioh: Complete Edition, Sekiro™: Shadows Die Twice</li>
 
-**Cluster 16:**
-DARK SOULS™ III, DARK SOULS™: REMASTERED, DRAGON BALL FighterZ, Monster Hunter: World, Nioh: Complete Edition, Sekiro™: Shadows Die Twice
+<li><b>Cluster 17:</b> Don't Starve, Don't Starve Together, My Time At Portia, Raft, Slime Rancher, Stardew Valley, Terraria, The Forest</li>
 
-**Cluster 17:**
-Don't Starve, Don't Starve Together, My Time At Portia, Raft, Slime Rancher, Stardew Valley, Terraria, The Forest
+<li><b>Cluster 18:</b> Cuphead, Getting Over It with Bennett Foddy, Hotline Miami, Mark of the Ninja, One Finger Death Punch, Shovel Knight: Treasure Trove, Super Meat Boy, The Binding of Isaac, The Binding of Isaac: Rebirth</li>
 
-**Cluster 18:**
-Cuphead, Getting Over It with Bennett Foddy, Hotline Miami, Mark of the Ninja, One Finger Death Punch, Shovel Knight: Treasure Trove, Super Meat Boy, The Binding of Isaac, The Binding of Isaac: Rebirth
+<li><b>Cluster 19:</b> Cities: Skylines, Farming Simulator 19, House Flipper, Jurassic World Evolution, PC Building Simulator, Planet Coaster, The Sims(TM) 3, Two Point Hospital, Youtubers Life, theHunter: Call of the Wild™</li>
 
-**Cluster 19:**
-Cities: Skylines, Farming Simulator 19, House Flipper, Jurassic World Evolution, PC Building Simulator, Planet Coaster, The Sims(TM) 3, Two Point Hospital, Youtubers Life, theHunter: Call of the Wild™
-
-**Cluster 20:**
-Baba Is You, Gunpoint, Portal 2, The Room, The Room Two
-
-{% endcapture %}{% include details.html %}
+<li><b>Cluster 20:</b> Baba Is You, Gunpoint, Portal 2, The Room, The Room Two</li>
+</ul>
+<br>
+</details>
 
 The figure below shows the games which are part of each cluster. Use the menu to navigate to the cluster of your choice.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
-If you know your games well, you see that the classification worked pretty well, with the exception of some oddities. 
+If you know your games well, you see that the classification worked pretty well, with the exception of some oddities.
 
 Particularly satisfying are the clusters 3 and 19, which group grand strategy games such as the _Civilization_ and _Total War_ series, and Simulation games of all sorts respectively.
 The cluster 5 is interesting as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
@@ -149,8 +132,8 @@ Although this grouping in 20 clusters is slightly uncertain and not without outl
 
 ## Clusters and tags comparison
 
-The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game? 
-To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly significant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **]. 
+The classical criteria to classify games is the use of genres that describe part of their aesthetic or some gameplay features. Steam also uses tags that users can assign to games, and the more popular ones are displayed on the games' pages on the platform. Do our clusters connect to the corresponding genres and tags of each game?
+To answer this question, we isolated for each cluster the genres and tags that were present in all of their games. One interesting thing to keep in mind is that the model for game embeddings had no information about the related tags during training outside the direct use of those words in the reviews, which is not highly significant [**Add the number of times "Indie" appears in the reviews ? Can't remember where's that info **].
 
 | Cluster | Size | Steam Genres | User-defined Tags | Prototype |
 |-------|--------|---------|---------|---------|
@@ -177,8 +160,8 @@ To answer this question, we isolated for each cluster the genres and tags that w
 
 The size indicates the number of games in each cluster, and the prototypes are the most central games in each cluster. Prototypes can be further analysed to try and create a classification system based on representative games, though this goes beyond the aim of our study.
 
-We see that most clusters effectively contain games with a couple of tags or genres in common. 
-It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it. 
+We see that most clusters effectively contain games with a couple of tags or genres in common.
+It is interesting to see the contrast between the tags and the diversity of some clusters. Looking at cluster 5 again, we find the common idea of multiplayer action, while the rest of the gameplay of these games is relatively varied. This reinforces our earlier hypothesis but is insufficient to verify it.
 Following it, we could interpret our clustering as a model selecting the defining feature(s) of each game to then place them in corresponding clusters. Once again, this idea should be further explored by looking at the reviews and find whether the characteristics associated with the genres and tags standing out for each cluster do in fact appear significantly more than other patterns in the players' discourse.
 
 Such results, with a more thorough analysis, could help us determine the most defining feature(s) of a game and classify genres and tags according to the value players assign to them in a game.
@@ -186,10 +169,10 @@ This could help players orient themselves more precisely when looking for a spec
 
 In addition to this overall suggestion that some genres and tags are more salient than others depending on the games, this table offers an interesting perspective on genres and user-defined tags in themselves. Indeed, at the exception of cluster 19, all genres defined by Steam are appearing in the tags as well.
 
-Supposedly, then, Steam users relate to the official genres. However, the games from clusters 2, 5, 9, 11, and 16 all share the same genre, Action. They distinguish by their tags, who are more precise. The same happens with the RPG genre in clusters 10 and 13. In cluster 13, the only tag shared by all games is RPG as well, while cluster 10 has several tags completing it. Possibly, the games from cluster 13 could be considered as the most representative of the RPG genre, while cluster 10 regroups RPG games with other salient features. 
+Supposedly, then, Steam users relate to the official genres. However, the games from clusters 2, 5, 9, 11, and 16 all share the same genre, Action. They distinguish by their tags, who are more precise. The same happens with the RPG genre in clusters 10 and 13. In cluster 13, the only tag shared by all games is RPG as well, while cluster 10 has several tags completing it. Possibly, the games from cluster 13 could be considered as the most representative of the RPG genre, while cluster 10 regroups RPG games with other salient features.
 Although the official genres are generally included in the user-defined tags, they appear to be insufficient by themselves, especially the Action genre.
 
-If we were to create a new categorisation system, then, these genres would have their share of information to give, but what is most striking here is how important and useful players’ opinions and perspectives can bring to the discussion. 
+If we were to create a new categorisation system, then, these genres would have their share of information to give, but what is most striking here is how important and useful players’ opinions and perspectives can bring to the discussion.
 
 
 ## A closer look at the reviews
@@ -203,7 +186,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
             <img src="img/nitw.jpg" onmouseover="this.src='img/nitw_screen.jpg';" onmouseout="this.src='img/nitw.jpg';">
         </div>
-        
+
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F3F4;">
             <div class="boxtext">
                 <h2> Night in the Woods </h2><br><br>
@@ -221,7 +204,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
                 In Undertale, we play a human who fell in a hole and ends up exploring an unknown world, encountering villagers and ‘enemies’ we can choose to fight or spare, with our main aim being to come back to the surface and in our own world.
             </div>
         </div>
-        
+
         <div class="col-lg-6 col-md-6 nopadding" style="padding-right: 0;">
             <img src="img/under.jpg" onmouseover="this.src='img/under_screen.jpg';" onmouseout="this.src='img/under.jpg';">
         </div>
@@ -233,7 +216,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
             <img src="img/oneshot.png" onmouseover="this.src='img/oneshot_screen.jpg';" onmouseout="this.src='img/oneshot.png';">
         </div>
-        
+
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
             <div class="boxtext">
                 <h2> Oneshot </h2><br><br>
@@ -277,7 +260,7 @@ _Night in the Woods_ is the only game of this cluster having a closer neighbour 
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
             <img src="img/vallhalla.jpg" onmouseover="this.src='img/vallhalla_screen.jpg';" onmouseout="this.src='img/vallhalla.jpg';">
         </div>
-        
+
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
             <div class="boxtext">
                 <h2> VA-11 Hall-A: Cyberpunk Bartender Action </h2><br><br>
@@ -288,7 +271,7 @@ _Night in the Woods_ is the only game of this cluster having a closer neighbour 
     </div>
 </div>
 
-Supposedly, this game's reviews should have more in common with _Night in the Woods_'s than this latter would have with the three other games. 
+Supposedly, this game's reviews should have more in common with _Night in the Woods_'s than this latter would have with the three other games.
 However, 'Story Rich' is the fourth user-defined tag, while 'Great Soundtrack' is absent of the list. Looking at the ten main tags for each game, nothing strikingly separates _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_ from _Undertale_, _To the Moon_ and _OneShot_.
 
 _VA-11 Hall-A: Cyberpunk Bartender Action_'s reviews contains numerous mentions of sex, sexuality and alcohol, and terms such as 'waifu'/'weeb' are recurrent. Although the reviews frequently refer to the story's depth and how it affected the reviewer, terms such as 'feelings', 'sad' or 'happy' are mainly absent.
@@ -321,7 +304,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
         <div class="col-lg-6 col-md-6 nopadding" style="padding-left: 0;">
             <img src="img/arma.jpg" onmouseover="this.src='img/arma_screen.jpg';" onmouseout="this.src='img/arma.jpg';">
         </div>
-        
+
         <div class="col-lg-6 col-md-6 nopadding" style="color: #F2F2F2;">
             <div class="boxtext">
                 <h2> Arma 3 </h2><br><br>
@@ -333,8 +316,8 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
 </div>
 
 _Insurgency: Sandstorm_'s reviews contain recurrent comments on the game's performances, mentions of sound but as in realistic rather than beautiful/enjoyable (sound design vs soundtrack). A review stood out, describing how passionate another player was, and how this intense experience was deeply appreciated by the reviewer.
-This game's reviews are obviously strikingly different from the games observed above. 
-Similarly, _Arma 3_'s reviews contain mainly feedback on the game's content, which is similar to _Insurgency: Sandstorm_ and quite different from the four other games. However, the reviews contain mentions of 'experience', 'depth' and intense feelings - somewhat like the standing-out review from _Insurgency: Sandstorm_ - that can be paralleled with the four-games cluster. 
+This game's reviews are obviously strikingly different from the games observed above.
+Similarly, _Arma 3_'s reviews contain mainly feedback on the game's content, which is similar to _Insurgency: Sandstorm_ and quite different from the four other games. However, the reviews contain mentions of 'experience', 'depth' and intense feelings - somewhat like the standing-out review from _Insurgency: Sandstorm_ - that can be paralleled with the four-games cluster.
 
 It is highly possible that terms such as 'experience' are way too frequent to be used as a way to distinguish games' reviews (like 'game', for example); this would explain the similarities between those highly distanced games. While some potential explanation can be found, slight similarities do exist between strongly opposed games in the embeddings.
 
@@ -344,9 +327,9 @@ As the program that created the embeddings does not understand English but measu
 
 ## PCA and classification
 
-Sometimes, the PCA decomposition can lead to interesting projection vectors. 
+Sometimes, the PCA decomposition can lead to interesting projection vectors.
 Out of curiosity, we tried to see if the PCA dimensions had similarities with the tags repartition.
-For each PCA dimension, we plotted the mean position of each tag 
+For each PCA dimension, we plotted the mean position of each tag
 (Once all games are projected, we calculate the mean position of all games possessing the tag).
 On the second plot, you can visualize each dimension and the position of all tagged games to get a better idea.
 
@@ -397,7 +380,7 @@ We can see that the more someone owns games, the more likely they will be to rat
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The more there are words, the more critical the reviews become.
 We also found that positive reviews had an average of 35 words, with the median length being 10 words.
-For negative reviews we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results. 
+For negative reviews we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results.
 
 ## References<br>
 
@@ -405,21 +388,22 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 
 
 <details>
-<summary> ### Images </summary>
+<summary><b>Images</b></summary>
+<ul>
+<li>2017-11-11-170105.jpg (960×544). (2017, November 11). <https://pixeladventurers.com/wp-content/uploads/2017/11/2017-11-11-170105.jpg></li>
+<li>696436-arma-iii-windows-screenshot-moving-in-formation.jpg (1920×1080). (n.d.). Retrieved 8 June 2021, from <https://www.mobygames.com/images/shots/l/696436-arma-iii-windows-screenshot-moving-in-formation.jpg></li>
+<li>7551559D53AB49AE0A1D232EA6777497395A7F94 (640×480). (n.d.). Retrieved 8 June 2021, from <https://steamuserimages-a.akamaihd.net/ugc/103980755826651042/7551559D53AB49AE0A1D232EA6777497395A7F94/></li>
+<li>2953937288.jpg (500×710). (n.d.). Retrieved 8 June 2021, from <https://cdn.startselect.com/production/products/images/4d59f/58605/2953937288.jpg></li>
+<li>Growing up is hard to do in Night in the Woods. (n.d.). VideoGamer.Com. Retrieved 8 June 2021, from <https://www.videogamer.com/features/growing-up-is-hard-to-do-in-night-in-the-woods></li>
+<li>Isandstorm_09.jpg (1280×720). (n.d.). Retrieved 8 June 2021, from <https://www.newgamenetwork.com/images/uploads/gallery/InsurgencySandstorm/isandstorm_09.jpg></li>
+<li>Latest (320×240). (n.d.). Retrieved 8 June 2021, from <https://static.wikia.nocookie.net/oneshot/images/d/da/OneShot_remake_title_card.png/revision/latest?cb=20170404075741></li>
+<li>Media.jpg (1200×1090). (n.d.). Retrieved 8 June 2021, from <https://media.melty.fr/article-4334256-ajust_1200/media.jpg></li>
+<li>Moon-Pic-3.png (500×375). (n.d.). Retrieved 8 June 2021, from <https://www.gbhbl.com/wp-content/uploads/2019/03/Moon-Pic-3.png></li>
+<li>Oneshot_07.jpg (640×480). (n.d.). Retrieved 8 June 2021, from <https://www.newgamenetwork.com/images/uploads/gallery/Oneshot/oneshot_07.jpg></li>
+<li>Sierra’s Adventures in YA Literature: Image. (n.d.). Retrieved 8 June 2021, from <https://sierraisalibrarian.files.wordpress.com/2020/10/nitw.jpg?w=662></li>
+<li>To-the-moon-cover.cover_large.jpg (600×600). (n.d.). Retrieved 8 June 2021, from <https://images.nintendolife.com/77811ede754b2/to-the-moon-cover.cover_large.jpg></li>
+<li>Valhalla.jpg (800×800). (n.d.). Retrieved 8 June 2021, from <https://thegamehoard.com/wp-content/uploads/2018/11/valhalla.jpg></li>
+<li>Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8 (362×512). (n.d.). Retrieved 8 June 2021, from <https://lh3.googleusercontent.com/proxy/Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8></li>
+ </ul>
 <br>
-    - 2017-11-11-170105.jpg (960×544). (2017, November 11). <https://pixeladventurers.com/wp-content/uploads/2017/11/2017-11-11-170105.jpg>
-    - 696436-arma-iii-windows-screenshot-moving-in-formation.jpg (1920×1080). (n.d.). Retrieved 8 June 2021, from <https://www.mobygames.com/images/shots/l/696436-arma-iii-windows-screenshot-moving-in-formation.jpg>
-- 7551559D53AB49AE0A1D232EA6777497395A7F94 (640×480). (n.d.). Retrieved 8 June 2021, from <https://steamuserimages-a.akamaihd.net/ugc/103980755826651042/7551559D53AB49AE0A1D232EA6777497395A7F94/>
-- 2953937288.jpg (500×710). (n.d.). Retrieved 8 June 2021, from <https://cdn.startselect.com/production/products/images/4d59f/58605/2953937288.jpg>
-- Growing up is hard to do in Night in the Woods. (n.d.). VideoGamer.Com. Retrieved 8 June 2021, from <https://www.videogamer.com/features/growing-up-is-hard-to-do-in-night-in-the-woods>
-- Isandstorm_09.jpg (1280×720). (n.d.). Retrieved 8 June 2021, from <https://www.newgamenetwork.com/images/uploads/gallery/InsurgencySandstorm/isandstorm_09.jpg>
-- Latest (320×240). (n.d.). Retrieved 8 June 2021, from <https://static.wikia.nocookie.net/oneshot/images/d/da/OneShot_remake_title_card.png/revision/latest?cb=20170404075741>
-- Media.jpg (1200×1090). (n.d.). Retrieved 8 June 2021, from <https://media.melty.fr/article-4334256-ajust_1200/media.jpg>
-- Moon-Pic-3.png (500×375). (n.d.). Retrieved 8 June 2021, from <https://www.gbhbl.com/wp-content/uploads/2019/03/Moon-Pic-3.png>
-- Oneshot_07.jpg (640×480). (n.d.). Retrieved 8 June 2021, from <https://www.newgamenetwork.com/images/uploads/gallery/Oneshot/oneshot_07.jpg>
-- Sierra’s Adventures in YA Literature: Image. (n.d.). Retrieved 8 June 2021, from <https://sierraisalibrarian.files.wordpress.com/2020/10/nitw.jpg?w=662>
-- To-the-moon-cover.cover_large.jpg (600×600). (n.d.). Retrieved 8 June 2021, from <https://images.nintendolife.com/77811ede754b2/to-the-moon-cover.cover_large.jpg>
-- Valhalla.jpg (800×800). (n.d.). Retrieved 8 June 2021, from <https://thegamehoard.com/wp-content/uploads/2018/11/valhalla.jpg>
-- Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8 (362×512). (n.d.). Retrieved 8 June 2021, from <https://lh3.googleusercontent.com/proxy/Y9pNo0aCyzSO6yztekij-JH-wI1wev90a-bG_xm8RMuYEe32PI_sS5dA2sgpZKgJ-NE8QtUOzLwvmChd6UptmTswxI5FRK1Kz5HiQcc_QafkfG8>
-<br>
-
+</details>
