@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Steam Reviews Analysis
+title: All your review are belong to us
 cover-img: "img/steam_big.jpg"
-subtitle: A EPFL-Unil collaborative project
+subtitle: An EPFL-Unil project on Steam reviews
 classes: wide
 ---
 
@@ -185,7 +185,7 @@ If we were to create a new categorisation system, then, these genres would have 
 <br>
 #### Comparing four close games: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_
 
-Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their [**distance**] to one another contained between 0.161 and 0.230. [**Add comment about them being in same cluster or not depending on which clustering we use**]
+Four games appear close together in our embeddings: _Night in the Woods_, _Undertale_, _OneShot_, and _To the Moon_, with all of their distance to one another contained between 0.161 and 0.230. Although _To the Moon_ is in cluster 4 and the others in cluster 8, they all have the other games as their top 3 (4 in the case of _Night in the Woods_) closest games. Consequently, they will still be considered as an ‘alternate’ smaller cluster for this analysis.
 
 <div class="container">
     <div class="row" style="background-color: #0b2c39;">
@@ -352,11 +352,11 @@ While that's all we can get out of PCA on the game embeddings themselves, what h
 
 #### 2D PCA projection of user tags and Steam genres embeddings<br>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/all_tag_pca.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" src="/html/all_tag_pca.html"></iframe>
 
 This projection gives two interesting results:
 - First, we notice that identical user-tags and official Steam genres are usually quite close together, which aligns with our findings in the clustering section. However, some broad genres (e.g. action) are much further apart than more objective tags (e.g. indie games). This indicates that, while the genres / tags are mostly consistent, some of them might be too broad to properly categorize a game (e.g. action might not mean exactly the same thing for everyone), and that more fine-grained game genres are needed.
-- Second, the two principal components seem to represent two important concepts: whether a game is single-player or multiplayer (horizontal axis), and the game's audience: casual or serious. This may indicate that we can describe many aspects of a game, such as the gameplay, atmosphere and soundtrack, based on how strongly associated they are associated with each of these concepts. This may also help us understand how genres relate to each other.
+- Second, the two principal components seem to represent two important concepts: whether a game is single-player or multiplayer (horizontal axis), and the game's audience: casual or serious (vertical axis). This may indicate that we can describe many aspects of a game, such as the gameplay, atmosphere and soundtrack, based on how strongly associated they are associated with each of these concepts. This may also help us understand how genres relate to each other.
 
 
 
