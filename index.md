@@ -400,7 +400,7 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 ## Conclusion
 
 By the way, what popular code allowed players of Contra on the NES to have 30 lives instead of 3?
-<a href="https://en.wikipedia.org/wiki/Konami_Code">
+<a href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank" width=150" height="70">
 	 <img src="img/konami.png">
 </a>
 ## References<br>
