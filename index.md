@@ -24,7 +24,7 @@ Continue reading for more details and other interesting statistics on Steam revi
 - [Game embeddings](#game-embeddings)
 - [Classification with K-means clustering](#classification-with-k-means-clustering)
 - [Clusters and tags comparison](#clusters-and-tags-comparison)
-- [A closer look a the reviews](#a-closer-look-at-the-reviews)
+- [A closer look at the reviews](#a-closer-look-at-the-reviews)
 - [PCA and classification](#pca-and-classification)
 - [What about the users?](#what-about-the-users)
 - [Conclusion](#conclusion)
