@@ -351,40 +351,39 @@ Sadly that's all we can get out of the PCA analysis, no particular discoveries h
 
 ## What about the users?
 
-Let's deep-dive into some statistics analysis on the metadata from the database! The number of reviews per category available you hover over them.
+Let's deep-dive into some stats obtained using the dataset's metadata! The number of reviews per category is available by hovering over them.
 
 #### Average rating of the games in our dataset<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="200" src="/html/average_all.html"></iframe>
-We can see that the average score of the games in our database is quite high. This probably due to the selection of mostly popular games which tend to be well received.
+We can see that the average score of the games in our dataset is quite high. This probably due to the selection of mostly popular games which tend to be well received.
 
 #### Average rating of games received for free or not<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/recivedForFree.html"></iframe>
-This was one of the most surprising results we got. Apparently, on average (for the games in our database at least), receiving the game for free doesn't make you want to recommend a game more.
+This was one of the most surprising results we got. Apparently, on average (for the games in our dataset at least), receiving the game for free doesn't make you want to recommend a game more.
 
 #### Average rating of games played during early access or not<br>
 "Early access" is a term meaning that the game can be purchased when the game is still being developed, usually at a smaller price, so that the player can provide feedback on what should be fixed or improved.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/early.html"></iframe>
 From this result, we can see a small tendency to be more critical when a game is released in early access.
-They usually have many bugs and sometimes a game change so much during development that early adopters of a game will not like how it is evolving and will then post "Not recommended" reviews in contest.
-And this other funding model also have some issues, sometimes some game developers "take the money and go away", but those incidents are quite rare.
+They usually have many bugs and sometimes, a game changes so much during development that early adopters of a game will not like how it is evolving. In protest, they may write "Not recommended" reviews.
+This funding model also has some issues, as some game developers might take the money and abandon development, but those incidents are quite rare, and did not occur for any of the games in our dataset.
 
 #### Average rating from users that posted a certain number of reviews<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/numReview.html"></iframe>
-Those results show that people will be more critical when posting more reviews until a certain point. This might be due to people noting their favourite games first and then the ones they dislike. And then you would have very active critics which might have a more nuanced view of games.
+Those results show that people will be more critical when posting more reviews until a certain point. One hypothesis would be that newcomers review their favourite games first, and then only after do they review the ones they dislike. This could be differentiated from "critics" (people who review many games), which probably have a more nuanced view on video games, and write reviews on all the games they play, regardless of whether they liked or not. 
 
 #### Average rating from users that own a certain number of games<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/owned.html"></iframe>
-We can see that the more someone owns games, the more likely they will be to rate a game down. This could be because when people play a lot of games, they will play a bigger proportion of indie game which tend to be less polished (gameplay- and graphically-wise) than game produced by big companies and will therefore rate them unfavourably.
+We can see that the more someone owns games, the more likely they are to rate a game negatively. We can hypothesize that people that own a high amount of games are most-likely avid players with plenty of video game experience. This might make them more critical of games, as, for each of the genres they like playing, they have much more games against which to compare.
 
 #### Average rating from reviews with a certain number of words<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
-The more there are words, the more critical the reviews become.
-We also found that positive reviews had an average of 35 words, with the median length being 10 words.
+The longer the reviews, the more critical they become. We also found that positive reviews had an average of 35 words, with the median length being 10 words.
 For negative reviews we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results.
 
 ## References<br>
