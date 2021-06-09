@@ -54,7 +54,7 @@ For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics
 
 Given the massive quantity of reviews, one key challenge is to condense all the information contained in a useful way. To do so, we tried to obtain numerical representations for each game, which we call **game embeddings**. Ideally, these embeddings would capture key information about the games and place conceptually similar games close together in the embedding space.
 
-The process to obtain these embeddings is quite involved, although we can split it in two key steps: First, we take the textual content from all the English reviews and use it to train a Sent2vec[^2] modelto obtain 100-dimensional sentence embeddings. Then, we take the 1000 most helpful reviews for each of the 200 most reviewed games, feed them to the trained Sent2vec model, and average the resulting sentence embeddings for each game. This gives us a 100-dimensional embedding for each of the top 200 most reviewed games in our dataset. This process is summarized in the figure below.
+The process to obtain these embeddings is quite involved, although we can split it in two key steps: First, we take the textual content from all the English reviews and use it to train a Sent2vec[^2] model to obtain 100-dimensional sentence embeddings. Then, we take the 1000 most helpful reviews for each of the 200 most reviewed games, feed them to the trained Sent2vec model, and average the resulting sentence embeddings for each game. This gives us a 100-dimensional embedding for each of the top 200 most reviewed games in our dataset. This process is summarized in the figure below.
 
 <figure>
     <img src="img/Embeddings_method.jpg">
@@ -120,7 +120,7 @@ We now try to see if we can use clustering on these embeddings to group similar 
 
 The figure below shows the games which are part of each cluster. Use the menu to navigate to the cluster of your choice.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
-If you know your games well, you see that the clustering worked quite well, aside from a few oddities.
+If you know your games well, you'll see that the clustering worked quite well, aside from a few oddities.
 
 Here are some clusters we found particulary satisfying:
 - Cluster 3, which groups grand strategy wargames such as the _Civilization_ and _Total War_ series
@@ -172,7 +172,7 @@ Following it, we could interpret our clustering as a model selecting the definin
 Such results, with a more thorough analysis, could help us determine the most defining feature(s) of a game and classify genres and tags according to the value players assign to them in a game.
 This could help players orient themselves more precisely when looking for a specific type of experience, contrary to simply search for a tag or genre's presence in a game, which does not indicate how important this characteristic will be in said game.
 
-In addition to this overall suggestion that some genres and tags are more salient than others depending on the games, this table offers an interesting perspective on genres and user-defined tags in themselves. Indeed, at the exception of cluster 19, all genres defined by Steam are appearing in the user tags as well.
+In addition to this overall suggestion that some genres and tags are more salient than others depending on the games, this table offers an interesting perspective on the genres and user-defined tags themselves. Indeed, at the exception of cluster 19, all genres defined by Steam are appearing in the user tags as well.
 
 Supposedly, then, Steam users relate to the official genres. However, the games from clusters 2, 5, 9, 11, and 16 all share the same genre, Action. They can be distinguished by their tags, which are more precise. The same happens with the RPG genre in clusters 10 and 13. In cluster 13, the only tag shared by all games is RPG as well, while cluster 10 has several tags complementing it. Possibly, the games from cluster 13 could be considered as the most representative of the RPG genre, while cluster 10 regroups RPG games with other salient features.
 Although the official genres are generally included in the user-defined tags, they appear to be insufficient by themselves, especially the Action genre.
@@ -247,7 +247,7 @@ Four games appear close together in our embeddings: _Night in the Woods_, _Under
     </div>
 </div>
 
-Looking at the content of these games' reviews to try and find what patterns may have been found by the program, several elements are striking. The four games' reviews have frequent references to terms referring to:
+Looking at the content of these games' reviews to try and find what patterns may have been found by our embedding method, several elements are striking. The four games' reviews have frequent references to terms referring to:
 - the story in a highly positive way, commenting on the quality of the writing
 - emotions, with words such as 'feelings', 'cry', 'sad', 'happy'
 - comments on the games not being focused on gameplay
