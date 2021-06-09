@@ -28,6 +28,7 @@ Continue reading for more details and other interesting statistics on Steam revi
 - [PCA and classification](#pca-and-classification)
 - [What about the users?](#what-about-the-users)
 - [References](#references)
+- [Conclusion](#conclusion)
 
 
 ## Dataset
@@ -396,6 +397,12 @@ We can see that the more someone owns games, the more likely they are to rate a 
 The longer the reviews, the more critical they become. We also found that positive reviews had an average of 35 words, with the median length being 10 words.
 For negative reviews we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results.
 
+## Conclusion
+
+By the way, what popular code allowed players of Contra on the NES to have 30 lives instead of 3?
+<a href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank" width=150" height="70">
+	 <img src="img/konami.png">
+</a>
 ## References<br>
 
 [^1]: [Kaggle, *Steam Reviews Dataset 2021*, 2021](https://www.kaggle.com/najzeko/steam-reviews-2021)
