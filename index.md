@@ -355,7 +355,7 @@ While that's all we can get out of PCA on the game embeddings themselves, what h
 
 This projection gives two interesting results:
 - First, we notice that identical user-tags and official Steam genres are usually quite close together, which aligns with our findings in the clustering section. However, some broad genres (e.g. action) are much further apart than more objective tags (e.g. indie games). This indicates that, while the genres / tags are mostly consistent, some of them might be too broad to properly categorize a game (e.g. action might not mean exactly the same thing for everyone), and that more fine-grained game genres are needed.
-- Second, the two principal components seem to represent two important concepts: whether a game is single-player or multiplayer (horizontal axis), and the game's audience: casual or serious. This may indicate that we can describe many aspects of a game, such as the gameplay, atmosphere and soundtrack, based on how strongly associated they are associated with each of these concepts. This may also help us understand how genres relate to each other.
+- Second, the two principal components seem to represent two important concepts: whether a game is single-player or multiplayer (horizontal axis), and the game's audience: casual or serious (vertical axis). This may indicate that we can describe many aspects of a game, such as the gameplay, atmosphere and soundtrack, based on how strongly associated they are associated with each of these concepts. This may also help us understand how genres relate to each other.
 
 
 
