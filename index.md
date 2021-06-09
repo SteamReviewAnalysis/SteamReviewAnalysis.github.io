@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Steam Reviews Analysis
+title: All your review are belong to us
 cover-img: "img/steam_big.jpg"
-subtitle: A EPFL-Unil collaborative project
+subtitle: An EPFL-Unil project analyzing Steam reviews
 classes: wide
 ---
 
