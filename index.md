@@ -294,7 +294,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
                 <h2> Insurgency: Sandstorm </h2><br><br>
-                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle Eastern region, the game depicts a conflict between two factions: "Security" and "Insurgents".
+                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle <a href="https://en.wikipedia.org/wiki/Konami_Code" title="Easter egg", target="_blank"><b>Eastern<b></a>n region, the game depicts a conflict between two factions: "Security" and "Insurgents".
             </div>
         </div>
 
@@ -349,7 +349,7 @@ Still, we can use these graphics to find the most representative axes for a spec
 
 While that's all we can get out of PCA on the game embeddings themselves, what happens if we use it in on our other embeddings? To find out, we merge the embeddings of the top user tags (20 of them) and top official Steam genres (9 of them), and use PCA to project them in a 2D space. The results are shown in the figure below (click on the legend to hide / reveal the user-defined tags and Steam genres). 
 
-#### 2D PCA projection of user tags and Steam genres embeddings<br>
+#### 2D PCA projection of user tags and Steam genre embeddings<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" src="/html/all_tag_pca.html"></iframe>
 
