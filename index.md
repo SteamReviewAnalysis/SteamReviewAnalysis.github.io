@@ -295,8 +295,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
                 <h2> Insurgency: Sandstorm </h2><br><br>
-                <a href="https://en.wikipedia.org/wiki/Konami_Code">code</a>
-                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle <a href="https://en.wikipedia.org/wiki/Konami_Code">Easter</a>n region, the game depicts a conflict between two factions: "Security" and "Insurgents".
+                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle <a href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank"><b>Easter</b></a>n region, the game depicts a conflict between two factions: "Security" and "Insurgents".
             </div>
         </div>
 
@@ -400,7 +399,7 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 
 ## Conclusion
 
-We hope you enjoyed diving into the ocean of these Steam reviews! This is a first step that needs more inputs from other fields such as linguistics, but the results so far are promising and we hope it gave you inspiration for further studies and maybe even write some <a href="https://en.wikipedia.org/wiki/Konami_Code">code</a>!
+We hope you enjoyed diving into the ocean of these Steam reviews! This is a first step that needs more inputs from other fields such as linguistics, but the results so far are promising and we hope it gave you inspiration for further studies and maybe even write some <a href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank">code</a>!
 
 By the way, what popular code allowed players of Contra on the NES to have 30 lives instead of 3?
 <a href="https://en.wikipedia.org/wiki/Konami_Code">
