@@ -295,7 +295,7 @@ Finally, let us compare the 4-games cluster with opposite ones, focusing on the 
         <div class="col-lg-6 col-md-6 nopadding" style="color: #EFEFEF;">
             <div class="boxtext">
                 <h2> Insurgency: Sandstorm </h2><br><br>
-                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle <a href="https://en.wikipedia.org/wiki/Konami_Code" title="Easter egg", target="_blank"><b>Easter<b></a>n region, the game depicts a conflict between two factions: "Security" and "Insurgents".
+                Insurgency: Sandstorm is a multiplayer tactical first-person shooter. It is set in an unnamed fictional Middle <a href="https://en.wikipedia.org/wiki/Konami_Code" title="Easter egg", target="_blank"><b>Easter</b></a>n region, the game depicts a conflict between two factions: "Security" and "Insurgents".
             </div>
         </div>
 
