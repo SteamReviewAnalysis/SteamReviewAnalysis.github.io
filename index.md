@@ -399,6 +399,8 @@ For negative reviews we have an average of 76 words with a median length of 28 w
 
 ## Conclusion
 
+We hope you enjoyed diving into the ocean of these Steam reviews! This is a first step that needs more inputs from other fields such as linguistics, but the results so far are promising and we hope it gave you inspiration for further studies and maybe even write some <a href="https://en.wikipedia.org/wiki/Konami_Code">code</a>!
+
 By the way, what popular code allowed players of Contra on the NES to have 30 lives instead of 3?
 <a href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank" width=150" height="70">
 	 <img src="img/konami.png">
