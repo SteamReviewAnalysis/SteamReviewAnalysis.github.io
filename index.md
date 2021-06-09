@@ -328,11 +328,11 @@ It is highly possible that terms such as 'experience' are way too frequent to be
 
 #### Embeddings: a black box
 
-As the program that created the embeddings does not understand English but measures the distances on grounds unknown to us, it is hard to understand _how_ the distances have been calculated and visualise _why_ two games will be close or distant. Consequently, _Night in the Woods_, _Undertale_, _OneShot_ and _To the Moon_ *may* be connected on elements that are unrelated to the meaning of their reviews. However, there is a crucial lack of information in this analysis, as it is based on an overview of only a part of the reviews, especially the ones voted the most helpful, so there is a huge lack of representativity here. No strong conclusions can be drawn here, only hypotheses pointing out the difficulty to pinpoint the elements determining the distance between games.
+As the program that created the embeddings does not understand English but measures the distances on grounds unknown to us, it is hard to understand _how_ the distances have been calculated and visualise _why_ two games will be close or distant. Consequently, _Night in the Woods_, _Undertale_, _OneShot_ and _To the Moon_ *may* be connected on elements that are unrelated to the meaning of their reviews. However, there is a crucial lack of information in this analysis, as it is based on an overview of only a part of the reviews, especially the ones voted the most helpful, so there is a lack of representativity here. No strong conclusions can be drawn here, only hypotheses pointing out the difficulty to pinpoint the elements determining the distance between games.
 
 ## PCA and classification
 
-Sometimes, the PCA decomposition can lead to interesting projection vectors.
+Sometimes, the Principal Component Analysis (PCA) decomposition can lead to interesting projection vectors.
 Out of curiosity, we tried to see if the PCA dimensions had similarities with the tags repartition.
 For each PCA dimension, we plotted the mean position of each tag
 (Once all games are projected, we calculate the mean position of all games possessing the tag).
@@ -347,7 +347,17 @@ It was expected, but individual axes do not correspond to individual tags and ca
 Still, we can use these graphics to find the most representative axes for a specific tag and better visualize groups of games on tensorflow.
 (Try components 1,2 and 4, and select color by User Story Rich to see most of the Story Rich games clumped together in a corner of the space.)
 
-Sadly that's all we can get out of the PCA analysis, no particular discoveries here...
+While that's all we can get out of PCA on the game embeddings themselves, what happens if we use it in on our other embeddings? To find out, we merge the embeddings of the top user tags (20 of them) and top official Steam genres (9 of them), and use PCA to project them in a 2D space. The results are shown in the figure below (click on the legend to hide / reveal the user-defined tags and Steam genres). 
+
+#### 2D PCA projection of user tags and Steam genres embeddings<br>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/all_tag_pca.html"></iframe>
+
+This projection gives two interesting results:
+- First, we notice that identical user-tags and official Steam genres are usually quite close together, which aligns with our findings in the clustering section. However, some broad genres (e.g. action) are much further apart than more objective tags (e.g. indie games). This indicates that, while the genres / tags are mostly consistent, some of them might be too broad to properly categorize a game (e.g. action might not mean exactly the same thing for everyone), and that more fine-grained game genres are needed.
+- Second, the two principal components seem to represent two important concepts: whether a game is single-player or multiplayer (horizontal axis), and the game's audience: casual or serious. This may indicate that we can describe many aspects of a game, such as the gameplay, atmosphere and soundtrack, based on how strongly associated they are associated with each of these concepts. This may also help us understand how genres relate to each other.
+
+
 
 ## What about the users?
 
