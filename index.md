@@ -344,7 +344,7 @@ On the second plot, you can visualize each dimension and the position of all tag
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/dim_games.html"></iframe>
 
 It was expected, but individual axes do not correspond to individual tags and cannot be properly interpreted.
-Still, we can use these graphics to find the most representative axes for a specific tag and better visualize groups of games on tensorflow.
+Still, we can use these graphics to find the most representative axes for a specific tag and better visualize groups of games on the [Embedding Projector]({% link embeddings.md %}).
 (Try components 1,2 and 4, and select color by User Story Rich to see most of the Story Rich games clumped together in a corner of the space.)
 
 While that's all we can get out of PCA on the game embeddings themselves, what happens if we use it in on our other embeddings? To find out, we merge the embeddings of the top user tags (20 of them) and top official Steam genres (9 of them), and use PCA to project them in a 2D space. The results are shown in the figure below (click on the legend to hide / reveal the user-defined tags and Steam genres). 
