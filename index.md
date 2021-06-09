@@ -351,7 +351,7 @@ While that's all we can get out of PCA on the game embeddings themselves, what h
 
 #### 2D PCA projection of user tags and Steam genres embeddings<br>
 
-<p align="center"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="750" src="/html/all_tag_pca.html"></iframe></p>
+<p align="center"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" src="/html/all_tag_pca.html"></iframe></p>
 
 This projection gives two interesting results:
 - First, we notice that identical user-tags and official Steam genres are usually quite close together, which aligns with our findings in the clustering section. However, some broad genres (e.g. action) are much further apart than more objective tags (e.g. indie games). This indicates that, while the genres / tags are mostly consistent, some of them might be too broad to properly categorize a game (e.g. action might not mean exactly the same thing for everyone), and that more fine-grained game genres are needed.
