@@ -49,7 +49,7 @@ They also added regarding the proportion of reviews collected for each selected 
 #### Game tags
 
 To complete our analysis, we gathered the official tags from Steam (also called genres) and the most popular user-defined tags. This procedure was made manually and some tags were either broken down into subparts or ignored to avoid synonyms while staying general.
-For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/break the different tags or not was highly subjective but mostly done by one person as to stay consistent. The games and their tags are publicly accessible [here](https://www.notion.so/ae461477418242858455d878c7647f5f?v=da64bc60b507481483510043f76169c3).
+For example, FPS was broken down into 'First person' and 'Shooter', and 'Tactics' was ignored for the more frequent 'Strategy' was already taken. The decision to avoid/break the different tags or not was highly subjective but mostly done by one person to stay consistent. The games and their tags are publicly accessible [here](https://www.notion.so/ae461477418242858455d878c7647f5f?v=da64bc60b507481483510043f76169c3).
 
 
 ## Game embeddings
@@ -124,12 +124,12 @@ The figure below shows the games which are part of each cluster. Use the menu to
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/clusters.html"></iframe>
 If you know your games well, you'll see that the clustering worked quite well, aside from a few oddities.
 
-Here are some clusters we found particulary satisfying:
+Here are some clusters we found particularly satisfying:
 - Cluster 3, which groups grand strategy wargames such as the _Civilization_ and _Total War_ series
 - Cluster 19, which contains simulation games of all sorts
-- Cluster 7, which comprises of many games of different genres and visual styles, but which are all well-known for their strong co-op / multiplayer aspect
+- Cluster 7, which comprises many games of different genres and visual styles, but which are all well-known for their strong co-op / multiplayer aspect
 
-The cluster 5 is interesting as well, as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
+Cluster 5 is interesting as well, as it contains a lot of games, including several that don't seem that similar, apart from the fact that they are linked by being multiplayer games.
 Maybe their belonging to the same cluster is a sign that the multiplayer component is the most salient part of the game, superseding the other aesthetic and gameplay features, in the players' reviews. Alternatively, it could simply be that these games were hard to group with anything else, and their relative proximity in the embedding space resulted in a cluster (as with K-Means clustering, all games must belong to a cluster).
 
 So, hypotheses can be found to explain the regrouping of games when more obvious aspects are lacking. It appears that we can effectively find a coherent classification using only the users' reviews. To confidently verify the hypothesis that the 5th cluster gathers games because players pay more attention to the multiplayer feature of these games than the others, a thorough linguistic analysis of the reviews' content is necessary.
@@ -278,7 +278,7 @@ _Night in the Woods_ is the only game of this cluster having a closer neighbour 
     </div>
 </div>
 
-Supposedly, this game's reviews should have more in common with _Night in the Woods_'s than this latter would have with the three other games.
+Supposedly, this game's reviews should have more in common with _Night in the Woods_ than with the three other games.
 However, 'Story Rich' is the fourth user-defined tag, while 'Great Soundtrack' is absent of the list. Looking at the ten main tags for each game, nothing strikingly separates _Night in the Woods_ and _VA-11 Hall-A: Cyberpunk Bartender Action_ from _Undertale_, _To the Moon_ and _OneShot_.
 
 _VA-11 Hall-A: Cyberpunk Bartender Action_'s reviews contains numerous mentions of sex, sexuality and alcohol, and terms such as 'waifu'/'weeb' are recurrent. Although the reviews frequently refer to the story's depth and how it affected the reviewer, terms such as 'feelings', 'sad' or 'happy' are mainly absent.
@@ -356,7 +356,7 @@ While that's all we can get out of PCA on the game embeddings themselves, what h
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" src="/html/all_tag_pca.html"></iframe>
 
 This projection gives two interesting results:
-- First, we notice that identical user-tags and official Steam genres are usually quite close together, which aligns with our findings in the clustering section. However, some broad genres (e.g. action) are much further apart than more objective tags (e.g. indie games). This indicates that, while the genres / tags are mostly consistent, some of them might be too broad to properly categorize a game (e.g. action might not mean exactly the same thing for everyone), and that more fine-grained game genres are needed.
+- First, we notice that identical user tags and official Steam genres are usually quite close together, which aligns with our findings in the clustering section. However, some broad genres (e.g. action) are much further apart than more objective tags (e.g. indie games). This indicates that, while the genres / tags are mostly consistent, some of them might be too broad to properly categorize a game (e.g. action might not mean exactly the same thing for everyone), and that more fine-grained game genres are needed.
 - Second, the two principal components seem to represent two important concepts: whether a game is single-player or multiplayer (horizontal axis), and the game's audience: casual or serious (vertical axis). This may indicate that we can describe many aspects of a game, such as the gameplay, atmosphere and soundtrack, based on how strongly associated they are associated with each of these concepts. This may also help us understand how genres relate to each other.
 
 
@@ -368,7 +368,7 @@ As a bonus, let's deep-dive into some stats obtained using the dataset's metadat
 #### Average rating of the games in our dataset<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="200" src="/html/average_all.html"></iframe>
-We can see that the average score of the games in our dataset is quite high. This probably due to the selection of mostly popular games which tend to be well received.
+We can see that the average score of the games in our dataset is quite high. This probably due to the selection of popular games which tend to be well received.
 
 #### Average rating of games received for free or not<br>
 
@@ -380,7 +380,7 @@ This was one of the most surprising results we got. Apparently, on average (for 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="300" src="/html/early.html"></iframe>
 From this result, we can see a small tendency to be more critical when a game is released in early access.
 They usually have many bugs and sometimes, a game changes so much during development that early adopters of a game will not like how it is evolving. In protest, they may write "Not recommended" reviews.
-This funding model also has some issues, as some game developers might take the money and abandon development, but those incidents are quite rare, and did not occur for any of the games in our dataset.
+This funding model also has some issues, as some game developers might take the money and abandon development, but those incidents are quite rare and did not occur for any of the games in our dataset.
 
 #### Average rating from users that posted a certain number of reviews<br>
 
@@ -390,13 +390,13 @@ Those results show that people will be more critical when posting more reviews u
 #### Average rating from users that own a certain number of games<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/owned.html"></iframe>
-We can see that the more someone owns games, the more likely they are to rate a game negatively. We can hypothesize that people that own a high amount of games are most-likely avid players with plenty of video game experience. This might make them more critical of games, as, for each of the genres they like playing, they have much more games against which to compare.
+We can see that the more someone owns games, the more likely they are to rate a game negatively. We can hypothesize that people that own a high amount of games are most likely avid players with plenty of video game experience. This might make them more critical of games, as, for each of the genres they like playing, they have much more games against which to compare.
 
 #### Average rating from reviews with a certain number of words<br>
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" src="/html/words.html"></iframe>
 The longer the reviews, the more critical they become. We also found that positive reviews had an average of 35 words, with the median length being 10 words.
-For negative reviews we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results.
+For negative reviews, we have an average of 76 words with a median length of 28 words. It seems that when users do not recommend a game, they usually provide a detailed review on what they disliked about it; this is clearly visible in the results.
 
 ## Conclusion
 
